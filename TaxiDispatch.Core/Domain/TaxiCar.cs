@@ -4,6 +4,8 @@ namespace TaxiDispatch.Core.Domain;
 public sealed class TaxiCar
 {
     public string LicensePlate { get; init; } = string.Empty;
+
     public string Model { get; init; } = string.Empty;
+
     public string Category { get; init; } = string.Empty;
 }

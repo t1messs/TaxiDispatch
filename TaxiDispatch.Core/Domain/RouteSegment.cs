@@ -4,8 +4,10 @@ namespace TaxiDispatch.Core.Domain;
 public sealed class RouteSegment
 {
     public string DestinationAddress { get; init; } = string.Empty;
+
     public decimal DistanceKm { get; init; }
+
     public decimal PricePerKm { get; init; }
-    
+
     public decimal Amount => DistanceKm * PricePerKm;
 }

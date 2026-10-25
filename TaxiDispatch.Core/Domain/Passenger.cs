@@ -4,6 +4,8 @@ namespace TaxiDispatch.Core.Domain;
 public sealed class Passenger
 {
     public int Id { get; init; }
+
     public string Name { get; init; } = string.Empty;
+
     public string PhoneNumber { get; init; } = string.Empty;
 }
