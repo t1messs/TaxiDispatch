@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TaxiDispatch.App/TaxiDispatch.App.csproj" />
+  <Project Path="TaxiDispatch.Core/TaxiDispatch.Core.csproj" />
+</Solution>
