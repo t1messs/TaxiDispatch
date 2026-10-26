@@ -1,11 +1,16 @@
 namespace TaxiDispatch.Core.Domain;
 
-/// <summary>Пасажир, який замовляє таксі.</summary>
-public sealed class Passenger
+/// <summary>
+/// Пасажир таксі.
+/// </summary>
+public class Passenger
 {
-    public int Id { get; init; }
+    /// <summary>Отримує або задає ідентифікатор пасажира.</summary>
+    public int Id { get; set; }
 
-    public string Name { get; init; } = string.Empty;
+    /// <summary>Отримує або задає ім'я пасажира.</summary>
+    public string Name { get; set; } = string.Empty;
 
-    public string PhoneNumber { get; init; } = string.Empty;
+    /// <summary>Отримує або задає номер телефону.</summary>
+    public string PhoneNumber { get; set; } = string.Empty;
 }

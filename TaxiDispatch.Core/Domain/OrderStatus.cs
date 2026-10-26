@@ -1,11 +1,22 @@
 namespace TaxiDispatch.Core.Domain;
 
-/// <summary>Стан замовлення таксі в його життєвому циклі.</summary>
+/// <summary>
+/// Статуси замовлення таксі.
+/// </summary>
 public enum OrderStatus
 {
-    New = 0,
-    Assigned = 1,
-    InProgress = 2,
-    Completed = 3,
-    Cancelled = 4
+    /// <summary>Нове замовлення.</summary>
+    New,
+
+    /// <summary>Призначено водія.</summary>
+    Assigned,
+
+    /// <summary>У дорозі.</summary>
+    InProgress,
+
+    /// <summary>Виконано.</summary>
+    Completed,
+
+    /// <summary>Скасовано.</summary>
+    Cancelled
 }

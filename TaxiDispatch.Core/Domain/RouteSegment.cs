@@ -1,13 +1,19 @@
 namespace TaxiDispatch.Core.Domain;
 
-/// <summary>Відрізок маршруту: адреса, відстань і ціна за кілометр.</summary>
-public sealed class RouteSegment
+/// <summary>
+/// Відрізок маршруту.
+/// </summary>
+public class RouteSegment
 {
-    public string DestinationAddress { get; init; } = string.Empty;
+    /// <summary>Отримує або задає адресу призначення.</summary>
+    public string DestinationAddress { get; set; } = string.Empty;
 
-    public decimal DistanceKm { get; init; }
+    /// <summary>Отримує або задає дистанцію в кілометрах.</summary>
+    public decimal DistanceKm { get; set; }
 
-    public decimal PricePerKm { get; init; }
+    /// <summary>Отримує або задає ціну за кілометр.</summary>
+    public decimal PricePerKm { get; set; }
 
+    /// <summary>Отримує загальну вартість відрізка.</summary>
     public decimal Amount => DistanceKm * PricePerKm;
 }
