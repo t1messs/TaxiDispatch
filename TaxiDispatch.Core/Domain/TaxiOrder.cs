@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace TaxiDispatch.Core.Domain
 {
     /// <summary>
@@ -9,7 +5,31 @@ namespace TaxiDispatch.Core.Domain
     /// </summary>
     public class TaxiOrder
     {
-        private readonly List<string[]> _segments = new List<string[]>();
+        /// <summary>Ставка податку на додану вартість.</summary>
+        private const decimal VatRate = 0.2m;
+        /// <summary>Поріг суми для знижки постійному пасажиру.</summary>
+        private const decimal RegularDiscountThreshold = 1000m;
+        /// <summary>Частка знижки постійному пасажиру.</summary>
+        private const decimal RegularDiscountRate = 0.10m;
+        /// <summary>Поріг суми для знижки на велике замовлення.</summary>
+        private const decimal LargeOrderThreshold = 5000m;
+        /// <summary>Частка знижки на велике замовлення.</summary>
+        private const decimal LargeOrderDiscountRate = 0.15m;
+        /// <summary>Кількість відрізків, з якої діє гуртова знижка.</summary>
+        private const int BulkSegmentCount = 10;
+        /// <summary>Сума гуртової знижки, грн.</summary>
+        private const decimal BulkDiscountAmount = 100m;
+        /// <summary>Максимальна кількість відрізків у замовленні.</summary>
+        private const int MaxSegmentCount = 100;
+        /// <summary>Мінімальна довжина імені пасажира.</summary>
+        private const int MinPassengerNameLength = 2;
+
+        private const int StatusNew = 0;
+        private const int StatusAssigned = 1;
+        private const int StatusInProgress = 2;
+        private const int StatusCancelled = 3;
+
+        private readonly System.Collections.Generic.List<string[]> _segments = new System.Collections.Generic.List<string[]>();
 
         /// <summary>
         /// Ініціалізує нове замовлення таксі.
@@ -20,7 +40,7 @@ namespace TaxiDispatch.Core.Domain
         {
             Id = id;
             PassengerName = passengerName;
-            CreatedAt = DateTime.Now;
+            CreatedAt = System.DateTime.Now;
         }
 
         /// <summary>
@@ -36,14 +56,12 @@ namespace TaxiDispatch.Core.Domain
         /// <summary>
         /// Отримує поточний статус замовлення.
         /// </summary>
-        public int Status { get; private set; } = 0;
+        public int Status { get; private set; } = StatusNew;
 
         /// <summary>
         /// Отримує дату та час створення замовлення.
         /// </summary>
-        public DateTime CreatedAt { get; private set; }
-
-        // public string prim; // примітка, поки не треба
+        public System.DateTime CreatedAt { get; private set; }
 
         /// <summary>
         /// Шукає замовлення за ідентифікатором у списку.
@@ -51,7 +69,7 @@ namespace TaxiDispatch.Core.Domain
         /// <param name="orders">Список замовлень для пошуку.</param>
         /// <param name="orderId">Ідентифікатор шуканого замовлення.</param>
         /// <returns>Знайдене замовлення або null, якщо не знайдено.</returns>
-        public static TaxiOrder? FindById(List<TaxiOrder> orders, string orderId)
+        public static TaxiOrder? FindById(System.Collections.Generic.List<TaxiOrder> orders, string orderId)
         {
             for (int i = 0; i < orders.Count; i++)
             {
@@ -93,29 +111,22 @@ namespace TaxiDispatch.Core.Domain
             {
                 int k = int.Parse(_segments[i][1]);
                 decimal c = decimal.Parse(_segments[i][2]);
-                total = total + (k * c);
-                segmentCount = segmentCount + 1;
+                total += k * c;
+                segmentCount++;
             }
 
-            // if (total > 500) { total = total - 50; } // стара знижка
-
-            // Нараховуємо знижки залежно від типу клієнта та суми
-            if (isRegularPassenger == true && total > 1000)
+            if (isRegularPassenger && total > RegularDiscountThreshold)
             {
-                total = total * 0.9m;
+                total *= 1m - RegularDiscountRate;
             }
-            else if (total > 5000)
+            else if (total > LargeOrderThreshold)
             {
-                total = total * 0.85m;
-            }
-            else
-            {
-                total = total;
+                total *= 1m - LargeOrderDiscountRate;
             }
 
-            if (segmentCount > 10)
+            if (segmentCount > BulkSegmentCount)
             {
-                total = total - 100;
+                total -= BulkDiscountAmount;
             }
 
             if (total < 0)
@@ -123,9 +134,8 @@ namespace TaxiDispatch.Core.Domain
                 total = 0;
             }
 
-            // Нараховуємо ПДВ
-            total = total + (total * 0.2m);
-            return Math.Round(total, 2);
+            total += total * VatRate;
+            return System.Math.Round(total, 2);
         }
 
         /// <summary>
@@ -135,21 +145,21 @@ namespace TaxiDispatch.Core.Domain
         /// <returns>true, якщо статус успішно змінено; false, якщо перехід заборонено.</returns>
         public bool TryChangeStatus(int newStatus)
         {
-            if (Status == 0 && newStatus == 1)
+            if (Status == StatusNew && newStatus == StatusAssigned)
             {
-                Status = 1;
+                Status = StatusAssigned;
                 return true;
             }
 
-            if (Status == 1 && newStatus == 2)
+            if (Status == StatusAssigned && newStatus == StatusInProgress)
             {
-                Status = 2;
+                Status = StatusInProgress;
                 return true;
             }
 
-            if (Status == 0 && newStatus == 3)
+            if (Status == StatusNew && newStatus == StatusCancelled)
             {
-                Status = 3;
+                Status = StatusCancelled;
                 return true;
             }
 
@@ -164,18 +174,16 @@ namespace TaxiDispatch.Core.Domain
         {
             if (Id != null && Id != string.Empty
                 && PassengerName != null
-                && PassengerName.Length > 2
+                && PassengerName.Length > MinPassengerNameLength
                 && _segments.Count > 0
-                && _segments.Count < 100
-                && Status >= 0
-                && Status <= 3)
+                && _segments.Count < MaxSegmentCount
+                && Status >= StatusNew
+                && Status <= StatusCancelled)
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         /// <summary>
