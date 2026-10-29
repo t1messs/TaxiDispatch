@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using TaxiDispatch.Core.Legacy;
 using Xunit;
+using TaxiDispatch.Core.Documents;
+
 
 namespace TaxiDispatch.Tests;
 
@@ -43,14 +45,24 @@ public class LegacyProcessorTests
     }
 
     [Fact]
-    public void Process_NoLines_ReturnsMinusOne()
+    public void Calculate_NoLines_ThrowsArgument()
     {
-        decimal total = LegacyProcessor.Process(
-            3, "Коваль", "k@ex.com", false,
-            new List<RouteSegment>(),
-            new DateOnly(2026, 3, 10), "", "New", false,
-            60m, out string next);
-
-        Assert.Equal(-1m, total);
+        Assert.Throws<ArgumentException>(() =>
+            DocumentGuards.EnsureLinesValid(new List<RouteSegment>()));
     }
+
+    [Fact]
+    public void Calculate_ZeroDistance_ThrowsRange()
+    {
+        RouteSegment segment = new()
+        {
+            Destination = "A1",
+            Distance = 0,
+            PricePerKm = 10m
+        };
+
+        Assert.Throws<ArgumentOutOfRangeException>(
+            () => DocumentGuards.EnsureLineValid(segment));
+    }
+
 }
