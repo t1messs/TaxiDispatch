@@ -18,6 +18,15 @@ public static class DocumentGuards
         }
     }
 
+    public static void EnsureRequestValid(TotalRequest request)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        ArgumentNullException.ThrowIfNull(request.Client);
+        EnsureHeaderValid(request.DocumentId, request.Client.Name, request.Client.Email);
+        EnsureLinesValid(request.Segments);
+        ArgumentOutOfRangeException.ThrowIfNegative(request.DeliveryPrice);
+    }
+
     public static void EnsureLineValid(RouteSegment segment)
     {
         ArgumentNullException.ThrowIfNull(segment);

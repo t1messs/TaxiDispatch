@@ -10,39 +10,47 @@ namespace TaxiDispatch.Tests;
 public class LegacyProcessorTests
 {
     [Fact]
-    public void Process_RegularClient_Returns1292()
+    public void Calculate_RegularClient_Returns1292()
     {
-        List<RouteSegment> segments = new()
-        {
-            new RouteSegment { Destination = "A1", Distance = 12, PricePerKm = 100m },
-            new RouteSegment { Destination = "B2", Distance = 1, PricePerKm = 250m }
-        };
+        TotalRequest request = new(
+            DocumentId: 1,
+            Client: new ClientInfo("Іваненко", "i@ex.com", true),
+            Segments: new List<RouteSegment>
+            {
+                new() { Destination = "A1", Distance = 12, PricePerKm = 100m },
+                new() { Destination = "B2", Distance = 1, PricePerKm = 250m }
+            },
+            CreatedAt: new DateOnly(2026, 3, 10),
+            CouponCode: null,
+            Status: DocumentStatus.New,
+            DeliveryPrice: 60m);
 
-        decimal total = LegacyProcessor.Process(
-            1, "Іваненко", "i@ex.com", true, segments,
-            new DateOnly(2026, 3, 10), "", "New", false,
-            60m, out string next);
-
-        Assert.Equal(1292.70m, total);
-        Assert.Equal("Paid", next);
+        TotalResult result = DocumentTotalCalculator.Calculate(request);
+        Assert.Equal(1292.70m, result.Total);
+        Assert.Equal(DocumentStatus.Paid, result.Status);
     }
 
     [Fact]
     public void Process_SmallOrder_AddsDelivery()
     {
-        List<RouteSegment> segments = new()
-        {
-            new RouteSegment { Destination = "A1", Distance = 2, PricePerKm = 200m }
-        };
+        TotalRequest request = new(
+            DocumentId: 2,
+            Client: new ClientInfo("Петренко", "p@ex.com", false),
+            Segments: new List<RouteSegment>
+            {
+                new() { Destination = "A1", Distance = 2, PricePerKm = 200m }
+            },
+            CreatedAt: new DateOnly(2026, 3, 10),
+            CouponCode: "SALE10",
+            Status: DocumentStatus.Paid,
+            DeliveryPrice: 60m);
 
-        decimal total = LegacyProcessor.Process(
-            2, "Петренко", "p@ex.com", false, segments,
-            new DateOnly(2026, 3, 10), "SALE10", "Paid",
-            false, 60m, out string next);
-
-        Assert.Equal(420m, total);
-        Assert.Equal("Shipped", next);
+        TotalResult result = DocumentTotalCalculator.Calculate(request);
+        Assert.Equal(420m, result.Total);
+        Assert.Equal(DocumentStatus.Shipped, result.Status);
     }
+
+
 
     [Fact]
     public void Calculate_NoLines_ThrowsArgument()
