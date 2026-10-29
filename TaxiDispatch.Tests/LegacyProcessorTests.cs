@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TaxiDispatch.Core.Legacy;
 using Xunit;
 using TaxiDispatch.Core.Documents;
+using System.IO;
+using TaxiDispatch.Core.Reporting;
+
 
 
 namespace TaxiDispatch.Tests;
@@ -71,6 +74,44 @@ public class LegacyProcessorTests
 
         Assert.Throws<ArgumentOutOfRangeException>(
             () => DocumentGuards.EnsureLineValid(segment));
+    }
+
+        private static TotalRequest BuildSampleRequest()
+    {
+        return new TotalRequest(
+            DocumentId: 1,
+            Client: new ClientInfo("Іваненко", "i@ex.com", true),
+            Segments: new List<RouteSegment>
+            {
+                new() { Destination = "A1", Distance = 12, PricePerKm = 100m },
+                new() { Destination = "B2", Distance = 1, PricePerKm = 250m }
+            },
+            CreatedAt: new DateOnly(2026, 3, 10),
+            CouponCode: null,
+            Status: DocumentStatus.New,
+            DeliveryPrice: 60m);
+    }
+
+    [Fact]
+    public void TextOf_ContainsTotalLine()
+    {
+        TotalRequest request = BuildSampleRequest();
+        TotalResult result = DocumentTotalCalculator.Calculate(request);
+        
+        string text = DocumentReport.TextOf(request, result);
+        
+        Assert.Contains("Разом: 1292.70", text);
+    }
+
+    [Fact]
+    public void Print_WritesReportToOutput()
+    {
+        StringWriter writer = new();
+        DocumentReportPrinter printer = new(writer);
+        
+        printer.Print("Разом: 10.00");
+        
+        Assert.Contains("10.00", writer.ToString());
     }
 
 }
