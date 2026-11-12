@@ -1,19 +1,36 @@
 namespace TaxiDispatch.Core.Domain;
 
 /// <summary>
-/// Відрізок маршруту.
+/// Відрізок маршруту — незмінна позиція замовлення таксі.
 /// </summary>
-public class RouteSegment
+public sealed record RouteSegment
 {
-    /// <summary>Отримує або задає адресу призначення.</summary>
-    public string DestinationAddress { get; set; } = string.Empty;
+    /// <summary>
+    /// Створює відрізок маршруту та перевіряє його інваріант.
+    /// </summary>
+    /// <param name="destination">Адреса кінцевого пункту відрізка.</param>
+    /// <param name="distanceKm">Дистанція в кілометрах, більша за нуль.</param>
+    /// <param name="pricePerKm">Ціна за кілометр, не менша за нуль.</param>
+    public RouteSegment(string destination, decimal distanceKm, decimal pricePerKm)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(destination);
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(distanceKm);
+        ArgumentOutOfRangeException.ThrowIfNegative(pricePerKm);
 
-    /// <summary>Отримує або задає дистанцію в кілометрах.</summary>
-    public decimal DistanceKm { get; set; }
+        Destination = destination;
+        DistanceKm = distanceKm;
+        PricePerKm = pricePerKm;
+    }
 
-    /// <summary>Отримує або задає ціну за кілометр.</summary>
-    public decimal PricePerKm { get; set; }
+    /// <summary>Отримує адресу кінцевого пункту відрізка.</summary>
+    public string Destination { get; }
 
-    /// <summary>Отримує загальну вартість відрізка.</summary>
+    /// <summary>Отримує дистанцію відрізка в кілометрах.</summary>
+    public decimal DistanceKm { get; }
+
+    /// <summary>Отримує ціну за один кілометр.</summary>
+    public decimal PricePerKm { get; }
+
+    /// <summary>Отримує вартість відрізка; обчислюється, а не зберігається.</summary>
     public decimal Amount => DistanceKm * PricePerKm;
 }
