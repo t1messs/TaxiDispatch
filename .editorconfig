@@ -70,3 +70,9 @@ dotnet_diagnostic.SA1503.severity = warning
 dotnet_diagnostic.SA1516.severity = warning 
 dotnet_diagnostic.IDE0055.severity = warning
 
+
+# Legacy/ — навчальний «клас-Бог» з методички ЛР4 для аудиту SOLID.
+# Методи навмисно повторюють структуру з методички (інстансні виклики через поля),
+# тому пропозицію зробити їх static (CA1822) тут вимкнено; на новий код це не впливає.
+[TaxiDispatch.Core/Legacy/**.cs]
+dotnet_diagnostic.CA1822.severity = none

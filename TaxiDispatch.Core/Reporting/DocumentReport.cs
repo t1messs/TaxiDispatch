@@ -17,16 +17,16 @@ public static class DocumentReport
         CultureInfo culture = CultureInfo.InvariantCulture;
         StringBuilder text = new();
 
-        text.AppendLine($"Документ № {request.DocumentId}");
-        text.AppendLine($"Клієнт: {request.Client.Name}");
+        text.AppendLine(culture, $"Документ № {request.DocumentId}");
+        text.AppendLine(culture, $"Клієнт: {request.Client.Name}");
 
         foreach (RouteSegment segment in request.Segments)
         {
-            text.AppendLine($"{segment.Destination} x {segment.Distance}");
+            text.AppendLine(culture, $"{segment.Destination} x {segment.Distance}");
         }
 
         text.AppendLine(string.Format(culture, "Разом: {0:F2}", result.Total));
-        text.AppendLine($"Стан: {result.Status}");
+        text.AppendLine(culture, $"Стан: {result.Status}");
 
         return text.ToString();
     }

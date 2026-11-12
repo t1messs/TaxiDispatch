@@ -11,7 +11,7 @@ public static class DocumentGuards
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(documentId);
         ArgumentException.ThrowIfNullOrWhiteSpace(clientName);
         ArgumentException.ThrowIfNullOrWhiteSpace(clientEmail);
-        
+
         if (!clientEmail.Contains('@'))
         {
             throw new ArgumentException("Пошта має містити символ @.", nameof(clientEmail));
@@ -42,6 +42,7 @@ public static class DocumentGuards
         {
             throw new ArgumentException("Документ не містить жодної позиції.", nameof(segments));
         }
+
         foreach (RouteSegment segment in segments)
         {
             EnsureLineValid(segment);

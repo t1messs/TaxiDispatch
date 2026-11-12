@@ -4,11 +4,6 @@ using TaxiDispatch.Core.Legacy;
 
 namespace TaxiDispatch.Core.Documents;
 
-public sealed record ClientInfo(
-    string Name,
-    string Email,
-    bool IsRegular);
-
 public sealed record TotalRequest(
     int DocumentId,
     ClientInfo Client,
@@ -17,7 +12,3 @@ public sealed record TotalRequest(
     string? CouponCode,
     DocumentStatus Status,
     decimal DeliveryPrice);
-
-public sealed record TotalResult(
-    decimal Total,
-    DocumentStatus Status);

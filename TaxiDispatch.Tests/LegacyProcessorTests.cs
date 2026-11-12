@@ -6,8 +6,6 @@ using TaxiDispatch.Core.Documents;
 using System.IO;
 using TaxiDispatch.Core.Reporting;
 
-
-
 namespace TaxiDispatch.Tests;
 
 public class LegacyProcessorTests
@@ -76,7 +74,7 @@ public class LegacyProcessorTests
             () => DocumentGuards.EnsureLineValid(segment));
     }
 
-        private static TotalRequest BuildSampleRequest()
+    private static TotalRequest BuildSampleRequest()
     {
         return new TotalRequest(
             DocumentId: 1,
@@ -97,9 +95,9 @@ public class LegacyProcessorTests
     {
         TotalRequest request = BuildSampleRequest();
         TotalResult result = DocumentTotalCalculator.Calculate(request);
-        
+
         string text = DocumentReport.TextOf(request, result);
-        
+
         Assert.Contains("Разом: 1292.70", text);
     }
 
@@ -108,10 +106,9 @@ public class LegacyProcessorTests
     {
         StringWriter writer = new();
         DocumentReportPrinter printer = new(writer);
-        
+
         printer.Print("Разом: 10.00");
-        
+
         Assert.Contains("10.00", writer.ToString());
     }
-
 }
