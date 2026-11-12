@@ -17,8 +17,10 @@ public static class DocumentTotalCalculator
             {
                 sum -= sum * PricingRules.BulkRate;
             }
+
             subtotal += sum;
         }
+
         return subtotal;
     }
 
@@ -32,9 +34,15 @@ public static class DocumentTotalCalculator
     {
         ArgumentOutOfRangeException.ThrowIfNegative(amount);
         if (amount > PricingRules.LargeOrderFrom)
+        {
             return amount * PricingRules.LargeOrderRate;
+        }
+
         if (amount > PricingRules.MediumOrderFrom)
+        {
             return amount * PricingRules.MediumOrderRate;
+        }
+
         return 0m;
     }
 
@@ -69,7 +77,7 @@ public static class DocumentTotalCalculator
             _ => current
         };
 
-        public static TotalResult Calculate(TotalRequest request)
+    public static TotalResult Calculate(TotalRequest request)
     {
         DocumentGuards.EnsureRequestValid(request);
         decimal total = SubtotalOf(request.Segments);
@@ -78,9 +86,8 @@ public static class DocumentTotalCalculator
         total -= CouponDiscountOf(total, request.CouponCode);
         total -= WeekendDiscountOf(total, request.CreatedAt);
         total += DeliveryFeeOf(total, request.DeliveryPrice);
-        
+
         total = request.Status == DocumentStatus.Cancelled ? 0m : Math.Round(Math.Max(total, 0m), 2);
         return new TotalResult(total, NextStatusOf(request.Status, total));
     }
-
 }
