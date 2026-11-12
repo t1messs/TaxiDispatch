@@ -3,12 +3,9 @@ using TaxiDispatch.Core.Domain;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-var z = new TaxiOrder("TX-1001", "Іваненко");
-z.AddSegment("Вулиця 1 - Вулиця 2", 3, 250m);
-z.AddSegment("Вулиця 2 - Вулиця 3", 12, 90m);
+var order = new TaxiOrder(1, 100, DateOnly.FromDateTime(DateTime.Today));
+order.AddSegment(new RouteSegment("Вулиця 1 - Вулиця 2", 3m, 250m));
+order.AddSegment(new RouteSegment("Вулиця 2 - Вулиця 3", 12m, 90m));
+order.Assign();
 
-Console.WriteLine(z.CalculateTotal(false));
-Console.WriteLine(z.CalculateTotal(true));
-Console.WriteLine(z.IsValid());
-Console.WriteLine(z.TryChangeStatus(1));
-Console.Write(z.BuildReport());
+Console.WriteLine($"Замовлення {order.Id}: відрізків {order.Segments.Count}, стан {order.Status}");
