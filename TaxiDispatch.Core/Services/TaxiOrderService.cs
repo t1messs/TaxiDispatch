@@ -48,6 +48,15 @@ public sealed class TaxiOrderService
             $"Замовлення № {order.Id} прийнято. Сума: {TotalOf(order):0.00}");
     }
 
+    // БУЛО: барикади немає, ядро саме розбирає рядки з консолі
+    public void AddSegment(int orderId, string destination, string distanceKm, string pricePerKm)
+    {
+        var order = _repository.GetById(orderId);
+        var distance = decimal.Parse(distanceKm);
+        var price = decimal.Parse(pricePerKm);
+        order.AddSegment(new RouteSegment(destination, distance, price));
+    }
+
     /// <summary>Обчислює суму замовлення за поточною політикою ціни.</summary>
     /// <param name="order">Замовлення таксі.</param>
     /// <returns>Сума всіх відрізків маршруту.</returns>
