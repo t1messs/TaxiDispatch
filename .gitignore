@@ -483,3 +483,6 @@ $RECYCLE.BIN/
 # власні винятки проєкту
 *.user
 data/*.local.json
+
+# Файли, які застосунок Claude зберігає в папку проєкту
+Claude outputs/
