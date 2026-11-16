@@ -33,36 +33,13 @@ public class LegacyRideProcessor
         List<RideLine>? lines, RideState state,
         string currency, DateTime createdAt, bool sendMail)
     {
-        if (lines != null)
-        {
-            if (lines.Count > 0)
-            {
-                if (state == RideState.New || state == RideState.Paid)
-                {
-                    if (passengerEmail != null &&
-                        passengerEmail.Contains("@"))
-                    {
-                        _log.Add("ok " + rideId);
-                    }
-                    else
-                    {
-                        return "ERR: mail";
-                    }
-                }
-                else
-                {
-                    return "ERR: state";
-                }
-            }
-            else
-            {
-                return "ERR: empty";
-            }
-        }
-        else
-        {
-            return "ERR: null";
-        }
+        // Охоронні умови: порядок перевірок той самий, що й у вкладених if.
+        if (lines == null) return "ERR: null";
+        if (lines.Count == 0) return "ERR: empty";
+        if (!IsProcessable(state)) return "ERR: state";
+        if (!HasValidEmail(passengerEmail)) return "ERR: mail";
+
+        _log.Add("ok " + rideId);
 
         _tmpSum = 0m;
         for (int i = 0; i < lines.Count; i++)
@@ -112,6 +89,12 @@ public class LegacyRideProcessor
         }
         return txt;
     }
+
+    private static bool IsProcessable(RideState state) =>
+        state == RideState.New || state == RideState.Paid;
+
+    private static bool HasValidEmail(string? email) =>
+        email != null && email.Contains("@");
 
     public decimal Preview(PassengerKind passengerKind, int tripCount,
         List<RideLine> lines)
