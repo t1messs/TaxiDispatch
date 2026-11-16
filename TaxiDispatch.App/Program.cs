@@ -11,44 +11,65 @@ using TaxiDispatch.Core.Storage;
 
 Console.OutputEncoding = Encoding.UTF8;
 
-// Композиційний корінь: єдине місце, де створюються конкретні реалізації.
-// Таблиця відповідності замість ланцюга if за типом клієнта (OCP).
-var policies = new Dictionary<string, IPricingPolicy>
+// Верхній обробник — єдине місце, де дозволено catch (Exception).
+try
 {
-    ["regular"] = new DiscountPricingPolicy(0.05m),
-    ["vip"] = new VipPricingPolicy(),
-    ["staff"] = new DiscountPricingPolicy(0.30m),
-};
-
-string customerType = "regular";
-IPricingPolicy pricing = policies.TryGetValue(customerType, out IPricingPolicy? found)
-    ? found
-    : new StandardPricingPolicy();
-
-var repository = new InMemoryTaxiOrderRepository();
-var service = new TaxiOrderService(repository, pricing, new ConsoleNotifier());
-
-var passenger = new Passenger(100, "Іваненко", "+380501234567");
-var order = new TaxiOrder(1, passenger.Id, DateOnly.FromDateTime(DateTime.Today));
-service.Place(order, passenger);
-
-ReadSegments(service, order.Id);
-
-if (order.Segments.Count == 0)
-{
-    Console.WriteLine("Маршрут порожній — замовлення не оформлено.");
+    RunApplication();
+    return 0;
 }
-else
+catch (DomainRuleException ex)
 {
-    service.Assign(order.Id);
-    Console.WriteLine($"Сума: {service.TotalOf(order):0.00}");
+    Console.WriteLine($"Порушено правило {ex.Rule}: {ex.Message}");
+    return 1;
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Непередбачений збій ({ex.GetType().Name}). Роботу завершено.");
+    Console.Error.WriteLine(ex);
+    return 2;
+}
 
-    order.Start();
-    order.Complete();
-    var archived = new ArchivedTaxiOrder(order, DateOnly.FromDateTime(DateTime.Today));
-    Console.WriteLine($"Архів: замовлення {archived.Id}, стан {archived.Status}");
+static void RunApplication()
+{
+    // Композиційний корінь: єдине місце, де створюються конкретні реалізації.
+    // Таблиця відповідності замість ланцюга if за типом клієнта (OCP).
+    var policies = new Dictionary<string, IPricingPolicy>
+    {
+        ["regular"] = new DiscountPricingPolicy(0.05m),
+        ["vip"] = new VipPricingPolicy(),
+        ["staff"] = new DiscountPricingPolicy(0.30m),
+    };
 
-    Console.Write(TaxiOrderCsvReport.BuildCsv(repository.GetAll(), service.TotalOf));
+    string customerType = "regular";
+    IPricingPolicy pricing = policies.TryGetValue(customerType, out IPricingPolicy? found)
+        ? found
+        : new StandardPricingPolicy();
+
+    var repository = new InMemoryTaxiOrderRepository();
+    var service = new TaxiOrderService(repository, pricing, new ConsoleNotifier());
+
+    var passenger = new Passenger(100, "Іваненко", "+380501234567");
+    var order = new TaxiOrder(1, passenger.Id, DateOnly.FromDateTime(DateTime.Today));
+    service.Place(order, passenger);
+
+    ReadSegments(service, order.Id);
+
+    if (order.Segments.Count == 0)
+    {
+        Console.WriteLine("Маршрут порожній — замовлення не оформлено.");
+    }
+    else
+    {
+        service.Assign(order.Id);
+        Console.WriteLine($"Сума: {service.TotalOf(order):0.00}");
+
+        order.Start();
+        order.Complete();
+        var archived = new ArchivedTaxiOrder(order, DateOnly.FromDateTime(DateTime.Today));
+        Console.WriteLine($"Архів: замовлення {archived.Id}, стан {archived.Status}");
+
+        Console.Write(TaxiOrderCsvReport.BuildCsv(repository.GetAll(), service.TotalOf));
+    }
 }
 
 // Зовнішній шар: читає рядки, барикада перетворює їх на RouteSegment.

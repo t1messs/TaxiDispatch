@@ -42,23 +42,20 @@ internal static class RouteSegmentParser
         return Result.Ok(new RouteSegment(destination.Trim(), distance, price));
     }
 
-    // АНТИПАТЕРН 4: try/catch замість звичайної умови
-    public static int CountValidDistances(string[] rows)
+    /// <summary>
+    /// Рахує рядки, що є коректною дистанцією (число більше 0); умова замість try/catch.
+    /// </summary>
+    /// <param name="rows">Сирі рядки з введення.</param>
+    /// <returns>Кількість коректних дистанцій.</returns>
+    public static int CountValidDistances(IEnumerable<string> rows)
     {
-        var valid = 0;
-        foreach (var row in rows)
+        ArgumentNullException.ThrowIfNull(rows);
+        int valid = 0;
+        foreach (string row in rows)
         {
-            try
+            if (TryParseNumber(row, out decimal km) && km > 0)
             {
-                var km = decimal.Parse(row, InputCulture);
-                if (km > 0)
-                {
-                    valid++;
-                }
-            }
-            catch (FormatException)
-            {
-                // не число — пропускаємо
+                valid++;
             }
         }
 

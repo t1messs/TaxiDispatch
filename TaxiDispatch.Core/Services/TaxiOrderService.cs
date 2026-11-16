@@ -107,32 +107,33 @@ public sealed class TaxiOrderService
         return total;
     }
 
-    // АНТИПАТЕРН 1: порожній catch, дефект зникає
-    public TaxiOrder? Load(int orderId)
-    {
-        try
-        {
-            return _repository.GetById(orderId);
-        }
-        catch (Exception)
-        {
-        }
+    /// <summary>
+    /// Завантажує замовлення; якщо його немає — виняток із контекстом, а не null.
+    /// </summary>
+    /// <param name="orderId">Номер замовлення.</param>
+    /// <returns>Знайдене замовлення.</returns>
+    public TaxiOrder Load(int orderId) => OrderOrThrow(orderId);
 
-        return null;
-    }
-
-    // АНТИПАТЕРНИ 2 і 3: широке перехоплення, throw ex
+    /// <summary>
+    /// Скасовує замовлення; заборонений перехід перекладає мовою правил предметної області.
+    /// </summary>
+    /// <param name="orderId">Номер замовлення.</param>
+    /// <param name="reason">Причина скасування.</param>
     public void Cancel(int orderId, string reason)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(reason);
+        TaxiOrder order = OrderOrThrow(orderId);
         try
         {
-            var order = _repository.GetById(orderId);
             order.Cancel();
         }
-        catch (Exception ex)
+        catch (InvalidOperationException ex)
         {
-            Console.WriteLine("Щось пішло не так");
-            throw ex;
+            // Конкретний тип замість Exception; початковий виняток зберігається як inner.
+            throw new DomainRuleException(
+                "order.cancellable",
+                $"Замовлення {orderId} у стані {order.Status} скасувати не можна",
+                ex);
         }
     }
 
