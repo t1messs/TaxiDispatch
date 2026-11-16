@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging.Abstractions;
 using TaxiDispatch.Core.Abstractions;
 using TaxiDispatch.Core.Domain;
 using TaxiDispatch.Core.Pricing;
@@ -31,7 +32,8 @@ public class DomainInvariantTests
         TaxiOrderService service = new(
             new InMemoryTaxiOrderRepository(),
             new DiscountPricingPolicy(0.10m),
-            new NullNotifier());
+            new NullNotifier(),
+            NullLogger<TaxiOrderService>.Instance);
         TaxiOrder order = NewOrder(2);
         order.AddSegment(new RouteSegment("Вулиця 1 - Вулиця 2", 2m, 100m));
 
