@@ -4,20 +4,21 @@ namespace TaxiDispatch.Legacy;
 
 public sealed class ReportBuilder
 {
-    public string Build(int rideId, string passengerName, List<RideLine> lines,
-        string currency, decimal discount, decimal shipping, decimal total)
+    public string Build(RideRequest req, decimal discount, decimal shipping, decimal total)
     {
         var sb = new StringBuilder();
-        sb.Append("Документ #").Append(rideId).Append('\n');
-        sb.Append("Клієнт: ").Append(passengerName).Append('\n');
-        foreach (var line in lines)
+        sb.Append("Документ #").Append(req.RideId).Append('\n');
+        sb.Append("Клієнт: ").Append(req.Passenger.Name).Append('\n');
+
+        // Lines уже перевірено на null у Handle до виклику Build.
+        foreach (var line in req.Lines!)
         {
-            sb.Append(Line(line, currency));
+            sb.Append(Line(line, req.Currency));
         }
 
-        sb.Append(Money("Знижка", discount, currency));
-        sb.Append(Money("Доставка", shipping, currency));
-        sb.Append(Money("Разом", total, currency));
+        sb.Append(Money("Знижка", discount, req.Currency));
+        sb.Append(Money("Доставка", shipping, req.Currency));
+        sb.Append(Money("Разом", total, req.Currency));
         return sb.ToString();
     }
 

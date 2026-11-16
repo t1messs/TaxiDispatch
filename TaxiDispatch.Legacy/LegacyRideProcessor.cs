@@ -30,36 +30,33 @@ public class LegacyRideProcessor
     private readonly ShippingPolicy _shipping = new();
     private readonly ReportBuilder _report = new();
 
-    public string Handle(int rideId, int passengerId,
-        string passengerName, string? passengerEmail,
-        PassengerKind passengerKind, int tripCount,
-        List<RideLine>? lines, RideState state,
-        string currency, DateTime createdAt, bool sendMail)
+    public string Handle(RideRequest req)
     {
+        IReadOnlyList<RideLine>? lines = req.Lines;
+
         // Охоронні умови: порядок перевірок той самий, що й у вкладених if.
         if (lines == null) return "ERR: null";
         if (lines.Count == 0) return "ERR: empty";
-        if (!IsProcessable(state)) return "ERR: state";
-        if (!HasValidEmail(passengerEmail)) return "ERR: mail";
+        if (!IsProcessable(req.State)) return "ERR: state";
+        if (!HasValidEmail(req.Passenger.Email)) return "ERR: mail";
 
-        _log.Add("ok " + rideId);
+        _log.Add("ok " + req.RideId);
 
         _tmpSum = Subtotal(lines);
-        _tmpDiscount = _discounts.For(_tmpSum, passengerKind, tripCount);
+        _tmpDiscount = _discounts.For(_tmpSum, req.Passenger.Kind, req.Passenger.TripCount);
         decimal ship = _shipping.For(_tmpSum - _tmpDiscount);
         decimal total = _tmpSum - _tmpDiscount + ship;
 
-        string txt = _report.Build(rideId, passengerName, lines, currency,
-            _tmpDiscount, ship, total);
+        string txt = _report.Build(req, _tmpDiscount, ship, total);
 
-        if (sendMail)
+        if (req.SendMail)
         {
-            _log.Add("mail -> " + passengerEmail);
+            _log.Add("mail -> " + req.Passenger.Email);
         }
         return txt;
     }
 
-    private static decimal Subtotal(List<RideLine> lines)
+    private static decimal Subtotal(IReadOnlyList<RideLine> lines)
     {
         decimal sum = 0m;
         for (int i = 0; i < lines.Count; i++)

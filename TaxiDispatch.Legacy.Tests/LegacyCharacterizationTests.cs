@@ -29,9 +29,8 @@ public class LegacyCharacterizationTests
         };
         var sut = new LegacyRideProcessor();
 
-        string actual = sut.Handle(
-            1001, 7, "Іван", email, PassengerKind.Regular, 0, lines, state, "UAH",
-            new DateTime(2026, 3, 1), false);
+        string actual = sut.Handle(new RideRequest(
+            1001, NewPassenger(email, PassengerKind.Regular, 0), lines, state, "UAH", false));
 
         Assert.Equal(expected, actual);
     }
@@ -41,9 +40,9 @@ public class LegacyCharacterizationTests
     {
         var sut = new LegacyRideProcessor();
 
-        string report = sut.Handle(
-            1001, 7, "Іван", "a@b.c", PassengerKind.Vip, 3, TwoLines(), RideState.New, "UAH",
-            new DateTime(2026, 3, 1), false);
+        string report = sut.Handle(new RideRequest(
+            1001, NewPassenger("a@b.c", PassengerKind.Vip, 3), TwoLines(),
+            RideState.New, "UAH", false));
 
         string expected =
             "Документ #1001\n" +
@@ -61,9 +60,9 @@ public class LegacyCharacterizationTests
     {
         var sut = new LegacyRideProcessor();
 
-        sut.Handle(
-            1001, 7, "Іван", "a@b.c", PassengerKind.Regular, 0, TwoLines(), RideState.Paid, "UAH",
-            new DateTime(2026, 3, 1), true);
+        sut.Handle(new RideRequest(
+            1001, NewPassenger("a@b.c", PassengerKind.Regular, 0), TwoLines(),
+            RideState.Paid, "UAH", true));
 
         Assert.Equal("ok 1001\nmail -> a@b.c\n", sut.DumpLog());
     }
@@ -113,6 +112,16 @@ public class LegacyCharacterizationTests
 
         Assert.Equal(expected, actual);
     }
+
+    // Пасажир з тими самими даними, що раніше передавалися окремими параметрами Handle.
+    private static Passenger NewPassenger(string email, PassengerKind kind, int trips) => new()
+    {
+        Id = 7,
+        Name = "Іван",
+        Email = email,
+        Kind = kind,
+        TripCount = trips,
+    };
 
     private static List<RideLine> TwoLines() => new()
     {
