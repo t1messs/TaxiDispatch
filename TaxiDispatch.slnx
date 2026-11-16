@@ -2,5 +2,6 @@
   <Project Path="TaxiDispatch.App/TaxiDispatch.App.csproj" />
   <Project Path="TaxiDispatch.Core/TaxiDispatch.Core.csproj" />
   <Project Path="TaxiDispatch.Legacy/TaxiDispatch.Legacy.csproj" />
+  <Project Path="TaxiDispatch.Legacy.Tests/TaxiDispatch.Legacy.Tests.csproj" />
   <Project Path="TaxiDispatch.Tests/TaxiDispatch.Tests.csproj" />
 </Solution>
