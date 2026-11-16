@@ -57,8 +57,7 @@ public sealed class TaxiOrderService
     public void AddSegment(int orderId, RouteSegment segment)
     {
         ArgumentNullException.ThrowIfNull(segment);
-        TaxiOrder order = _repository.GetById(orderId)
-            ?? throw new DomainRuleException("order.exists", $"Замовлення {orderId} не знайдено");
+        TaxiOrder order = OrderOrThrow(orderId);
         if (order.Status != OrderStatus.New)
         {
             throw new DomainRuleException(
@@ -69,27 +68,28 @@ public sealed class TaxiOrderService
         order.AddSegment(segment);
     }
 
-    // БУЛО: коди повернення без назв і сенсу
-    public int Assign(int orderId)
+    /// <summary>
+    /// Призначає водія замовленню; про порушення правил повідомляє винятком із контекстом.
+    /// </summary>
+    /// <param name="orderId">Номер замовлення.</param>
+    public void Assign(int orderId)
     {
-        var order = _repository.GetById(orderId);
-        if (order == null)
-        {
-            return -1;
-        }
-
+        TaxiOrder order = OrderOrThrow(orderId);
         if (order.Status != OrderStatus.New)
         {
-            return -2;
+            throw new DomainRuleException(
+                "order.assignable",
+                $"Стан {order.Status} не дозволяє призначити водія замовленню {orderId}");
         }
 
         if (order.Segments.Count == 0)
         {
-            return -3;
+            throw new DomainRuleException(
+                "order.route",
+                $"Замовлення {orderId} не має жодного відрізка маршруту");
         }
 
         order.Assign();
-        return 0;
     }
 
     /// <summary>Обчислює суму замовлення за поточною політикою ціни.</summary>
@@ -106,4 +106,8 @@ public sealed class TaxiOrderService
 
         return total;
     }
+
+    private TaxiOrder OrderOrThrow(int orderId) =>
+        _repository.GetById(orderId)
+            ?? throw new DomainRuleException("order.exists", $"Замовлення {orderId} не знайдено");
 }
