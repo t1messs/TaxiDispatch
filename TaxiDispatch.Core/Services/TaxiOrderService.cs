@@ -69,6 +69,29 @@ public sealed class TaxiOrderService
         order.AddSegment(segment);
     }
 
+    // БУЛО: коди повернення без назв і сенсу
+    public int Assign(int orderId)
+    {
+        var order = _repository.GetById(orderId);
+        if (order == null)
+        {
+            return -1;
+        }
+
+        if (order.Status != OrderStatus.New)
+        {
+            return -2;
+        }
+
+        if (order.Segments.Count == 0)
+        {
+            return -3;
+        }
+
+        order.Assign();
+        return 0;
+    }
+
     /// <summary>Обчислює суму замовлення за поточною політикою ціни.</summary>
     /// <param name="order">Замовлення таксі.</param>
     /// <returns>Сума всіх відрізків маршруту.</returns>
