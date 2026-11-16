@@ -69,3 +69,13 @@ dotnet_diagnostic.SA1201.severity = warning
 dotnet_diagnostic.SA1503.severity = warning 
 dotnet_diagnostic.SA1516.severity = warning 
 dotnet_diagnostic.IDE0055.severity = warning
+
+# CA1848 (LoggerMessage-делегати) і CA1873 (обчислення аргументів запису, навіть коли
+# рівень вимкнено) — оптимізації продуктивності, а не коректності: прибирають розбір
+# шаблону, упаковку й обчислення аргументів на кожному виклику. Для навчального
+# застосунку з кількома записами на операцію це несуттєво, а методичка ЛР5 вимагає
+# саме виклики LogInformation/LogWarning з іменованими заповнювачами. Для гарячих
+# шляхів у реальному проєкті застосували б [LoggerMessage] (генератор коду).
+[*.cs]
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA1873.severity = none

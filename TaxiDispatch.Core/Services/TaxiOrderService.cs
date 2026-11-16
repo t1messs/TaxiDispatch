@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using TaxiDispatch.Core.Abstractions;
 using TaxiDispatch.Core.Domain;
 using TaxiDispatch.Core.Errors;
@@ -9,9 +10,13 @@ namespace TaxiDispatch.Core.Services;
 /// </summary>
 public sealed class TaxiOrderService
 {
+    // Поріг, вище якого вартість одного відрізка вважаємо підозрілою (рівень Warning).
+    private const decimal LargeSegmentAmount = 2000m;
+
     private readonly ITaxiOrderRepository _repository;
     private readonly IPricingPolicy _pricing;
     private readonly INotifier _notifier;
+    private readonly ILogger<TaxiOrderService> _log;
 
     /// <summary>
     /// Створює сервіс із впровадженими залежностями.
@@ -19,14 +24,17 @@ public sealed class TaxiOrderService
     /// <param name="repository">Сховище замовлень.</param>
     /// <param name="pricing">Політика розрахунку ціни.</param>
     /// <param name="notifier">Сповіщувач пасажирів.</param>
+    /// <param name="log">Журнал сервісу.</param>
     public TaxiOrderService(
         ITaxiOrderRepository repository,
         IPricingPolicy pricing,
-        INotifier notifier)
+        INotifier notifier,
+        ILogger<TaxiOrderService> log)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _pricing = pricing ?? throw new ArgumentNullException(nameof(pricing));
         _notifier = notifier ?? throw new ArgumentNullException(nameof(notifier));
+        _log = log ?? throw new ArgumentNullException(nameof(log));
     }
 
     /// <summary>
@@ -43,7 +51,9 @@ public sealed class TaxiOrderService
             throw new ArgumentException("Замовлення належить іншому пасажиру.", nameof(passenger));
         }
 
+        using var scope = _log.BeginScope("Order:{OrderId}", order.Id);
         _repository.Add(order);
+        _log.LogInformation("Замовлення прийнято для пасажира {PassengerId}", passenger.Id);
         _notifier.Notify(
             passenger.PhoneNumber,
             $"Замовлення № {order.Id} прийнято, очікуємо маршрут");
@@ -57,6 +67,12 @@ public sealed class TaxiOrderService
     public void AddSegment(int orderId, RouteSegment segment)
     {
         ArgumentNullException.ThrowIfNull(segment);
+        using var scope = _log.BeginScope("Order:{OrderId}", orderId);
+        _log.LogDebug(
+            "Додаємо відрізок до {Destination}: {DistanceKm} км по {PricePerKm} грн",
+            segment.Destination,
+            segment.DistanceKm,
+            segment.PricePerKm);
         TaxiOrder order = OrderOrThrow(orderId);
         if (order.Status != OrderStatus.New)
         {
@@ -65,7 +81,16 @@ public sealed class TaxiOrderService
                 $"Редагувати можна лише нове замовлення; замовлення {orderId} — {order.Status}");
         }
 
+        if (segment.Amount > LargeSegmentAmount)
+        {
+            _log.LogWarning(
+                "Незвично дорогий відрізок: {Amount} грн, поріг {Threshold} грн",
+                segment.Amount,
+                LargeSegmentAmount);
+        }
+
         order.AddSegment(segment);
+        _log.LogInformation("Відрізок до {Destination} додано", segment.Destination);
     }
 
     /// <summary>
@@ -74,7 +99,9 @@ public sealed class TaxiOrderService
     /// <param name="orderId">Номер замовлення.</param>
     public void Assign(int orderId)
     {
+        using var scope = _log.BeginScope("Order:{OrderId}", orderId);
         TaxiOrder order = OrderOrThrow(orderId);
+        _log.LogDebug("Призначення водія, відрізків {SegmentCount}", order.Segments.Count);
         if (order.Status != OrderStatus.New)
         {
             throw new DomainRuleException(
@@ -90,6 +117,7 @@ public sealed class TaxiOrderService
         }
 
         order.Assign();
+        _log.LogInformation("Водія призначено, стан {Status}", order.Status);
     }
 
     /// <summary>Обчислює суму замовлення за поточною політикою ціни.</summary>
@@ -122,6 +150,7 @@ public sealed class TaxiOrderService
     public void Cancel(int orderId, string reason)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(reason);
+        using var scope = _log.BeginScope("Order:{OrderId}", orderId);
         TaxiOrder order = OrderOrThrow(orderId);
         try
         {
@@ -129,12 +158,19 @@ public sealed class TaxiOrderService
         }
         catch (InvalidOperationException ex)
         {
-            // Конкретний тип замість Exception; початковий виняток зберігається як inner.
+            // Виняток — першим аргументом; конкретний тип замість Exception; inner зберігається.
+            _log.LogError(
+                ex,
+                "Скасування відхилено: стан {Status}, причина {Reason}",
+                order.Status,
+                reason);
             throw new DomainRuleException(
                 "order.cancellable",
                 $"Замовлення {orderId} у стані {order.Status} скасувати не можна",
                 ex);
         }
+
+        _log.LogInformation("Замовлення скасовано: {Reason}", reason);
     }
 
     private TaxiOrder OrderOrThrow(int orderId) =>

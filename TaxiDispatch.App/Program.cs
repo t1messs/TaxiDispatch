@@ -1,4 +1,5 @@
 using System.Text;
+using Microsoft.Extensions.Logging;
 using TaxiDispatch.App;
 using TaxiDispatch.App.Input;
 using TaxiDispatch.Core.Abstractions;
@@ -11,25 +12,37 @@ using TaxiDispatch.Core.Storage;
 
 Console.OutputEncoding = Encoding.UTF8;
 
+using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+{
+    builder.AddSimpleConsole(options =>
+    {
+        options.TimestampFormat = "HH:mm:ss ";
+        options.IncludeScopes = true;
+    });
+    builder.SetMinimumLevel(LogLevel.Debug);
+});
+ILogger log = loggerFactory.CreateLogger("TaxiDispatch.App");
+
 // Верхній обробник — єдине місце, де дозволено catch (Exception).
 try
 {
-    RunApplication();
+    RunApplication(loggerFactory);
     return 0;
 }
 catch (DomainRuleException ex)
 {
-    Console.WriteLine($"Порушено правило {ex.Rule}: {ex.Message}");
+    log.LogWarning("Правило {Rule}: {Message}", ex.Rule, ex.Message);
+    Console.WriteLine($"Порушено правило: {ex.Message}");
     return 1;
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"Непередбачений збій ({ex.GetType().Name}). Роботу завершено.");
-    Console.Error.WriteLine(ex);
+    log.LogCritical(ex, "Непередбачений збій, роботу завершено");
+    Console.WriteLine("Непередбачений збій. Подробиці — у журналі.");
     return 2;
 }
 
-static void RunApplication()
+static void RunApplication(ILoggerFactory loggerFactory)
 {
     // Композиційний корінь: єдине місце, де створюються конкретні реалізації.
     // Таблиця відповідності замість ланцюга if за типом клієнта (OCP).
@@ -46,7 +59,11 @@ static void RunApplication()
         : new StandardPricingPolicy();
 
     var repository = new InMemoryTaxiOrderRepository();
-    var service = new TaxiOrderService(repository, pricing, new ConsoleNotifier());
+    var service = new TaxiOrderService(
+        repository,
+        pricing,
+        new ConsoleNotifier(),
+        loggerFactory.CreateLogger<TaxiOrderService>());
 
     var passenger = new Passenger(100, "Іваненко", "+380501234567");
     var order = new TaxiOrder(1, passenger.Id, DateOnly.FromDateTime(DateTime.Today));
@@ -69,6 +86,17 @@ static void RunApplication()
         Console.WriteLine($"Архів: замовлення {archived.Id}, стан {archived.Status}");
 
         Console.Write(TaxiOrderCsvReport.BuildCsv(repository.GetAll(), service.TotalOf));
+
+        // Пасажир намагається скасувати вже завершену поїздку: правило порушено,
+        // це помилка користувача — повідомляємо й працюємо далі.
+        try
+        {
+            service.Cancel(order.Id, "пасажир передумав");
+        }
+        catch (DomainRuleException ex)
+        {
+            Console.WriteLine($"Скасування неможливе: {ex.Message}");
+        }
     }
 }
 
