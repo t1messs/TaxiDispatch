@@ -107,6 +107,35 @@ public sealed class TaxiOrderService
         return total;
     }
 
+    // АНТИПАТЕРН 1: порожній catch, дефект зникає
+    public TaxiOrder? Load(int orderId)
+    {
+        try
+        {
+            return _repository.GetById(orderId);
+        }
+        catch (Exception)
+        {
+        }
+
+        return null;
+    }
+
+    // АНТИПАТЕРНИ 2 і 3: широке перехоплення, throw ex
+    public void Cancel(int orderId, string reason)
+    {
+        try
+        {
+            var order = _repository.GetById(orderId);
+            order.Cancel();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Щось пішло не так");
+            throw ex;
+        }
+    }
+
     private TaxiOrder OrderOrThrow(int orderId) =>
         _repository.GetById(orderId)
             ?? throw new DomainRuleException("order.exists", $"Замовлення {orderId} не знайдено");

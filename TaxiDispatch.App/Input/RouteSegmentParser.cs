@@ -42,6 +42,29 @@ internal static class RouteSegmentParser
         return Result.Ok(new RouteSegment(destination.Trim(), distance, price));
     }
 
+    // АНТИПАТЕРН 4: try/catch замість звичайної умови
+    public static int CountValidDistances(string[] rows)
+    {
+        var valid = 0;
+        foreach (var row in rows)
+        {
+            try
+            {
+                var km = decimal.Parse(row, InputCulture);
+                if (km > 0)
+                {
+                    valid++;
+                }
+            }
+            catch (FormatException)
+            {
+                // не число — пропускаємо
+            }
+        }
+
+        return valid;
+    }
+
     private static bool TryParseNumber(string? text, out decimal value)
     {
         string normalized = (text ?? string.Empty).Trim().Replace('.', ',');
