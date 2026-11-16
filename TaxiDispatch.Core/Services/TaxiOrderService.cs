@@ -30,7 +30,7 @@ public sealed class TaxiOrderService
     }
 
     /// <summary>
-    /// Приймає замовлення: зберігає його та сповіщає пасажира про суму.
+    /// Приймає замовлення: зберігає його та сповіщає пасажира.
     /// </summary>
     /// <param name="order">Замовлення таксі.</param>
     /// <param name="passenger">Пасажир, якому належить замовлення.</param>
@@ -46,7 +46,7 @@ public sealed class TaxiOrderService
         _repository.Add(order);
         _notifier.Notify(
             passenger.PhoneNumber,
-            $"Замовлення № {order.Id} прийнято. Сума: {TotalOf(order):0.00}");
+            $"Замовлення № {order.Id} прийнято, очікуємо маршрут");
     }
 
     /// <summary>
