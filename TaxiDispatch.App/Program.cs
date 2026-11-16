@@ -35,6 +35,20 @@ catch (DomainRuleException ex)
     Console.WriteLine($"Порушено правило: {ex.Message}");
     return 1;
 }
+catch (UnauthorizedAccessException ex)
+{
+    // Помилка середовища: немає прав на файл звіту чи аудиту.
+    log.LogError(ex, "Немає доступу до файлу");
+    Console.WriteLine("Немає доступу до файлу звіту або журналу аудиту.");
+    return 3;
+}
+catch (IOException ex)
+{
+    // Помилка середовища: файл заблоковано, диск переповнено тощо.
+    log.LogError(ex, "Збій файлової системи");
+    Console.WriteLine("Не вдалося записати файл: він зайнятий або на диску немає місця.");
+    return 3;
+}
 catch (Exception ex)
 {
     log.LogCritical(ex, "Непередбачений збій, роботу завершено");
@@ -65,9 +79,13 @@ static void RunApplication(ILoggerFactory loggerFactory)
         new ConsoleNotifier(),
         loggerFactory.CreateLogger<TaxiOrderService>());
 
+    // using гарантує Dispose (закриття файлу) навіть тоді, коли далі кинуто виняток.
+    using var audit = new FileAuditLog("audit.log");
+
     var passenger = new Passenger(100, "Іваненко", "+380501234567");
     var order = new TaxiOrder(1, passenger.Id, DateOnly.FromDateTime(DateTime.Today));
     service.Place(order, passenger);
+    audit.Write("Place", order.Id);
 
     ReadSegments(service, order.Id);
 
@@ -78,16 +96,19 @@ static void RunApplication(ILoggerFactory loggerFactory)
     else
     {
         service.Assign(order.Id);
+        audit.Write("Assign", order.Id);
         Console.WriteLine($"Сума: {service.TotalOf(order):0.00}");
 
         order.Start();
         order.Complete();
+        audit.Write("Complete", order.Id);
         var archived = new ArchivedTaxiOrder(order, DateOnly.FromDateTime(DateTime.Today));
         Console.WriteLine($"Архів: замовлення {archived.Id}, стан {archived.Status}");
 
         Console.Write(TaxiOrderCsvReport.BuildCsv(repository.GetAll(), service.TotalOf));
         ReportFileExporter.Export("report.csv", repository.GetAll(), service.TotalOf);
-        Console.WriteLine("Звіт збережено у report.csv");
+        audit.Write("Export", order.Id);
+        Console.WriteLine("Звіт збережено у report.csv, аудит — у audit.log");
 
         // Пасажир намагається скасувати вже завершену поїздку: правило порушено,
         // це помилка користувача — повідомляємо й працюємо далі.
