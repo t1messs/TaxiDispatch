@@ -13,7 +13,7 @@ public class FileOrderStore : ITaxiOrderStore
         File.WriteAllText(path, order.Id + ";" + order.Total + ";" + order.Status);
     }
 
-    public void SendEmail(string to, string body) => throw new NotSupportedException();
+    public void SendEmail(string recipient, string body) => throw new NotSupportedException();
 
     public string ExportCsv() => throw new NotSupportedException();
 

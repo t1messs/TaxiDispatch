@@ -9,7 +9,7 @@ public interface ITaxiOrderStore
 
     void SaveToFile(LegacyTaxiOrder order, string path);
 
-    void SendEmail(string to, string body);
+    void SendEmail(string recipient, string body);
 
     string ExportCsv();
 

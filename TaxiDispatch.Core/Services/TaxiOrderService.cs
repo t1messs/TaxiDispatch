@@ -1,5 +1,6 @@
 using TaxiDispatch.Core.Abstractions;
 using TaxiDispatch.Core.Domain;
+using TaxiDispatch.Core.Errors;
 
 namespace TaxiDispatch.Core.Services;
 
@@ -48,13 +49,24 @@ public sealed class TaxiOrderService
             $"Замовлення № {order.Id} прийнято. Сума: {TotalOf(order):0.00}");
     }
 
-    // БУЛО: барикади немає, ядро саме розбирає рядки з консолі
-    public void AddSegment(int orderId, string destination, string distanceKm, string pricePerKm)
+    /// <summary>
+    /// Додає до замовлення вже перевірений відрізок маршруту (ядро не знає про рядки).
+    /// </summary>
+    /// <param name="orderId">Номер замовлення.</param>
+    /// <param name="segment">Відрізок, отриманий від барикади.</param>
+    public void AddSegment(int orderId, RouteSegment segment)
     {
-        var order = _repository.GetById(orderId);
-        var distance = decimal.Parse(distanceKm);
-        var price = decimal.Parse(pricePerKm);
-        order.AddSegment(new RouteSegment(destination, distance, price));
+        ArgumentNullException.ThrowIfNull(segment);
+        TaxiOrder order = _repository.GetById(orderId)
+            ?? throw new DomainRuleException("order.exists", $"Замовлення {orderId} не знайдено");
+        if (order.Status != OrderStatus.New)
+        {
+            throw new DomainRuleException(
+                "order.editable",
+                $"Редагувати можна лише нове замовлення; замовлення {orderId} — {order.Status}");
+        }
+
+        order.AddSegment(segment);
     }
 
     /// <summary>Обчислює суму замовлення за поточною політикою ціни.</summary>
