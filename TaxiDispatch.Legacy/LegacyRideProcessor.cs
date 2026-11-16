@@ -11,6 +11,18 @@ public class Passenger
     public PassengerKind Kind = PassengerKind.Regular;
     public int TripCount;
     public DateTime SinceUtc;
+
+    // Перенесено з LegacyRideProcessor.DescribePassenger: метод читав лише поля Passenger.
+    public string Describe()
+    {
+        string s = Name.Trim().ToUpper();
+        if (Kind == PassengerKind.Vip) s += " [VIP]";
+        if (TripCount > PricingRules.LoyalTrips) s += " [ЛОЯЛЬНИЙ]";
+        s += " <" + Email.ToLower() + ">";
+        int years = DateTime.Now.Year - SinceUtc.Year;
+        s += " стаж " + years;
+        return s;
+    }
 }
 
 public class RideLine
@@ -79,17 +91,6 @@ public class LegacyRideProcessor
         decimal subtotal = Subtotal(lines);
         decimal payable = subtotal - _discounts.For(subtotal, passengerKind, tripCount);
         return payable + _shipping.For(payable);
-    }
-
-    public string DescribePassenger(Passenger c)
-    {
-        string s = c.Name.Trim().ToUpper();
-        if (c.Kind == PassengerKind.Vip) s += " [VIP]";
-        if (c.TripCount > PricingRules.LoyalTrips) s += " [ЛОЯЛЬНИЙ]";
-        s += " <" + c.Email.ToLower() + ">";
-        int years = DateTime.Now.Year - c.SinceUtc.Year;
-        s += " стаж " + years;
-        return s;
     }
 
     public string DumpLog()
