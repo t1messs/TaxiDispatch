@@ -14,12 +14,12 @@ public class LegacyCharacterizationTests
     }
 
     [Theory]
-    [InlineData(null, "new", "a@b.c", "ERR: null")]
-    [InlineData("empty", "new", "a@b.c", "ERR: empty")]
-    [InlineData("two", "draft", "a@b.c", "ERR: state")]
-    [InlineData("two", "new", "no-mail", "ERR: mail")]
+    [InlineData(null, RideState.New, "a@b.c", "ERR: null")]
+    [InlineData("empty", RideState.New, "a@b.c", "ERR: empty")]
+    [InlineData("two", RideState.Draft, "a@b.c", "ERR: state")]
+    [InlineData("two", RideState.New, "no-mail", "ERR: mail")]
     public void Handle_BadInput_ReturnsErrorCode(
-        string? kindOfLines, string state, string email, string expected)
+        string? kindOfLines, RideState state, string email, string expected)
     {
         List<RideLine>? lines = kindOfLines switch
         {
@@ -30,7 +30,7 @@ public class LegacyCharacterizationTests
         var sut = new LegacyRideProcessor();
 
         string actual = sut.Handle(
-            1001, 7, "Іван", email, "regular", 0, lines, state, "UAH",
+            1001, 7, "Іван", email, PassengerKind.Regular, 0, lines, state, "UAH",
             new DateTime(2026, 3, 1), false);
 
         Assert.Equal(expected, actual);
@@ -42,7 +42,7 @@ public class LegacyCharacterizationTests
         var sut = new LegacyRideProcessor();
 
         string report = sut.Handle(
-            1001, 7, "Іван", "a@b.c", "vip", 3, TwoLines(), "new", "UAH",
+            1001, 7, "Іван", "a@b.c", PassengerKind.Vip, 3, TwoLines(), RideState.New, "UAH",
             new DateTime(2026, 3, 1), false);
 
         string expected =
@@ -62,18 +62,18 @@ public class LegacyCharacterizationTests
         var sut = new LegacyRideProcessor();
 
         sut.Handle(
-            1001, 7, "Іван", "a@b.c", "regular", 0, TwoLines(), "paid", "UAH",
+            1001, 7, "Іван", "a@b.c", PassengerKind.Regular, 0, TwoLines(), RideState.Paid, "UAH",
             new DateTime(2026, 3, 1), true);
 
         Assert.Equal("ok 1001\nmail -> a@b.c\n", sut.DumpLog());
     }
 
     [Theory]
-    [InlineData("regular", 0, 760)]
-    [InlineData("vip", 0, 655)]
-    [InlineData("staff", 0, 550)]
-    [InlineData("regular", 11, 725)]
-    public void Preview_ByKind_ReturnsTotal(string kind, int trips, decimal expected)
+    [InlineData(PassengerKind.Regular, 0, 760)]
+    [InlineData(PassengerKind.Vip, 0, 655)]
+    [InlineData(PassengerKind.Staff, 0, 550)]
+    [InlineData(PassengerKind.Regular, 11, 725)]
+    public void Preview_ByKind_ReturnsTotal(PassengerKind kind, int trips, decimal expected)
     {
         var sut = new LegacyRideProcessor();
 
@@ -88,7 +88,7 @@ public class LegacyCharacterizationTests
         var sut = new LegacyRideProcessor();
         var lines = new List<RideLine> { new() { Code = "R-9", Km = 10, PricePerKm = 100m } };
 
-        decimal total = sut.Preview("regular", 0, lines);
+        decimal total = sut.Preview(PassengerKind.Regular, 0, lines);
 
         Assert.Equal(1000m, total);
     }
@@ -100,7 +100,7 @@ public class LegacyCharacterizationTests
         {
             Name = " іван ",
             Email = "IVAN@MAIL.COM",
-            Kind = "vip",
+            Kind = PassengerKind.Vip,
             TripCount = 12,
             SinceUtc = new DateTime(2020, 1, 1),
         };

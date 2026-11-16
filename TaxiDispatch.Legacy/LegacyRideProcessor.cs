@@ -8,7 +8,7 @@ public class Passenger
     public int Id;
     public string Name = "";
     public string Email = "";
-    public string Kind = "regular";
+    public PassengerKind Kind = PassengerKind.Regular;
     public int TripCount;
     public DateTime SinceUtc;
 }
@@ -29,15 +29,15 @@ public class LegacyRideProcessor
 
     public string Handle(int rideId, int passengerId,
         string passengerName, string? passengerEmail,
-        string passengerKind, int tripCount,
-        List<RideLine>? lines, string state,
+        PassengerKind passengerKind, int tripCount,
+        List<RideLine>? lines, RideState state,
         string currency, DateTime createdAt, bool sendMail)
     {
         if (lines != null)
         {
             if (lines.Count > 0)
             {
-                if (state == "new" || state == "paid")
+                if (state == RideState.New || state == RideState.Paid)
                 {
                     if (passengerEmail != null &&
                         passengerEmail.Contains("@"))
@@ -71,12 +71,12 @@ public class LegacyRideProcessor
         }
 
         _tmpDiscount = 0m;
-        if (passengerKind == "vip")
+        if (passengerKind == PassengerKind.Vip)
         {
             _tmpDiscount = _tmpSum * PricingRules.VipRate;
             if (_tmpDiscount > PricingRules.MaxDiscount) _tmpDiscount = PricingRules.MaxDiscount;
         }
-        else if (passengerKind == "staff")
+        else if (passengerKind == PassengerKind.Staff)
         {
             _tmpDiscount = _tmpSum * PricingRules.StaffRate;
             if (_tmpDiscount > PricingRules.MaxDiscount) _tmpDiscount = PricingRules.MaxDiscount;
@@ -113,7 +113,7 @@ public class LegacyRideProcessor
         return txt;
     }
 
-    public decimal Preview(string passengerKind, int tripCount,
+    public decimal Preview(PassengerKind passengerKind, int tripCount,
         List<RideLine> lines)
     {
         decimal s = 0m;
@@ -122,12 +122,12 @@ public class LegacyRideProcessor
             s += it.Km * it.PricePerKm;
         }
         decimal d = 0m;
-        if (passengerKind == "vip")
+        if (passengerKind == PassengerKind.Vip)
         {
             d = s * PricingRules.VipRate;
             if (d > PricingRules.MaxDiscount) d = PricingRules.MaxDiscount;
         }
-        else if (passengerKind == "staff")
+        else if (passengerKind == PassengerKind.Staff)
         {
             d = s * PricingRules.StaffRate;
             if (d > PricingRules.MaxDiscount) d = PricingRules.MaxDiscount;
@@ -145,7 +145,7 @@ public class LegacyRideProcessor
     public string DescribePassenger(Passenger c)
     {
         string s = c.Name.Trim().ToUpper();
-        if (c.Kind == "vip") s += " [VIP]";
+        if (c.Kind == PassengerKind.Vip) s += " [VIP]";
         if (c.TripCount > PricingRules.LoyalTrips) s += " [ЛОЯЛЬНИЙ]";
         s += " <" + c.Email.ToLower() + ">";
         int years = DateTime.Now.Year - c.SinceUtc.Year;
