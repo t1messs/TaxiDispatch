@@ -86,6 +86,8 @@ static void RunApplication(ILoggerFactory loggerFactory)
         Console.WriteLine($"Архів: замовлення {archived.Id}, стан {archived.Status}");
 
         Console.Write(TaxiOrderCsvReport.BuildCsv(repository.GetAll(), service.TotalOf));
+        ReportFileExporter.Export("report.csv", repository.GetAll(), service.TotalOf);
+        Console.WriteLine("Звіт збережено у report.csv");
 
         // Пасажир намагається скасувати вже завершену поїздку: правило порушено,
         // це помилка користувача — повідомляємо й працюємо далі.
