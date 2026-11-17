@@ -16,8 +16,16 @@ public class Passenger
     public string Describe()
     {
         string s = Name.Trim().ToUpper();
-        if (Kind == PassengerKind.Vip) s += " [VIP]";
-        if (TripCount > PricingRules.LoyalTrips) s += " [ЛОЯЛЬНИЙ]";
+        if (Kind == PassengerKind.Vip)
+        {
+            s += " [VIP]";
+        }
+
+        if (TripCount > PricingRules.LoyalTrips)
+        {
+            s += " [ЛОЯЛЬНИЙ]";
+        }
+
         s += " <" + Email.ToLower() + ">";
         int years = DateTime.Now.Year - SinceUtc.Year;
         s += " стаж " + years;
@@ -45,10 +53,25 @@ public class LegacyRideProcessor
         IReadOnlyList<RideLine>? lines = req.Lines;
 
         // Охоронні умови: порядок перевірок той самий, що й у вкладених if.
-        if (lines == null) return "ERR: null";
-        if (lines.Count == 0) return "ERR: empty";
-        if (!IsProcessable(req.State)) return "ERR: state";
-        if (!HasValidEmail(req.Passenger.Email)) return "ERR: mail";
+        if (lines == null)
+        {
+            return "ERR: null";
+        }
+
+        if (lines.Count == 0)
+        {
+            return "ERR: empty";
+        }
+
+        if (!IsProcessable(req.State))
+        {
+            return "ERR: state";
+        }
+
+        if (!HasValidEmail(req.Passenger.Email))
+        {
+            return "ERR: mail";
+        }
 
         _log.Add("ok " + req.RideId);
 
@@ -94,7 +117,11 @@ public class LegacyRideProcessor
     public string DumpLog()
     {
         string r = "";
-        foreach (var l in _log) r += l + "\n";
+        foreach (var l in _log)
+        {
+            r += l + "\n";
+        }
+
         return r;
     }
 }

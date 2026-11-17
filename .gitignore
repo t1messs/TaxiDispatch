@@ -495,3 +495,9 @@ audit.log
 # ЛР7: результати запуску тестів і звіт покриття
 TestResults/
 coverage/
+coverage.cobertura.xml
+
+# ЛР8: локальні налаштування й секрети не потрапляють у репозиторій
+appsettings.Local.json
+**/*.secrets.json
+.env*

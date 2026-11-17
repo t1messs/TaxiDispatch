@@ -1,14 +1,18 @@
 # TaxiDispatch
 
+![CI](https://github.com/t1messs/TaxiDispatch/actions/workflows/ci.yml/badge.svg)
+
 Навчальний проєкт з дисципліни «Конструювання програмного забезпечення».
 Варіант № 13: приймання й розподіл замовлень таксі.
 
 ## Склад рішення
 - `TaxiDispatch.Core` — логіка предметної області (бібліотека класів): домен, сервіс,
-  політики ціни, винятки `Errors/DomainRuleException` і тип `Errors/Result`.
-- `TaxiDispatch.App` — консольний застосунок: введення, барикада `Input/RouteSegmentParser`,
-  журнал, файли звіту та аудиту.
-- `TaxiDispatch.Tests` — модульні тести (xUnit).
+  політики ціни, барикада вводу `Input/RouteSegmentParser`, винятки
+  `Errors/DomainRuleException` і тип `Errors/Result`.
+- `TaxiDispatch.App` — консольний застосунок: введення, журнал, файли звіту та аудиту.
+- `TaxiDispatch.Tests` — модульні тести ядра (xUnit).
+- `TaxiDispatch.Legacy`, `TaxiDispatch.Legacy.Tests` — успадкований модуль (ЛР6) і його
+  характеризаційні тести.
 
 ## Вимоги
 .NET SDK 10.0 або новіший, Git.
@@ -44,3 +48,24 @@ dotnet run --project TaxiDispatch.App
 
 ## Автор
 Польщенко Нікіта, група 472
+
+## Безперервна інтеграція
+Конвеєр `.github/workflows/ci.yml` (GitHub Actions) запускається на кожен push у `main`
+і `feature/**` та на кожен pull request у `main`. Зміна потрапляє в `main`, лише якщо
+виконано всі критерії якості:
+
+| Крок | Команда | Що ламає збірку |
+|---|---|---|
+| Форматування | `dotnet format --verify-no-changes` | відступ, пробіл, порядок `using`, іменування |
+| Складання | `dotnet build -c Release` | будь-яке попередження CS, CA, SA, IDE (`TreatWarningsAsErrors`) або вразливий пакет (`NuGetAudit`) |
+| Тести | `dotnet test -c Release` | хоча б один червоний тест |
+| Покриття | `/p:Threshold=60 /p:ThresholdType=line` | покриття рядків нижче за 60 % |
+
+Спільні налаштування складання (версія, попередження як помилки, аналізатори) — у
+`Directory.Build.props`, правила стилю й серйозності — у `.editorconfig`.
+Перед пушем варто виконати ті самі перевірки локально:
+```bash
+dotnet format --verify-no-changes
+dotnet build -c Release
+dotnet test -c Release /p:CollectCoverage=true /p:Threshold=60 /p:ThresholdType=line
+```

@@ -36,6 +36,17 @@ dotnet_naming_symbols.priv_field.applicable_accessibilities = private
 dotnet_naming_style.underscore_camel.capitalization = camel_case
 dotnet_naming_style.underscore_camel.required_prefix = _
 
+# константи — PascalCase, як у .NET (правило конкретніше, тож має пріоритет над priv_field)
+dotnet_naming_rule.const_pascal.symbols = const_field
+dotnet_naming_rule.const_pascal.style = pascal
+dotnet_naming_rule.const_pascal.severity = warning
+
+dotnet_naming_symbols.const_field.applicable_kinds = field
+dotnet_naming_symbols.const_field.applicable_accessibilities = *
+dotnet_naming_symbols.const_field.required_modifiers = const
+
+dotnet_naming_style.pascal.capitalization = pascal_case
+
 # StyleCop: свідомо вимкнені правила 
 # заголовок з ліцензією в навчальному проєкті не потрібен 
 dotnet_diagnostic.SA1633.severity = none 
@@ -49,11 +60,12 @@ dotnet_diagnostic.SA1200.severity = none
 # приватні поля іменуємо з _, як прийнято в .NET 
 dotnet_diagnostic.SA1309.severity = none 
 
-# XML-документацію вимагатимемо з ЛР № 4, поки що ні 
-dotnet_diagnostic.SA0001.severity = none 
-dotnet_diagnostic.SA1600.severity = none 
-dotnet_diagnostic.SA1601.severity = none 
-dotnet_diagnostic.SA1602.severity = none 
+# XML-документацію пишемо для публічного API ядра (ЛР4), але не вимагаємо
+# для кожного члена: тести, Program.cs і внутрішні типи її не потребують
+dotnet_diagnostic.SA0001.severity = none
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.SA1601.severity = none
+dotnet_diagnostic.SA1602.severity = none
 dotnet_diagnostic.SA1611.severity = none
 dotnet_diagnostic.SA1616.severity = none
 dotnet_diagnostic.SA1623.severity = none
@@ -69,6 +81,9 @@ dotnet_diagnostic.SA1201.severity = warning
 dotnet_diagnostic.SA1503.severity = warning 
 dotnet_diagnostic.SA1516.severity = warning 
 dotnet_diagnostic.IDE0055.severity = warning
+
+# ЛР8: форматування рядків і чисел лише з явною культурою
+dotnet_diagnostic.CA1305.severity = warning
 
 # CA1848 (LoggerMessage-делегати) і CA1873 (обчислення аргументів запису, навіть коли
 # рівень вимкнено) — оптимізації продуктивності, а не коректності: прибирають розбір
