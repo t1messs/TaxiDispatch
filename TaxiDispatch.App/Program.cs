@@ -2,6 +2,7 @@ using System.Text;
 using Microsoft.Extensions.Logging;
 using TaxiDispatch.App;
 using TaxiDispatch.App.Input;
+using TaxiDispatch.Core;
 using TaxiDispatch.Core.Abstractions;
 using TaxiDispatch.Core.Domain;
 using TaxiDispatch.Core.Errors;
@@ -11,6 +12,7 @@ using TaxiDispatch.Core.Services;
 using TaxiDispatch.Core.Storage;
 
 Console.OutputEncoding = Encoding.UTF8;
+Console.WriteLine($"TaxiDispatch v{VersionInfo.Current()}");
 
 using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
 {

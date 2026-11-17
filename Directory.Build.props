@@ -1,10 +1,16 @@
-<Project> 
-  <PropertyGroup> 
-    <Nullable>enable</Nullable> 
-    <ImplicitUsings>enable</ImplicitUsings> 
-    <LangVersion>latest</LangVersion> 
-    <EnableNETAnalyzers>true</EnableNETAnalyzers> 
-    <AnalysisLevel>latest-recommended</AnalysisLevel> 
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>  
-  </PropertyGroup> 
+<Project>
+  <!-- Спільні властивості для всіх проєктів рішення (ЛР8). -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <VersionPrefix>0.8.0</VersionPrefix>
+    <Authors>Польщенко Нікіта</Authors>
+    <Product>TaxiDispatch</Product>
+  </PropertyGroup>
 </Project>
