@@ -495,3 +495,4 @@ audit.log
 # ЛР7: результати запуску тестів і звіт покриття
 TestResults/
 coverage/
+coverage.cobertura.xml
