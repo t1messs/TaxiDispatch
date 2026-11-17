@@ -12,5 +12,8 @@
     <VersionPrefix>0.8.0</VersionPrefix>
     <Authors>Польщенко Нікіта</Authors>
     <Product>TaxiDispatch</Product>
+    <!-- ЛР8: аудит вразливих пакетів (зокрема транзитивних) під час відновлення -->
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
   </PropertyGroup>
 </Project>
