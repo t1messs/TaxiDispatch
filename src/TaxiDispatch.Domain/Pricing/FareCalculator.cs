@@ -3,7 +3,7 @@ namespace TaxiDispatch.Domain.Pricing;
 /// <summary>
 /// Вартість поїздки за правилом 4.1 специфікації. Чисті функції без побічних ефектів.
 /// </summary>
-public static class FareCalculator
+public  static class FareCalculator
 {
     /// <summary>Множник вартості для посадки вночі.</summary>
     public const decimal NightSurcharge = 1.25m;
