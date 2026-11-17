@@ -63,7 +63,7 @@
 - **Постумова:** нове замовлення в стані `New` збережено у файлі.
 - **Правила:** таблиця 4.1 (попередня вартість).
 - **Тести:** `Accept_ValidRequest_CreatesNewOrder`, `Accept_UnknownPhone_RegistersPassenger`,
-  `Accept_UnknownPlace_ReturnsError`, `Accept_TooShortTrip_ReturnsError`.
+  `ParsePlace_UnknownCode_ReturnsError`, `Accept_TooShortTrip_ReturnsError`.
 
 ### UC-02. Призначити водія
 - **Дійова особа:** оператор.
@@ -84,7 +84,7 @@
     Warning.
 - **Постумова:** стан `Assigned`, водій зайнятий.
 - **Тести:** `Assign_FreeDriverNearby_AssignsNearest`,
-  `Assign_NoDriverInRadius_ReturnsFailureAndKeepsNew`, `Assign_OrderNotNew_Throws`.
+  `Assign_NoDriverInRadius_ReturnsFailureAndKeepsNew`, `Assign_OrderNotNew_ThrowsAndKeepsOtherDriverFree`.
 
 ### UC-03. Виконати поїздку
 - **Дійова особа:** оператор (за повідомленням водія).
@@ -105,7 +105,7 @@
   - 3б. Замовлення не в стані `InProgress` — завершення відхилено.
 - **Постумова:** стан `Completed`, вартість збережено, водій вільний.
 - **Тести:** `Complete_InProgressOrder_SetsFareAndFreesDriver`,
-  `Complete_InvalidActualKm_ReturnsError`, `Start_OrderNotAssigned_Throws`.
+  `ParseActualKm_InvalidValue_ReturnsError`, `Start_OrderNotAssigned_Throws`.
 
 ### UC-04. Скасувати замовлення
 - **Дійова особа:** оператор.
@@ -153,7 +153,7 @@
   - 2а. Завершених поїздок у зміні немає — звіт із нульовими підсумками й повідомленням.
 - **Постумова:** дані не змінюються.
 - **Тести:** `Build_EmptyShift_ReturnsZeroTotals`, `Build_OneRide_ReturnsOneRow`,
-  `Build_SeveralRides_SortsByCompletionAndTotalsDrivers`, `For_NightShift_EndsNextMorning`.
+  `Build_SeveralRides_SortsByCompletionAndTotalsDrivers`, `Contains_TimeAfterMidnight_BelongsToNightShiftOfPreviousDate`.
 
 ## 4. Правила домену
 
@@ -169,7 +169,7 @@
 | Comfort | 55 | 16 | 120 |
 | Business | 90 | 26 | 220 |
 
-Таблиця рішень (кожен рядок — випадок параметризованого тесту `Calculate_DecisionTable`):
+Таблиця рішень (кожен рядок — випадок параметризованого тесту `Calculate_DecisionTableRow_ReturnsExpectedFare`):
 
 | № | Клас | Км | Час доби | Посадка + км | Вартість, грн | Що перевіряє |
 |---|---|---|---|---|---|---|
@@ -204,7 +204,8 @@
 - Відстань рівно 5 км — кандидат (межа включно).
 - Жодного кандидата — призначення не відбувається (UC-02, 2а).
 - Тести: `Choose_TwoCandidates_ReturnsNearest`, `Choose_EqualDistance_PrefersHigherRating`,
-  `Choose_DriverExactlyAtRadius_IsCandidate`, `Choose_BusyOrOtherClass_IsSkipped`.
+  `Choose_DriverExactlyAtRadius_IsCandidate`,
+  `Choose_DriverJustBeyondRadius_ReturnsNull`, `Choose_BusyOrOtherClass_ReturnsNull`.
 
 ### 4.3. Життєвий цикл замовлення
 
@@ -249,4 +250,14 @@
 
 ## 7. Розбіжності з реалізацією
 
-Заповнюється після реалізації.
+Специфікацію написано до коду; після реалізації (тег `v1.0`) розбіжності такі:
+
+- Назви кількох тестів уточнено під схему `Метод_Умова_Результат` (вище наведено фактичні).
+  Перевірку некоректного вводу (місце, пробіг) винесено з тестів сервісів у тести барикади
+  `InputParserTests`, бо саме там ввід і перевіряється.
+- UC-03 у меню розділено на два пункти — «Почати поїздку» і «Завершити поїздку»: кроки 1–2 і
+  3–5 сценарію виконуються в різний час.
+- Повідомлення про заборонений перехід містить англійські назви стану й дії
+  (`Дію Cancel заборонено для замовлення в стані Completed`) — як у таблиці 4.3.
+- Помилки вводу не записуються до журналу (лише повторний запит) — див. `docs/self-check.md`,
+  пункт 14.

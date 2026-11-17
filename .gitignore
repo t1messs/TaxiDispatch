@@ -504,3 +504,4 @@ appsettings.Local.json
 
 # СР3: робочий стан застосунку (data/ — лише умовні дані)
 state/
+coveragereport/
