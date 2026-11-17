@@ -26,7 +26,7 @@
 ```bash
 dotnet build
 dotnet test
-dotnet run --project TaxiDispatch.App
+dotnet run --project src/TaxiDispatch.App
 ```
 Застосунок запитує відрізки маршруту (адреса, дистанція, ціна за кілометр);
 щоб завершити введення, введіть «готово» замість адреси. Дробові числа — з комою
