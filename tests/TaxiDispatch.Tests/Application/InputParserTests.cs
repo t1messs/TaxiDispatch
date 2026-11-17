@@ -107,6 +107,24 @@ public class InputParserTests
         Assert.False(InputParser.ParseOrderId(text).IsSuccess);
     }
 
+    [Theory]
+    [InlineData("")]
+    [InlineData("  ")]
+    public void ParseOptionalCriteria_EmptyText_ReturnsNull(string text)
+    {
+        Assert.Null(InputParser.ParseOptionalDate(text).Value);
+        Assert.Null(InputParser.ParseOptionalPhone(text).Value);
+        Assert.Null(InputParser.ParseOptionalStatus(text).Value);
+    }
+
+    [Fact]
+    public void ParseOptionalCriteria_WrongText_ReturnsError()
+    {
+        Assert.False(InputParser.ParseOptionalDate("вчора").IsSuccess);
+        Assert.False(InputParser.ParseOptionalPhone("0501234567").IsSuccess);
+        Assert.False(InputParser.ParseOptionalStatus("Paid").IsSuccess);
+    }
+
     [Fact]
     public void ParseDateAndShift_ValidText_ReturnsValues()
     {

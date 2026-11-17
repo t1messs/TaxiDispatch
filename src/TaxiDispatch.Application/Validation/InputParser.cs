@@ -149,6 +149,38 @@ public static class InputParser
             ? Result.Ok(date)
             : Result.Fail<DateOnly>("Дата у форматі дд.мм.рррр, наприклад 17.11.2026.");
 
+    /// <summary>Розбирає необов'язкову дату для пошуку: порожній ввід — <c>null</c>.</summary>
+    /// <param name="text">Введений рядок.</param>
+    /// <returns>Дата, <c>null</c> або пояснення помилки.</returns>
+    public static Result<DateOnly?> ParseOptionalDate(string? text)
+    {
+        if (Normalize(text).Length == 0)
+        {
+            return Result.Ok<DateOnly?>(null);
+        }
+
+        Result<DateOnly> date = ParseDate(text);
+        return date.IsSuccess
+            ? Result.Ok<DateOnly?>(date.Value)
+            : Result.Fail<DateOnly?>(date.Error);
+    }
+
+    /// <summary>Розбирає необов'язковий телефон для пошуку: порожній ввід — <c>null</c>.</summary>
+    /// <param name="text">Введений рядок.</param>
+    /// <returns>Телефон, <c>null</c> або пояснення помилки.</returns>
+    public static Result<string?> ParseOptionalPhone(string? text)
+    {
+        if (Normalize(text).Length == 0)
+        {
+            return Result.Ok<string?>(null);
+        }
+
+        Result<string> phone = ParsePhone(text);
+        return phone.IsSuccess
+            ? Result.Ok<string?>(phone.Value)
+            : Result.Fail<string?>(phone.Error);
+    }
+
     /// <summary>Розбирає вид зміни: «д» або «н» (чи Day, Night).</summary>
     /// <param name="text">Введений рядок.</param>
     /// <returns>Вид зміни або пояснення помилки.</returns>
