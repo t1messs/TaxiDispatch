@@ -1,7 +1,11 @@
 <Solution>
-  <Project Path="TaxiDispatch.App/TaxiDispatch.App.csproj" />
-  <Project Path="TaxiDispatch.Core/TaxiDispatch.Core.csproj" />
-  <Project Path="TaxiDispatch.Legacy/TaxiDispatch.Legacy.csproj" />
-  <Project Path="TaxiDispatch.Legacy.Tests/TaxiDispatch.Legacy.Tests.csproj" />
-  <Project Path="TaxiDispatch.Tests/TaxiDispatch.Tests.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/TaxiDispatch.Domain/TaxiDispatch.Domain.csproj" />
+    <Project Path="src/TaxiDispatch.Application/TaxiDispatch.Application.csproj" />
+    <Project Path="src/TaxiDispatch.Infrastructure/TaxiDispatch.Infrastructure.csproj" />
+    <Project Path="src/TaxiDispatch.App/TaxiDispatch.App.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TaxiDispatch.Tests/TaxiDispatch.Tests.csproj" />
+  </Folder>
 </Solution>

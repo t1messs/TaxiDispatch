@@ -1,8 +1,9 @@
 name: CI
 
+# Конвеєр СР3: сім кроків, кожен — критерій якості. Локальний еквівалент — tools/ci-local.sh.
 on:
   push:
-    branches: [ main, 'feature/**' ]
+    branches: [ main, 'feature/**', ci-demo ]
   pull_request:
     branches: [ main ]
 
@@ -10,36 +11,35 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - name: Отримати код
+      - name: 1. Отримати код
         uses: actions/checkout@v5
 
-      - name: Установити .NET 10
+      - name: 1. Установити .NET 10
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 10.0.x
 
-      - name: Відновити залежності
+      - name: 2. Відновити залежності
         run: dotnet restore
 
-      - name: Перевірка форматування
-        run: dotnet format --verify-no-changes --no-restore
+      - name: 3. Перевірка форматування й стандарту
+        run: |
+          dotnet format --verify-no-changes --no-restore
+          bash tools/check-standard.sh
 
-      - name: Перевірка правил стандарту поза Roslyn
-        run: bash tools/check-standard.sh
+      - name: 4. Складання Release без попереджень
+        run: dotnet build -c Release --no-restore -warnaserror
 
-      - name: Складання Release з аналізаторами
-        run: dotnet build -c Release --no-restore
-
-      - name: Тести й покриття
+      - name: 5–6. Тести з покриттям і порогом 70 % (домен і прикладний шар)
         run: >
-          dotnet test -c Release --no-restore
+          dotnet test -c Release --no-build
           /p:CollectCoverage=true
-          /p:CoverletOutputFormat=cobertura
-          /p:Threshold=60 /p:ThresholdType=line
+          /p:CoverletOutput=${{ github.workspace }}/coverage/
+          /p:Threshold=70
 
-      - name: Зберегти звіт про покриття
+      - name: 7. Опублікувати звіт про покриття
         if: always()
         uses: actions/upload-artifact@v6
         with:
           name: coverage
-          path: '**/coverage.cobertura.xml'
+          path: coverage/coverage.cobertura.xml

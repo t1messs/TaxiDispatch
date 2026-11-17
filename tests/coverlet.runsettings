@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Межа вимірювання покриття для збирача XPlat Code Coverage (локальний звіт):
+     домен і прикладний шар. Те саме для конвеєра задає tests/TaxiDispatch.Tests.csproj. -->
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat Code Coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <Include>[TaxiDispatch.Domain]*,[TaxiDispatch.Application]*</Include>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

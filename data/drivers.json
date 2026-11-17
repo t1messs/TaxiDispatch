@@ -1,0 +1,1022 @@
+[
+  {
+    "profile": {
+      "id": 1,
+      "name": "Софія Савченко",
+      "vehicle": {
+        "plate": "AA4777XE",
+        "model": "Hyundai Accent",
+        "carClass": "Economy"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.4163,
+      "longitude": 30.5687
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 2,
+      "name": "Богдан Дячук",
+      "vehicle": {
+        "plate": "KA1491TO",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.1
+    },
+    "location": {
+      "latitude": 50.3899,
+      "longitude": 30.6153
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 3,
+      "name": "Юлія Поліщук",
+      "vehicle": {
+        "plate": "AA5299TO",
+        "model": "Hyundai Accent",
+        "carClass": "Economy"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.519,
+      "longitude": 30.612
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 4,
+      "name": "Марія Лисенко",
+      "vehicle": {
+        "plate": "KA6967TO",
+        "model": "Skoda Fabia",
+        "carClass": "Economy"
+      },
+      "rating": 4.6
+    },
+    "location": {
+      "latitude": 50.4298,
+      "longitude": 30.4379
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 5,
+      "name": "Оксана Сидоренко",
+      "vehicle": {
+        "plate": "KA8346HK",
+        "model": "Hyundai Accent",
+        "carClass": "Economy"
+      },
+      "rating": 4.8
+    },
+    "location": {
+      "latitude": 50.4948,
+      "longitude": 30.6015
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 6,
+      "name": "Дмитро Павленко",
+      "vehicle": {
+        "plate": "AA5805XE",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.4748,
+      "longitude": 30.4986
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 7,
+      "name": "Наталія Кузьменко",
+      "vehicle": {
+        "plate": "KA7484XE",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.4
+    },
+    "location": {
+      "latitude": 50.432,
+      "longitude": 30.4459
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 8,
+      "name": "Петро Гнатюк",
+      "vehicle": {
+        "plate": "KA3147BC",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4591,
+      "longitude": 30.6271
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 9,
+      "name": "Віктор Зінченко",
+      "vehicle": {
+        "plate": "AA4684XE",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.3803,
+      "longitude": 30.4931
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 10,
+      "name": "Ганна Гнатюк",
+      "vehicle": {
+        "plate": "KA6744XE",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.4024,
+      "longitude": 30.4899
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 11,
+      "name": "Софія Остапенко",
+      "vehicle": {
+        "plate": "AA9132XE",
+        "model": "Skoda Fabia",
+        "carClass": "Economy"
+      },
+      "rating": 5.0
+    },
+    "location": {
+      "latitude": 50.4803,
+      "longitude": 30.4097
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 12,
+      "name": "Максим Мельник",
+      "vehicle": {
+        "plate": "KA3984MP",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4783,
+      "longitude": 30.3812
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 13,
+      "name": "Микола Лисенко",
+      "vehicle": {
+        "plate": "KA9901BC",
+        "model": "Skoda Fabia",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.5061,
+      "longitude": 30.4185
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 14,
+      "name": "Василь Клименко",
+      "vehicle": {
+        "plate": "AA7685MP",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.3804,
+      "longitude": 30.6594
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 15,
+      "name": "Олег Кравченко",
+      "vehicle": {
+        "plate": "AA1093MP",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.5114,
+      "longitude": 30.5214
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 16,
+      "name": "Ігор Бондаренко",
+      "vehicle": {
+        "plate": "KA4654XE",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.5158,
+      "longitude": 30.5198
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 17,
+      "name": "Тетяна Олійник",
+      "vehicle": {
+        "plate": "AA5232TO",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.48,
+      "longitude": 30.4156
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 18,
+      "name": "Максим Гнатюк",
+      "vehicle": {
+        "plate": "AA5708TO",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4623,
+      "longitude": 30.4731
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 19,
+      "name": "Оксана Коваленко",
+      "vehicle": {
+        "plate": "AA2123BC",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.4
+    },
+    "location": {
+      "latitude": 50.3853,
+      "longitude": 30.4853
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 20,
+      "name": "Ігор Павленко",
+      "vehicle": {
+        "plate": "KA6453BC",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.4429,
+      "longitude": 30.6575
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 21,
+      "name": "Ігор Мороз",
+      "vehicle": {
+        "plate": "KA3560XE",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4008,
+      "longitude": 30.3853
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 22,
+      "name": "Микола Клименко",
+      "vehicle": {
+        "plate": "AA6915TO",
+        "model": "Toyota Yaris",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4207,
+      "longitude": 30.4708
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 23,
+      "name": "Дмитро Романенко",
+      "vehicle": {
+        "plate": "AA1805MP",
+        "model": "Hyundai Accent",
+        "carClass": "Economy"
+      },
+      "rating": 4.1
+    },
+    "location": {
+      "latitude": 50.3861,
+      "longitude": 30.5252
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 24,
+      "name": "Роман Ткаченко",
+      "vehicle": {
+        "plate": "AA2469TO",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.5052,
+      "longitude": 30.6346
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 25,
+      "name": "Катерина Литвиненко",
+      "vehicle": {
+        "plate": "AA4911HK",
+        "model": "Hyundai Accent",
+        "carClass": "Economy"
+      },
+      "rating": 5.0
+    },
+    "location": {
+      "latitude": 50.4922,
+      "longitude": 30.432
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 26,
+      "name": "Богдан Романенко",
+      "vehicle": {
+        "plate": "AA2890HK",
+        "model": "Kia Rio",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.435,
+      "longitude": 30.3857
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 27,
+      "name": "Роман Бондаренко",
+      "vehicle": {
+        "plate": "KA5272BC",
+        "model": "Skoda Fabia",
+        "carClass": "Economy"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.4355,
+      "longitude": 30.4132
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 28,
+      "name": "Катерина Гнатюк",
+      "vehicle": {
+        "plate": "KA2489MP",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.4818,
+      "longitude": 30.4011
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 29,
+      "name": "Тарас Мороз",
+      "vehicle": {
+        "plate": "KA1668BC",
+        "model": "Renault Logan",
+        "carClass": "Economy"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4671,
+      "longitude": 30.6116
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 30,
+      "name": "Андрій Павленко",
+      "vehicle": {
+        "plate": "AA8375MP",
+        "model": "Skoda Fabia",
+        "carClass": "Economy"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.446,
+      "longitude": 30.4477
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 31,
+      "name": "Дмитро Кузьменко",
+      "vehicle": {
+        "plate": "AA7143TO",
+        "model": "Hyundai Elantra",
+        "carClass": "Comfort"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.4163,
+      "longitude": 30.4663
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 32,
+      "name": "Ганна Кузьменко",
+      "vehicle": {
+        "plate": "KA4176TO",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 4.1
+    },
+    "location": {
+      "latitude": 50.4017,
+      "longitude": 30.5377
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 33,
+      "name": "Андрій Клименко",
+      "vehicle": {
+        "plate": "AA3052BC",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 4.5
+    },
+    "location": {
+      "latitude": 50.4602,
+      "longitude": 30.3799
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 34,
+      "name": "Андрій Романенко",
+      "vehicle": {
+        "plate": "AA4511TO",
+        "model": "Skoda Octavia",
+        "carClass": "Comfort"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.3913,
+      "longitude": 30.6321
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 35,
+      "name": "Світлана Руденко",
+      "vehicle": {
+        "plate": "AA9203TO",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 4.8
+    },
+    "location": {
+      "latitude": 50.4217,
+      "longitude": 30.5496
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 36,
+      "name": "Андрій Клименко",
+      "vehicle": {
+        "plate": "KA9689HK",
+        "model": "Hyundai Elantra",
+        "carClass": "Comfort"
+      },
+      "rating": 4.6
+    },
+    "location": {
+      "latitude": 50.383,
+      "longitude": 30.3972
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 37,
+      "name": "Юлія Коваленко",
+      "vehicle": {
+        "plate": "KA4857HK",
+        "model": "Skoda Octavia",
+        "carClass": "Comfort"
+      },
+      "rating": 4.6
+    },
+    "location": {
+      "latitude": 50.4714,
+      "longitude": 30.5464
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 38,
+      "name": "Юлія Савченко",
+      "vehicle": {
+        "plate": "KA3184MP",
+        "model": "Kia Ceed",
+        "carClass": "Comfort"
+      },
+      "rating": 5.0
+    },
+    "location": {
+      "latitude": 50.508,
+      "longitude": 30.6402
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 39,
+      "name": "Тарас Бондаренко",
+      "vehicle": {
+        "plate": "AA3923HK",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 5.0
+    },
+    "location": {
+      "latitude": 50.393,
+      "longitude": 30.5767
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 40,
+      "name": "Наталія Клименко",
+      "vehicle": {
+        "plate": "KA6837TO",
+        "model": "Hyundai Elantra",
+        "carClass": "Comfort"
+      },
+      "rating": 5.0
+    },
+    "location": {
+      "latitude": 50.4829,
+      "longitude": 30.3776
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 41,
+      "name": "Олег Гончаренко",
+      "vehicle": {
+        "plate": "KA9638MP",
+        "model": "Skoda Octavia",
+        "carClass": "Comfort"
+      },
+      "rating": 4.4
+    },
+    "location": {
+      "latitude": 50.4519,
+      "longitude": 30.3895
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 42,
+      "name": "Ігор Коваленко",
+      "vehicle": {
+        "plate": "AA8837TO",
+        "model": "Hyundai Elantra",
+        "carClass": "Comfort"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4757,
+      "longitude": 30.4788
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 43,
+      "name": "Максим Коваленко",
+      "vehicle": {
+        "plate": "AA2309MP",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.4375,
+      "longitude": 30.5336
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 44,
+      "name": "Ігор Коваленко",
+      "vehicle": {
+        "plate": "AA8068HK",
+        "model": "Toyota Corolla",
+        "carClass": "Comfort"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4254,
+      "longitude": 30.457
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 45,
+      "name": "Олег Мельник",
+      "vehicle": {
+        "plate": "AA7334XE",
+        "model": "Skoda Octavia",
+        "carClass": "Comfort"
+      },
+      "rating": 4.3
+    },
+    "location": {
+      "latitude": 50.4849,
+      "longitude": 30.5603
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 46,
+      "name": "Дмитро Дячук",
+      "vehicle": {
+        "plate": "AA8167HK",
+        "model": "Hyundai Elantra",
+        "carClass": "Comfort"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4778,
+      "longitude": 30.3843
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 47,
+      "name": "Роман Остапенко",
+      "vehicle": {
+        "plate": "AA2824BC",
+        "model": "Skoda Octavia",
+        "carClass": "Comfort"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.4916,
+      "longitude": 30.6174
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 48,
+      "name": "Ігор Поліщук",
+      "vehicle": {
+        "plate": "AA2499TO",
+        "model": "Kia Ceed",
+        "carClass": "Comfort"
+      },
+      "rating": 4.4
+    },
+    "location": {
+      "latitude": 50.4948,
+      "longitude": 30.5958
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 49,
+      "name": "Юлія Зінченко",
+      "vehicle": {
+        "plate": "KA5635MP",
+        "model": "Mercedes-Benz E-Class",
+        "carClass": "Business"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4167,
+      "longitude": 30.6037
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 50,
+      "name": "Богдан Савченко",
+      "vehicle": {
+        "plate": "AA2956MP",
+        "model": "BMW 5 Series",
+        "carClass": "Business"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4975,
+      "longitude": 30.3945
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 51,
+      "name": "Ірина Поліщук",
+      "vehicle": {
+        "plate": "AA1752HK",
+        "model": "Mercedes-Benz E-Class",
+        "carClass": "Business"
+      },
+      "rating": 4.8
+    },
+    "location": {
+      "latitude": 50.3944,
+      "longitude": 30.498
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 52,
+      "name": "Ганна Кузьменко",
+      "vehicle": {
+        "plate": "KA3046BC",
+        "model": "Toyota Camry",
+        "carClass": "Business"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4127,
+      "longitude": 30.4662
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 53,
+      "name": "Петро Кравченко",
+      "vehicle": {
+        "plate": "KA8332BC",
+        "model": "Toyota Camry",
+        "carClass": "Business"
+      },
+      "rating": 4.9
+    },
+    "location": {
+      "latitude": 50.4877,
+      "longitude": 30.6181
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 54,
+      "name": "Роман Марченко",
+      "vehicle": {
+        "plate": "KA8148BC",
+        "model": "BMW 5 Series",
+        "carClass": "Business"
+      },
+      "rating": 4.6
+    },
+    "location": {
+      "latitude": 50.3996,
+      "longitude": 30.4709
+    },
+    "status": "OffShift"
+  },
+  {
+    "profile": {
+      "id": 55,
+      "name": "Олександр Остапенко",
+      "vehicle": {
+        "plate": "AA3774TO",
+        "model": "Audi A6",
+        "carClass": "Business"
+      },
+      "rating": 4.2
+    },
+    "location": {
+      "latitude": 50.4845,
+      "longitude": 30.401
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 56,
+      "name": "Юрій Гончаренко",
+      "vehicle": {
+        "plate": "AA7168BC",
+        "model": "BMW 5 Series",
+        "carClass": "Business"
+      },
+      "rating": 4.7
+    },
+    "location": {
+      "latitude": 50.4489,
+      "longitude": 30.53
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 57,
+      "name": "Людмила Остапенко",
+      "vehicle": {
+        "plate": "AA7569XE",
+        "model": "Toyota Camry",
+        "carClass": "Business"
+      },
+      "rating": 4.8
+    },
+    "location": {
+      "latitude": 50.436,
+      "longitude": 30.3933
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 58,
+      "name": "Олександр Романенко",
+      "vehicle": {
+        "plate": "KA3342HK",
+        "model": "Mercedes-Benz E-Class",
+        "carClass": "Business"
+      },
+      "rating": 4.1
+    },
+    "location": {
+      "latitude": 50.4417,
+      "longitude": 30.5256
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 59,
+      "name": "Олександр Марченко",
+      "vehicle": {
+        "plate": "KA5471TO",
+        "model": "Mercedes-Benz E-Class",
+        "carClass": "Business"
+      },
+      "rating": 4.8
+    },
+    "location": {
+      "latitude": 50.4138,
+      "longitude": 30.496
+    },
+    "status": "Free"
+  },
+  {
+    "profile": {
+      "id": 60,
+      "name": "Світлана Клименко",
+      "vehicle": {
+        "plate": "KA4375TO",
+        "model": "Audi A6",
+        "carClass": "Business"
+      },
+      "rating": 4.1
+    },
+    "location": {
+      "latitude": 50.436,
+      "longitude": 30.5486
+    },
+    "status": "OffShift"
+  }
+]

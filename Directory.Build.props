@@ -11,7 +11,7 @@
     <AnalysisMode>Recommended</AnalysisMode>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <VersionPrefix>0.8.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Польщенко Нікіта</Authors>
     <Product>TaxiDispatch</Product>
     <!-- ЛР8: аудит вразливих пакетів (зокрема транзитивних) під час відновлення -->
