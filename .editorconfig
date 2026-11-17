@@ -231,3 +231,8 @@ dotnet_diagnostic.CS1591.severity = error
 dotnet_diagnostic.CA1062.severity = error
 # D-18: заборонені API годинника (список — TaxiDispatch.Core/BannedSymbols.txt)
 dotnet_diagnostic.RS0030.severity = error
+
+# ---------- Лише для проєктів тестів ----------
+[{TaxiDispatch.Tests,TaxiDispatch.Legacy.Tests}/**.cs]
+# CA1707: імена тестів за схемою Метод_Умова_Результат (N-15) містять підкреслення
+dotnet_diagnostic.CA1707.severity = none
