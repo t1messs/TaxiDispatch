@@ -10,7 +10,7 @@ namespace TaxiDispatch.App.Input;
 internal static class RouteSegmentParser
 {
     // Застосунок очікує десяткову кому (культура uk-UA); крапку теж приймаємо, замінюючи на кому.
-    private static readonly CultureInfo InputCulture = CultureInfo.GetCultureInfo("uk-UA");
+    private static readonly CultureInfo _inputCulture = CultureInfo.GetCultureInfo("uk-UA");
 
     /// <summary>
     /// Розбирає адресу, дистанцію й ціну за кілометр.
@@ -68,7 +68,7 @@ internal static class RouteSegmentParser
         return decimal.TryParse(
             normalized,
             NumberStyles.AllowDecimalPoint,
-            InputCulture,
+            _inputCulture,
             out value);
     }
 }
