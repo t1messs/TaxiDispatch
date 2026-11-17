@@ -33,6 +33,7 @@ public sealed class OrderQueryService
     {
         ArgumentNullException.ThrowIfNull(criteria);
         using IDisposable? scope = _log.BeginScope("UC-05");
+        _log.LogInformation("Початок: пошук замовлень");
         if (criteria.IsEmpty)
         {
             _log.LogWarning("Відхилено: пошук без критеріїв");

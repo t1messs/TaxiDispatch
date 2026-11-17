@@ -36,6 +36,7 @@ public sealed class ShiftReportService
     {
         ArgumentNullException.ThrowIfNull(shift);
         using IDisposable? scope = _log.BeginScope("UC-06");
+        _log.LogInformation("Початок: зміна {Date}, {Kind}", shift.Date, shift.Kind);
         Dictionary<int, string> names = _store.Drivers.All()
             .ToDictionary(driver => driver.Id, driver => driver.Profile.Name);
         List<ShiftReportRow> rows = _store.Orders.All()

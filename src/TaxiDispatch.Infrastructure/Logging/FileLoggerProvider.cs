@@ -32,7 +32,8 @@ public sealed class FileLoggerProvider : ILoggerProvider
             Directory.CreateDirectory(directory);
         }
 
-        _writer = new StreamWriter(path, append: true, Encoding.UTF8) { AutoFlush = true };
+        var utf8 = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
+        _writer = new StreamWriter(path, append: true, utf8) { AutoFlush = true };
     }
 
     /// <inheritdoc/>

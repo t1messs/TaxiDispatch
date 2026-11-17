@@ -56,6 +56,8 @@ public sealed class JsonTaxiStore : ITaxiStore
     /// <inheritdoc/>
     public void SaveChanges()
     {
+        // TODO(TD-11): файли пишуться цілком — за 10 000+ замовлень потрібне інше сховище
+        // (файл на день або SQLite); строк — у разі зростання обсягу.
         Directory.CreateDirectory(_paths.StateDirectory);
         List<OrderSnapshot> snapshots = _orders.Items.Select(order => order.ToSnapshot()).ToList();
         JsonFiles.Write(_paths.ForWriting(OrdersFile), snapshots);
