@@ -2,18 +2,27 @@ using System.Globalization;
 using TaxiDispatch.Core.Domain;
 using TaxiDispatch.Core.Errors;
 
-namespace TaxiDispatch.App.Input;
+namespace TaxiDispatch.Core.Input;
 
 /// <summary>
-/// Барикада: перетворює сирі рядки з консолі на перевірений відрізок маршруту.
+/// Барикада: межа між «брудними» рядками ззовні та перевіреним відрізком маршруту.
 /// </summary>
-internal static class RouteSegmentParser
+public static class RouteSegmentParser
 {
+    /// <summary>Найдовша допустима адреса, символів.</summary>
+    public const int MaxDestinationLength = 100;
+
+    /// <summary>Найбільша допустима дистанція одного відрізка, км.</summary>
+    public const decimal MaxDistanceKm = 1000m;
+
+    /// <summary>Найбільша допустима ціна за кілометр, грн.</summary>
+    public const decimal MaxPricePerKm = 500m;
+
     // Застосунок очікує десяткову кому (культура uk-UA); крапку теж приймаємо, замінюючи на кому.
     private static readonly CultureInfo _inputCulture = CultureInfo.GetCultureInfo("uk-UA");
 
     /// <summary>
-    /// Розбирає адресу, дистанцію й ціну за кілометр.
+    /// Розбирає адресу, дистанцію й ціну за кілометр і перевіряє їхні межі.
     /// </summary>
     /// <param name="destination">Адреса призначення.</param>
     /// <param name="distanceKm">Дистанція в кілометрах (рядок).</param>
@@ -24,22 +33,28 @@ internal static class RouteSegmentParser
         string? distanceKm,
         string? pricePerKm)
     {
-        if (string.IsNullOrWhiteSpace(destination))
+        string address = destination?.Trim() ?? string.Empty;
+        if (address.Length is 0 or > MaxDestinationLength)
         {
-            return Result.Fail<RouteSegment>("Адреса призначення не може бути порожньою");
+            return Result.Fail<RouteSegment>(
+                $"Адреса призначення — від 1 до {MaxDestinationLength} символів");
         }
 
-        if (!TryParseNumber(distanceKm, out decimal distance) || distance <= 0)
+        if (!TryParseNumber(distanceKm, out decimal distance)
+            || distance is <= 0m or > MaxDistanceKm)
         {
-            return Result.Fail<RouteSegment>("Дистанція — число більше 0, наприклад 3,5");
+            return Result.Fail<RouteSegment>(
+                "Дистанція — число більше 0 і не більше 1000 км, наприклад 3,5");
         }
 
-        if (!TryParseNumber(pricePerKm, out decimal price) || price < 0)
+        if (!TryParseNumber(pricePerKm, out decimal price)
+            || price is < 0m or > MaxPricePerKm)
         {
-            return Result.Fail<RouteSegment>("Ціна за кілометр — число не менше 0");
+            return Result.Fail<RouteSegment>(
+                "Ціна за кілометр — число від 0 до 500 грн");
         }
 
-        return Result.Ok(new RouteSegment(destination.Trim(), distance, price));
+        return Result.Ok(new RouteSegment(address, distance, price));
     }
 
     /// <summary>
