@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using TaxiDispatch.Core.Legacy;
-using Xunit;
-using TaxiDispatch.Core.Documents;
 using System.IO;
+using TaxiDispatch.Core.Documents;
+using TaxiDispatch.Core.Legacy;
 using TaxiDispatch.Core.Reporting;
+using Xunit;
 
 namespace TaxiDispatch.Tests;
 
