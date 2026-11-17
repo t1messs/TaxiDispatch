@@ -14,8 +14,9 @@ public static class RoadDistance
     /// <param name="from">Точка подачі.</param>
     /// <param name="to">Точка призначення.</param>
     /// <returns>Довжина маршруту, км, округлена до метра.</returns>
-    public static decimal Estimate(GeoPoint from, GeoPoint to) => Math.Round(
-        GeoDistance.KilometersBetween(from, to) * RoadFactor,
-        GeoDistance.DistanceDecimals,
-        MidpointRounding.AwayFromZero);
+    public static decimal Estimate(GeoPoint from, GeoPoint to)
+    {
+        decimal km = GeoDistance.KilometersBetween(from, to) * RoadFactor;
+        return Math.Round(km, GeoDistance.DistanceDecimals, MidpointRounding.AwayFromZero);
+    }
 }
