@@ -40,4 +40,18 @@ public class RideDiscountPolicyTests
         // Assert
         Assert.Equal("amount", ex.ParamName);
     }
+
+    // Вимога ЛР7 (TDD): знижка на поїздку не може перевищувати 150 грн.
+    [Fact]
+    public void DiscountFor_HugeRide_IsCappedAtMax()
+    {
+        // Arrange
+        var policy = new RideDiscountPolicy();
+
+        // Act
+        decimal actual = policy.DiscountFor(5000m, true);
+
+        // Assert
+        Assert.Equal(150m, actual);
+    }
 }
