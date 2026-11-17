@@ -1,0 +1,402 @@
+[
+  {
+    "code": "P01",
+    "name": "Центральний залізничний вокзал",
+    "location": {
+      "latitude": 50.4406,
+      "longitude": 30.489
+    }
+  },
+  {
+    "code": "P02",
+    "name": "Аеропорт «Київ» (Жуляни)",
+    "location": {
+      "latitude": 50.4017,
+      "longitude": 30.4497
+    }
+  },
+  {
+    "code": "P03",
+    "name": "Майдан Незалежності",
+    "location": {
+      "latitude": 50.4501,
+      "longitude": 30.5234
+    }
+  },
+  {
+    "code": "P04",
+    "name": "Контрактова площа",
+    "location": {
+      "latitude": 50.4651,
+      "longitude": 30.5154
+    }
+  },
+  {
+    "code": "P05",
+    "name": "Бессарабська площа",
+    "location": {
+      "latitude": 50.4418,
+      "longitude": 30.5212
+    }
+  },
+  {
+    "code": "P06",
+    "name": "Палац спорту",
+    "location": {
+      "latitude": 50.4385,
+      "longitude": 30.5215
+    }
+  },
+  {
+    "code": "P07",
+    "name": "НСК «Олімпійський»",
+    "location": {
+      "latitude": 50.4334,
+      "longitude": 30.5216
+    }
+  },
+  {
+    "code": "P08",
+    "name": "Лук'янівська площа",
+    "location": {
+      "latitude": 50.4623,
+      "longitude": 30.4823
+    }
+  },
+  {
+    "code": "P09",
+    "name": "Південний вокзал",
+    "location": {
+      "latitude": 50.4372,
+      "longitude": 30.48
+    }
+  },
+  {
+    "code": "P10",
+    "name": "Деміївська площа",
+    "location": {
+      "latitude": 50.4058,
+      "longitude": 30.5175
+    }
+  },
+  {
+    "code": "P11",
+    "name": "Видубицький вокзал",
+    "location": {
+      "latitude": 50.4064,
+      "longitude": 30.5598
+    }
+  },
+  {
+    "code": "P12",
+    "name": "Лівобережна",
+    "location": {
+      "latitude": 50.452,
+      "longitude": 30.598
+    }
+  },
+  {
+    "code": "P13",
+    "name": "Вокзал «Дарниця»",
+    "location": {
+      "latitude": 50.4545,
+      "longitude": 30.6305
+    }
+  },
+  {
+    "code": "P14",
+    "name": "Позняки",
+    "location": {
+      "latitude": 50.398,
+      "longitude": 30.634
+    }
+  },
+  {
+    "code": "P15",
+    "name": "Осокорки",
+    "location": {
+      "latitude": 50.3953,
+      "longitude": 30.616
+    }
+  },
+  {
+    "code": "P16",
+    "name": "Харківська площа",
+    "location": {
+      "latitude": 50.4005,
+      "longitude": 30.652
+    }
+  },
+  {
+    "code": "P17",
+    "name": "Троєщина",
+    "location": {
+      "latitude": 50.51,
+      "longitude": 30.604
+    }
+  },
+  {
+    "code": "P18",
+    "name": "Оболонська набережна",
+    "location": {
+      "latitude": 50.501,
+      "longitude": 30.504
+    }
+  },
+  {
+    "code": "P19",
+    "name": "Мінська площа",
+    "location": {
+      "latitude": 50.5125,
+      "longitude": 30.4985
+    }
+  },
+  {
+    "code": "P20",
+    "name": "Героїв Дніпра",
+    "location": {
+      "latitude": 50.5225,
+      "longitude": 30.4985
+    }
+  },
+  {
+    "code": "P21",
+    "name": "Виноградар",
+    "location": {
+      "latitude": 50.508,
+      "longitude": 30.43
+    }
+  },
+  {
+    "code": "P22",
+    "name": "Нивки",
+    "location": {
+      "latitude": 50.4585,
+      "longitude": 30.404
+    }
+  },
+  {
+    "code": "P23",
+    "name": "Святошин",
+    "location": {
+      "latitude": 50.458,
+      "longitude": 30.391
+    }
+  },
+  {
+    "code": "P24",
+    "name": "Академмістечко",
+    "location": {
+      "latitude": 50.465,
+      "longitude": 30.355
+    }
+  },
+  {
+    "code": "P25",
+    "name": "Борщагівка",
+    "location": {
+      "latitude": 50.425,
+      "longitude": 30.37
+    }
+  },
+  {
+    "code": "P26",
+    "name": "Відрадний",
+    "location": {
+      "latitude": 50.429,
+      "longitude": 30.423
+    }
+  },
+  {
+    "code": "P27",
+    "name": "Севастопольська площа",
+    "location": {
+      "latitude": 50.426,
+      "longitude": 30.474
+    }
+  },
+  {
+    "code": "P28",
+    "name": "Експоцентр",
+    "location": {
+      "latitude": 50.381,
+      "longitude": 30.477
+    }
+  },
+  {
+    "code": "P29",
+    "name": "Голосіївський парк",
+    "location": {
+      "latitude": 50.387,
+      "longitude": 30.51
+    }
+  },
+  {
+    "code": "P30",
+    "name": "Теремки",
+    "location": {
+      "latitude": 50.367,
+      "longitude": 30.454
+    }
+  },
+  {
+    "code": "P31",
+    "name": "Либідська площа",
+    "location": {
+      "latitude": 50.413,
+      "longitude": 30.525
+    }
+  },
+  {
+    "code": "P32",
+    "name": "Печерська лавра",
+    "location": {
+      "latitude": 50.4346,
+      "longitude": 30.5573
+    }
+  },
+  {
+    "code": "P33",
+    "name": "Арсенальна",
+    "location": {
+      "latitude": 50.4446,
+      "longitude": 30.5455
+    }
+  },
+  {
+    "code": "P34",
+    "name": "Поштова площа",
+    "location": {
+      "latitude": 50.459,
+      "longitude": 30.525
+    }
+  },
+  {
+    "code": "P35",
+    "name": "Андріївський узвіз",
+    "location": {
+      "latitude": 50.459,
+      "longitude": 30.516
+    }
+  },
+  {
+    "code": "P36",
+    "name": "Золоті ворота",
+    "location": {
+      "latitude": 50.4485,
+      "longitude": 30.5135
+    }
+  },
+  {
+    "code": "P37",
+    "name": "Площа Перемоги",
+    "location": {
+      "latitude": 50.4505,
+      "longitude": 30.493
+    }
+  },
+  {
+    "code": "P38",
+    "name": "Шулявська",
+    "location": {
+      "latitude": 50.455,
+      "longitude": 30.445
+    }
+  },
+  {
+    "code": "P39",
+    "name": "КПІ",
+    "location": {
+      "latitude": 50.4485,
+      "longitude": 30.457
+    }
+  },
+  {
+    "code": "P40",
+    "name": "Дорогожичі",
+    "location": {
+      "latitude": 50.473,
+      "longitude": 30.449
+    }
+  },
+  {
+    "code": "P41",
+    "name": "Сирець",
+    "location": {
+      "latitude": 50.476,
+      "longitude": 30.431
+    }
+  },
+  {
+    "code": "P42",
+    "name": "Петрівка",
+    "location": {
+      "latitude": 50.486,
+      "longitude": 30.498
+    }
+  },
+  {
+    "code": "P43",
+    "name": "Гідропарк",
+    "location": {
+      "latitude": 50.446,
+      "longitude": 30.577
+    }
+  },
+  {
+    "code": "P44",
+    "name": "Русанівка",
+    "location": {
+      "latitude": 50.441,
+      "longitude": 30.6
+    }
+  },
+  {
+    "code": "P45",
+    "name": "Березняки",
+    "location": {
+      "latitude": 50.425,
+      "longitude": 30.605
+    }
+  },
+  {
+    "code": "P46",
+    "name": "Дарницька площа",
+    "location": {
+      "latitude": 50.443,
+      "longitude": 30.615
+    }
+  },
+  {
+    "code": "P47",
+    "name": "Лісовий масив",
+    "location": {
+      "latitude": 50.465,
+      "longitude": 30.644
+    }
+  },
+  {
+    "code": "P48",
+    "name": "Чернігівська",
+    "location": {
+      "latitude": 50.46,
+      "longitude": 30.63
+    }
+  },
+  {
+    "code": "P49",
+    "name": "Броварський проспект",
+    "location": {
+      "latitude": 50.459,
+      "longitude": 30.612
+    }
+  },
+  {
+    "code": "P50",
+    "name": "Червоний хутір",
+    "location": {
+      "latitude": 50.41,
+      "longitude": 30.68
+    }
+  }
+]

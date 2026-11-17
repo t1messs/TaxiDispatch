@@ -1,0 +1,20 @@
+[
+  {
+    "carClass": "Economy",
+    "boarding": 40.0,
+    "perKm": 12.0,
+    "minimum": 90.0
+  },
+  {
+    "carClass": "Comfort",
+    "boarding": 55.0,
+    "perKm": 16.0,
+    "minimum": 120.0
+  },
+  {
+    "carClass": "Business",
+    "boarding": 90.0,
+    "perKm": 26.0,
+    "minimum": 220.0
+  }
+]

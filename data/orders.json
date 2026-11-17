@@ -1,0 +1,4508 @@
+[
+  {
+    "id": 1,
+    "passengerId": 38,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P33",
+        "name": "Арсенальна",
+        "location": {
+          "latitude": 50.4446,
+          "longitude": 30.5455
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.111
+    },
+    "createdAt": "2026-11-14T08:00:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 26,
+      "pickupKm": 3.373,
+      "assignedAt": "2026-11-14T08:02:00+02:00"
+    },
+    "startedAt": "2026-11-14T08:13:00+02:00",
+    "result": {
+      "actualKm": 7.68,
+      "fare": 132.16,
+      "completedAt": "2026-11-14T08:33:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 2,
+    "passengerId": 9,
+    "plan": {
+      "pickup": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "dropoff": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 7.692
+    },
+    "createdAt": "2026-11-14T08:26:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 54,
+      "pickupKm": 0.406,
+      "assignedAt": "2026-11-14T08:28:00+02:00"
+    },
+    "startedAt": "2026-11-14T08:42:00+02:00",
+    "result": {
+      "actualKm": 8.077,
+      "fare": 300.0,
+      "completedAt": "2026-11-14T09:03:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 3,
+    "passengerId": 67,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P38",
+        "name": "Шулявська",
+        "location": {
+          "latitude": 50.455,
+          "longitude": 30.445
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 4.97
+    },
+    "createdAt": "2026-11-14T09:17:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 43,
+      "pickupKm": 1.587,
+      "assignedAt": "2026-11-14T09:19:00+02:00"
+    },
+    "startedAt": "2026-11-14T09:24:00+02:00",
+    "result": {
+      "actualKm": 5.467,
+      "fare": 142.47,
+      "completedAt": "2026-11-14T09:39:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 4,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P47",
+        "name": "Лісовий масив",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.644
+        }
+      },
+      "dropoff": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 20.998
+    },
+    "createdAt": "2026-11-14T09:54:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 34,
+      "pickupKm": 1.99,
+      "assignedAt": "2026-11-14T09:56:00+02:00"
+    },
+    "startedAt": "2026-11-14T10:01:00+02:00",
+    "result": {
+      "actualKm": 23.098,
+      "fare": 424.57,
+      "completedAt": "2026-11-14T10:52:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 5,
+    "passengerId": 67,
+    "plan": {
+      "pickup": {
+        "code": "P41",
+        "name": "Сирець",
+        "location": {
+          "latitude": 50.476,
+          "longitude": 30.431
+        }
+      },
+      "dropoff": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 6.834
+    },
+    "createdAt": "2026-11-14T10:57:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 28,
+      "pickupKm": 1.985,
+      "assignedAt": "2026-11-14T10:59:00+02:00"
+    },
+    "startedAt": "2026-11-14T11:09:00+02:00",
+    "result": {
+      "actualKm": 7.449,
+      "fare": 129.39,
+      "completedAt": "2026-11-14T11:28:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 6,
+    "passengerId": 1,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 16.488
+    },
+    "createdAt": "2026-11-14T11:14:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 42,
+      "pickupKm": 1.861,
+      "assignedAt": "2026-11-14T11:16:00+02:00"
+    },
+    "startedAt": "2026-11-14T11:24:00+02:00",
+    "result": {
+      "actualKm": 17.642,
+      "fare": 337.27,
+      "completedAt": "2026-11-14T12:04:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 7,
+    "passengerId": 37,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P12",
+        "name": "Лівобережна",
+        "location": {
+          "latitude": 50.452,
+          "longitude": 30.598
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.177
+    },
+    "createdAt": "2026-11-14T12:20:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 24,
+      "pickupKm": 3.061,
+      "assignedAt": "2026-11-14T12:22:00+02:00"
+    },
+    "startedAt": "2026-11-14T12:30:00+02:00",
+    "result": {
+      "actualKm": 11.401,
+      "fare": 176.81,
+      "completedAt": "2026-11-14T12:57:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 8,
+    "passengerId": 30,
+    "plan": {
+      "pickup": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "dropoff": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 13.107
+    },
+    "createdAt": "2026-11-14T12:37:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 39,
+      "pickupKm": 2.701,
+      "assignedAt": "2026-11-14T12:39:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-14T12:44:00+02:00"
+    }
+  },
+  {
+    "id": 9,
+    "passengerId": 74,
+    "plan": {
+      "pickup": {
+        "code": "P02",
+        "name": "Аеропорт «Київ» (Жуляни)",
+        "location": {
+          "latitude": 50.4017,
+          "longitude": 30.4497
+        }
+      },
+      "dropoff": {
+        "code": "P31",
+        "name": "Либідська площа",
+        "location": {
+          "latitude": 50.413,
+          "longitude": 30.525
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.127
+    },
+    "createdAt": "2026-11-14T13:29:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 13,
+      "pickupKm": 4.106,
+      "assignedAt": "2026-11-14T13:31:00+02:00"
+    },
+    "startedAt": "2026-11-14T13:41:00+02:00",
+    "result": {
+      "actualKm": 7.483,
+      "fare": 129.8,
+      "completedAt": "2026-11-14T14:00:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 10,
+    "passengerId": 23,
+    "plan": {
+      "pickup": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "dropoff": {
+        "code": "P02",
+        "name": "Аеропорт «Київ» (Жуляни)",
+        "location": {
+          "latitude": 50.4017,
+          "longitude": 30.4497
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 8.054
+    },
+    "createdAt": "2026-11-14T14:13:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 52,
+      "pickupKm": 0.872,
+      "assignedAt": "2026-11-14T14:15:00+02:00"
+    },
+    "startedAt": "2026-11-14T14:19:00+02:00",
+    "result": {
+      "actualKm": 8.054,
+      "fare": 299.4,
+      "completedAt": "2026-11-14T14:40:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 11,
+    "passengerId": 27,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P16",
+        "name": "Харківська площа",
+        "location": {
+          "latitude": 50.4005,
+          "longitude": 30.652
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 16.806
+    },
+    "createdAt": "2026-11-14T14:45:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 15,
+      "pickupKm": 1.833,
+      "assignedAt": "2026-11-14T14:47:00+02:00"
+    },
+    "startedAt": "2026-11-14T14:56:00+02:00",
+    "result": {
+      "actualKm": 16.974,
+      "fare": 243.69,
+      "completedAt": "2026-11-14T15:34:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 12,
+    "passengerId": 55,
+    "plan": {
+      "pickup": {
+        "code": "P28",
+        "name": "Експоцентр",
+        "location": {
+          "latitude": 50.381,
+          "longitude": 30.477
+        }
+      },
+      "dropoff": {
+        "code": "P34",
+        "name": "Поштова площа",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.525
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 12.111
+    },
+    "createdAt": "2026-11-14T15:41:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 19,
+      "pickupKm": 3.566,
+      "assignedAt": "2026-11-14T15:43:00+02:00"
+    },
+    "startedAt": "2026-11-14T15:47:00+02:00",
+    "result": {
+      "actualKm": 12.959,
+      "fare": 195.51,
+      "completedAt": "2026-11-14T16:17:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 13,
+    "passengerId": 73,
+    "plan": {
+      "pickup": {
+        "code": "P19",
+        "name": "Мінська площа",
+        "location": {
+          "latitude": 50.5125,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P05",
+        "name": "Бессарабська площа",
+        "location": {
+          "latitude": 50.4418,
+          "longitude": 30.5212
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 10.431
+    },
+    "createdAt": "2026-11-14T16:35:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 40,
+      "pickupKm": 2.39,
+      "assignedAt": "2026-11-14T16:37:00+02:00"
+    },
+    "startedAt": "2026-11-14T16:44:00+02:00",
+    "result": {
+      "actualKm": 10.535,
+      "fare": 223.56,
+      "completedAt": "2026-11-14T17:10:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 14,
+    "passengerId": 38,
+    "plan": {
+      "pickup": {
+        "code": "P39",
+        "name": "КПІ",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.457
+        }
+      },
+      "dropoff": {
+        "code": "P05",
+        "name": "Бессарабська площа",
+        "location": {
+          "latitude": 50.4418,
+          "longitude": 30.5212
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 5.989
+    },
+    "createdAt": "2026-11-14T17:03:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 24,
+      "pickupKm": 3.923,
+      "assignedAt": "2026-11-14T17:05:00+02:00"
+    },
+    "startedAt": "2026-11-14T17:11:00+02:00",
+    "result": {
+      "actualKm": 6.288,
+      "fare": 115.46,
+      "completedAt": "2026-11-14T17:28:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 15,
+    "passengerId": 60,
+    "plan": {
+      "pickup": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "dropoff": {
+        "code": "P13",
+        "name": "Вокзал «Дарниця»",
+        "location": {
+          "latitude": 50.4545,
+          "longitude": 30.6305
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 7.883
+    },
+    "createdAt": "2026-11-14T17:45:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 47,
+      "pickupKm": 3.699,
+      "assignedAt": "2026-11-14T17:47:00+02:00"
+    },
+    "startedAt": "2026-11-14T17:56:00+02:00",
+    "result": {
+      "actualKm": 8.198,
+      "fare": 186.17,
+      "completedAt": "2026-11-14T18:17:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 16,
+    "passengerId": 71,
+    "plan": {
+      "pickup": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "dropoff": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 16.826
+    },
+    "createdAt": "2026-11-14T18:24:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 49,
+      "pickupKm": 0.983,
+      "assignedAt": "2026-11-14T18:26:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "не вийшов до авто",
+      "cancelledAt": "2026-11-14T18:31:00+02:00"
+    }
+  },
+  {
+    "id": 17,
+    "passengerId": 38,
+    "plan": {
+      "pickup": {
+        "code": "P28",
+        "name": "Експоцентр",
+        "location": {
+          "latitude": 50.381,
+          "longitude": 30.477
+        }
+      },
+      "dropoff": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 11.834
+    },
+    "createdAt": "2026-11-14T19:00:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 42,
+      "pickupKm": 3.798,
+      "assignedAt": "2026-11-14T19:02:00+02:00"
+    },
+    "startedAt": "2026-11-14T19:15:00+02:00",
+    "result": {
+      "actualKm": 12.189,
+      "fare": 250.02,
+      "completedAt": "2026-11-14T19:44:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 18,
+    "passengerId": 62,
+    "plan": {
+      "pickup": {
+        "code": "P37",
+        "name": "Площа Перемоги",
+        "location": {
+          "latitude": 50.4505,
+          "longitude": 30.493
+        }
+      },
+      "dropoff": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 5.152
+    },
+    "createdAt": "2026-11-14T19:48:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 44,
+      "pickupKm": 4.448,
+      "assignedAt": "2026-11-14T19:50:00+02:00"
+    },
+    "startedAt": "2026-11-14T20:03:00+02:00",
+    "result": {
+      "actualKm": 5.152,
+      "fare": 137.43,
+      "completedAt": "2026-11-14T20:18:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 19,
+    "passengerId": 40,
+    "plan": {
+      "pickup": {
+        "code": "P46",
+        "name": "Дарницька площа",
+        "location": {
+          "latitude": 50.443,
+          "longitude": 30.615
+        }
+      },
+      "dropoff": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 19.549
+    },
+    "createdAt": "2026-11-14T20:42:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 3,
+      "pickupKm": 3.779,
+      "assignedAt": "2026-11-14T20:44:00+02:00"
+    },
+    "startedAt": "2026-11-14T20:49:00+02:00",
+    "result": {
+      "actualKm": 21.113,
+      "fare": 293.36,
+      "completedAt": "2026-11-14T21:36:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 20,
+    "passengerId": 27,
+    "plan": {
+      "pickup": {
+        "code": "P20",
+        "name": "Героїв Дніпра",
+        "location": {
+          "latitude": 50.5225,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P48",
+        "name": "Чернігівська",
+        "location": {
+          "latitude": 50.46,
+          "longitude": 30.63
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 15.096
+    },
+    "createdAt": "2026-11-14T21:01:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 3,
+      "pickupKm": 4.834,
+      "assignedAt": "2026-11-14T21:03:00+02:00"
+    },
+    "startedAt": "2026-11-14T21:14:00+02:00",
+    "result": {
+      "actualKm": 15.096,
+      "fare": 221.15,
+      "completedAt": "2026-11-14T21:49:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 21,
+    "passengerId": 1,
+    "plan": {
+      "pickup": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "dropoff": {
+        "code": "P32",
+        "name": "Печерська лавра",
+        "location": {
+          "latitude": 50.4346,
+          "longitude": 30.5573
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 13.641
+    },
+    "createdAt": "2026-11-14T21:46:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 49,
+      "pickupKm": 1.181,
+      "assignedAt": "2026-11-14T21:48:00+02:00"
+    },
+    "startedAt": "2026-11-14T21:54:00+02:00",
+    "result": {
+      "actualKm": 13.641,
+      "fare": 444.67,
+      "completedAt": "2026-11-14T22:26:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 22,
+    "passengerId": 5,
+    "plan": {
+      "pickup": {
+        "code": "P09",
+        "name": "Південний вокзал",
+        "location": {
+          "latitude": 50.4372,
+          "longitude": 30.48
+        }
+      },
+      "dropoff": {
+        "code": "P19",
+        "name": "Мінська площа",
+        "location": {
+          "latitude": 50.5125,
+          "longitude": 30.4985
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 11.018
+    },
+    "createdAt": "2026-11-14T22:40:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 45,
+      "pickupKm": 3.941,
+      "assignedAt": "2026-11-14T22:42:00+02:00"
+    },
+    "startedAt": "2026-11-14T22:47:00+02:00",
+    "result": {
+      "actualKm": 11.459,
+      "fare": 297.93,
+      "completedAt": "2026-11-14T23:14:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 23,
+    "passengerId": 63,
+    "plan": {
+      "pickup": {
+        "code": "P15",
+        "name": "Осокорки",
+        "location": {
+          "latitude": 50.3953,
+          "longitude": 30.616
+        }
+      },
+      "dropoff": {
+        "code": "P03",
+        "name": "Майдан Незалежності",
+        "location": {
+          "latitude": 50.4501,
+          "longitude": 30.5234
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 11.64
+    },
+    "createdAt": "2026-11-14T23:18:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 53,
+      "pickupKm": 4.208,
+      "assignedAt": "2026-11-14T23:20:00+02:00"
+    },
+    "startedAt": "2026-11-14T23:32:00+02:00",
+    "result": {
+      "actualKm": 11.873,
+      "fare": 498.37,
+      "completedAt": "2026-11-15T00:00:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 24,
+    "passengerId": 44,
+    "plan": {
+      "pickup": {
+        "code": "P12",
+        "name": "Лівобережна",
+        "location": {
+          "latitude": 50.452,
+          "longitude": 30.598
+        }
+      },
+      "dropoff": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.53
+    },
+    "createdAt": "2026-11-14T23:52:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 18,
+      "pickupKm": 4.612,
+      "assignedAt": "2026-11-14T23:54:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "пасажир передумав",
+      "cancelledAt": "2026-11-14T23:59:00+02:00"
+    }
+  },
+  {
+    "id": 25,
+    "passengerId": 80,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 14.607
+    },
+    "createdAt": "2026-11-15T00:31:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 13,
+      "pickupKm": 3.215,
+      "assignedAt": "2026-11-15T00:33:00+02:00"
+    },
+    "startedAt": "2026-11-15T00:40:00+02:00",
+    "result": {
+      "actualKm": 15.045,
+      "fare": 275.68,
+      "completedAt": "2026-11-15T01:15:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 26,
+    "passengerId": 10,
+    "plan": {
+      "pickup": {
+        "code": "P36",
+        "name": "Золоті ворота",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.5135
+        }
+      },
+      "dropoff": {
+        "code": "P15",
+        "name": "Осокорки",
+        "location": {
+          "latitude": 50.3953,
+          "longitude": 30.616
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 12.176
+    },
+    "createdAt": "2026-11-15T01:21:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 13,
+      "pickupKm": 1.742,
+      "assignedAt": "2026-11-15T01:23:00+02:00"
+    },
+    "startedAt": "2026-11-15T01:27:00+02:00",
+    "result": {
+      "actualKm": 12.42,
+      "fare": 236.3,
+      "completedAt": "2026-11-15T01:56:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 27,
+    "passengerId": 80,
+    "plan": {
+      "pickup": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "dropoff": {
+        "code": "P13",
+        "name": "Вокзал «Дарниця»",
+        "location": {
+          "latitude": 50.4545,
+          "longitude": 30.6305
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 10.557
+    },
+    "createdAt": "2026-11-15T02:22:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 56,
+      "pickupKm": 4.146,
+      "assignedAt": "2026-11-15T02:24:00+02:00"
+    },
+    "startedAt": "2026-11-15T02:38:00+02:00",
+    "result": {
+      "actualKm": 10.979,
+      "fare": 469.32,
+      "completedAt": "2026-11-15T03:04:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 28,
+    "passengerId": 10,
+    "plan": {
+      "pickup": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "dropoff": {
+        "code": "P04",
+        "name": "Контрактова площа",
+        "location": {
+          "latitude": 50.4651,
+          "longitude": 30.5154
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 3.886
+    },
+    "createdAt": "2026-11-15T02:37:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 39,
+      "pickupKm": 4.179,
+      "assignedAt": "2026-11-15T02:39:00+02:00"
+    },
+    "startedAt": "2026-11-15T02:44:00+02:00",
+    "result": {
+      "actualKm": 4.158,
+      "fare": 151.91,
+      "completedAt": "2026-11-15T02:57:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 29,
+    "passengerId": 33,
+    "plan": {
+      "pickup": {
+        "code": "P46",
+        "name": "Дарницька площа",
+        "location": {
+          "latitude": 50.443,
+          "longitude": 30.615
+        }
+      },
+      "dropoff": {
+        "code": "P40",
+        "name": "Дорогожичі",
+        "location": {
+          "latitude": 50.473,
+          "longitude": 30.449
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 15.881
+    },
+    "createdAt": "2026-11-15T03:38:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 56,
+      "pickupKm": 0.51,
+      "assignedAt": "2026-11-15T03:40:00+02:00"
+    },
+    "startedAt": "2026-11-15T03:53:00+02:00",
+    "result": {
+      "actualKm": 16.199,
+      "fare": 638.97,
+      "completedAt": "2026-11-15T04:30:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 30,
+    "passengerId": 50,
+    "plan": {
+      "pickup": {
+        "code": "P34",
+        "name": "Поштова площа",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.525
+        }
+      },
+      "dropoff": {
+        "code": "P19",
+        "name": "Мінська площа",
+        "location": {
+          "latitude": 50.5125,
+          "longitude": 30.4985
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.108
+    },
+    "createdAt": "2026-11-15T04:10:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 9,
+      "pickupKm": 3.157,
+      "assignedAt": "2026-11-15T04:12:00+02:00"
+    },
+    "startedAt": "2026-11-15T04:22:00+02:00",
+    "result": {
+      "actualKm": 8.676,
+      "fare": 180.14,
+      "completedAt": "2026-11-15T04:44:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 31,
+    "passengerId": 22,
+    "plan": {
+      "pickup": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "dropoff": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 13.017
+    },
+    "createdAt": "2026-11-15T04:59:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 25,
+      "pickupKm": 4.13,
+      "assignedAt": "2026-11-15T05:01:00+02:00"
+    },
+    "startedAt": "2026-11-15T05:08:00+02:00",
+    "result": {
+      "actualKm": 14.058,
+      "fare": 260.87,
+      "completedAt": "2026-11-15T05:41:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 32,
+    "passengerId": 79,
+    "plan": {
+      "pickup": {
+        "code": "P28",
+        "name": "Експоцентр",
+        "location": {
+          "latitude": 50.381,
+          "longitude": 30.477
+        }
+      },
+      "dropoff": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 5.175
+    },
+    "createdAt": "2026-11-15T05:51:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 35,
+      "pickupKm": 0.673,
+      "assignedAt": "2026-11-15T05:53:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "не вийшов до авто",
+      "cancelledAt": "2026-11-15T05:58:00+02:00"
+    }
+  },
+  {
+    "id": 33,
+    "passengerId": 72,
+    "plan": {
+      "pickup": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "dropoff": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 9.519
+    },
+    "createdAt": "2026-11-15T06:10:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 47,
+      "pickupKm": 3.984,
+      "assignedAt": "2026-11-15T06:12:00+02:00"
+    },
+    "startedAt": "2026-11-15T06:21:00+02:00",
+    "result": {
+      "actualKm": 10.281,
+      "fare": 219.5,
+      "completedAt": "2026-11-15T06:46:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 34,
+    "passengerId": 75,
+    "plan": {
+      "pickup": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "dropoff": {
+        "code": "P01",
+        "name": "Центральний залізничний вокзал",
+        "location": {
+          "latitude": 50.4406,
+          "longitude": 30.489
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 12.827
+    },
+    "createdAt": "2026-11-15T07:06:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 17,
+      "pickupKm": 3.733,
+      "assignedAt": "2026-11-15T07:08:00+02:00"
+    },
+    "startedAt": "2026-11-15T07:20:00+02:00",
+    "result": {
+      "actualKm": 13.34,
+      "fare": 200.08,
+      "completedAt": "2026-11-15T07:51:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 35,
+    "passengerId": 5,
+    "plan": {
+      "pickup": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "dropoff": {
+        "code": "P17",
+        "name": "Троєщина",
+        "location": {
+          "latitude": 50.51,
+          "longitude": 30.604
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 17.037
+    },
+    "createdAt": "2026-11-15T07:42:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 2,
+      "pickupKm": 3.688,
+      "assignedAt": "2026-11-15T07:44:00+02:00"
+    },
+    "startedAt": "2026-11-15T07:51:00+02:00",
+    "result": {
+      "actualKm": 17.889,
+      "fare": 254.67,
+      "completedAt": "2026-11-15T08:31:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 36,
+    "passengerId": 79,
+    "plan": {
+      "pickup": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "dropoff": {
+        "code": "P08",
+        "name": "Лук'янівська площа",
+        "location": {
+          "latitude": 50.4623,
+          "longitude": 30.4823
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 10.781
+    },
+    "createdAt": "2026-11-15T08:38:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 24,
+      "pickupKm": 4.2,
+      "assignedAt": "2026-11-15T08:40:00+02:00"
+    },
+    "startedAt": "2026-11-15T08:46:00+02:00",
+    "result": {
+      "actualKm": 11.859,
+      "fare": 182.31,
+      "completedAt": "2026-11-15T09:14:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 37,
+    "passengerId": 34,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.395
+    },
+    "createdAt": "2026-11-15T08:58:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 23,
+      "pickupKm": 2.044,
+      "assignedAt": "2026-11-15T09:00:00+02:00"
+    },
+    "startedAt": "2026-11-15T09:12:00+02:00",
+    "result": {
+      "actualKm": 9.067,
+      "fare": 148.8,
+      "completedAt": "2026-11-15T09:35:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 38,
+    "passengerId": 29,
+    "plan": {
+      "pickup": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "dropoff": {
+        "code": "P01",
+        "name": "Центральний залізничний вокзал",
+        "location": {
+          "latitude": 50.4406,
+          "longitude": 30.489
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 6.614
+    },
+    "createdAt": "2026-11-15T10:00:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 22,
+      "pickupKm": 4.13,
+      "assignedAt": "2026-11-15T10:02:00+02:00"
+    },
+    "startedAt": "2026-11-15T10:09:00+02:00",
+    "result": {
+      "actualKm": 7.408,
+      "fare": 128.9,
+      "completedAt": "2026-11-15T10:28:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 39,
+    "passengerId": 27,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P43",
+        "name": "Гідропарк",
+        "location": {
+          "latitude": 50.446,
+          "longitude": 30.577
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 10.408
+    },
+    "createdAt": "2026-11-15T10:32:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 22,
+      "pickupKm": 4.32,
+      "assignedAt": "2026-11-15T10:34:00+02:00"
+    },
+    "startedAt": "2026-11-15T10:38:00+02:00",
+    "result": {
+      "actualKm": 11.032,
+      "fare": 172.38,
+      "completedAt": "2026-11-15T11:05:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 40,
+    "passengerId": 66,
+    "plan": {
+      "pickup": {
+        "code": "P41",
+        "name": "Сирець",
+        "location": {
+          "latitude": 50.476,
+          "longitude": 30.431
+        }
+      },
+      "dropoff": {
+        "code": "P46",
+        "name": "Дарницька площа",
+        "location": {
+          "latitude": 50.443,
+          "longitude": 30.615
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 17.592
+    },
+    "createdAt": "2026-11-15T11:30:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 34,
+      "pickupKm": 3.217,
+      "assignedAt": "2026-11-15T11:32:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-15T11:37:00+02:00"
+    }
+  },
+  {
+    "id": 41,
+    "passengerId": 41,
+    "plan": {
+      "pickup": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "dropoff": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 14.353
+    },
+    "createdAt": "2026-11-15T11:52:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 27,
+      "pickupKm": 1.346,
+      "assignedAt": "2026-11-15T11:54:00+02:00"
+    },
+    "startedAt": "2026-11-15T12:03:00+02:00",
+    "result": {
+      "actualKm": 15.932,
+      "fare": 231.18,
+      "completedAt": "2026-11-15T12:39:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 42,
+    "passengerId": 25,
+    "plan": {
+      "pickup": {
+        "code": "P15",
+        "name": "Осокорки",
+        "location": {
+          "latitude": 50.3953,
+          "longitude": 30.616
+        }
+      },
+      "dropoff": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 17.027
+    },
+    "createdAt": "2026-11-15T12:48:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 11,
+      "pickupKm": 3.437,
+      "assignedAt": "2026-11-15T12:50:00+02:00"
+    },
+    "startedAt": "2026-11-15T12:56:00+02:00",
+    "result": {
+      "actualKm": 17.878,
+      "fare": 254.54,
+      "completedAt": "2026-11-15T13:36:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 43,
+    "passengerId": 5,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 14.006
+    },
+    "createdAt": "2026-11-15T13:23:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 45,
+      "pickupKm": 3.514,
+      "assignedAt": "2026-11-15T13:25:00+02:00"
+    },
+    "startedAt": "2026-11-15T13:34:00+02:00",
+    "result": {
+      "actualKm": 15.547,
+      "fare": 303.75,
+      "completedAt": "2026-11-15T14:10:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 44,
+    "passengerId": 63,
+    "plan": {
+      "pickup": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "dropoff": {
+        "code": "P37",
+        "name": "Площа Перемоги",
+        "location": {
+          "latitude": 50.4505,
+          "longitude": 30.493
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.155
+    },
+    "createdAt": "2026-11-15T14:15:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 2,
+      "pickupKm": 1.278,
+      "assignedAt": "2026-11-15T14:17:00+02:00"
+    },
+    "startedAt": "2026-11-15T14:22:00+02:00",
+    "result": {
+      "actualKm": 7.727,
+      "fare": 132.72,
+      "completedAt": "2026-11-15T14:42:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 45,
+    "passengerId": 13,
+    "plan": {
+      "pickup": {
+        "code": "P45",
+        "name": "Березняки",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.605
+        }
+      },
+      "dropoff": {
+        "code": "P32",
+        "name": "Печерська лавра",
+        "location": {
+          "latitude": 50.4346,
+          "longitude": 30.5573
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 4.606
+    },
+    "createdAt": "2026-11-15T14:47:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 38,
+      "pickupKm": 0.662,
+      "assignedAt": "2026-11-15T14:49:00+02:00"
+    },
+    "startedAt": "2026-11-15T14:54:00+02:00",
+    "result": {
+      "actualKm": 5.067,
+      "fare": 136.07,
+      "completedAt": "2026-11-15T15:09:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 46,
+    "passengerId": 70,
+    "plan": {
+      "pickup": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "dropoff": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 12.063
+    },
+    "createdAt": "2026-11-15T15:26:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 53,
+      "pickupKm": 1.294,
+      "assignedAt": "2026-11-15T15:28:00+02:00"
+    },
+    "startedAt": "2026-11-15T15:32:00+02:00",
+    "result": {
+      "actualKm": 13.028,
+      "fare": 428.73,
+      "completedAt": "2026-11-15T16:03:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 47,
+    "passengerId": 6,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P32",
+        "name": "Печерська лавра",
+        "location": {
+          "latitude": 50.4346,
+          "longitude": 30.5573
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 14.529
+    },
+    "createdAt": "2026-11-15T16:00:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 48,
+      "pickupKm": 2.825,
+      "assignedAt": "2026-11-15T16:02:00+02:00"
+    },
+    "startedAt": "2026-11-15T16:11:00+02:00",
+    "result": {
+      "actualKm": 14.674,
+      "fare": 289.78,
+      "completedAt": "2026-11-15T16:45:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 48,
+    "passengerId": 17,
+    "plan": {
+      "pickup": {
+        "code": "P39",
+        "name": "КПІ",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.457
+        }
+      },
+      "dropoff": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.735
+    },
+    "createdAt": "2026-11-15T17:01:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 27,
+      "pickupKm": 4.762,
+      "assignedAt": "2026-11-15T17:03:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-15T17:08:00+02:00"
+    }
+  },
+  {
+    "id": 49,
+    "passengerId": 74,
+    "plan": {
+      "pickup": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "dropoff": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 19.946
+    },
+    "createdAt": "2026-11-15T17:44:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 24,
+      "pickupKm": 1.76,
+      "assignedAt": "2026-11-15T17:46:00+02:00"
+    },
+    "startedAt": "2026-11-15T17:54:00+02:00",
+    "result": {
+      "actualKm": 21.542,
+      "fare": 298.5,
+      "completedAt": "2026-11-15T18:42:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 50,
+    "passengerId": 41,
+    "plan": {
+      "pickup": {
+        "code": "P36",
+        "name": "Золоті ворота",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.5135
+        }
+      },
+      "dropoff": {
+        "code": "P34",
+        "name": "Поштова площа",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.525
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 1.85
+    },
+    "createdAt": "2026-11-15T18:18:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 9,
+      "pickupKm": 3.959,
+      "assignedAt": "2026-11-15T18:20:00+02:00"
+    },
+    "startedAt": "2026-11-15T18:33:00+02:00",
+    "result": {
+      "actualKm": 1.869,
+      "fare": 90.0,
+      "completedAt": "2026-11-15T18:41:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 51,
+    "passengerId": 43,
+    "plan": {
+      "pickup": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "dropoff": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 16.0
+    },
+    "createdAt": "2026-11-15T18:53:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 8,
+      "pickupKm": 0.534,
+      "assignedAt": "2026-11-15T18:55:00+02:00"
+    },
+    "startedAt": "2026-11-15T19:09:00+02:00",
+    "result": {
+      "actualKm": 17.44,
+      "fare": 249.28,
+      "completedAt": "2026-11-15T19:48:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 52,
+    "passengerId": 69,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 22.915
+    },
+    "createdAt": "2026-11-15T19:27:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 21,
+      "pickupKm": 0.4,
+      "assignedAt": "2026-11-15T19:29:00+02:00"
+    },
+    "startedAt": "2026-11-15T19:37:00+02:00",
+    "result": {
+      "actualKm": 22.915,
+      "fare": 314.98,
+      "completedAt": "2026-11-15T20:27:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 53,
+    "passengerId": 57,
+    "plan": {
+      "pickup": {
+        "code": "P16",
+        "name": "Харківська площа",
+        "location": {
+          "latitude": 50.4005,
+          "longitude": 30.652
+        }
+      },
+      "dropoff": {
+        "code": "P12",
+        "name": "Лівобережна",
+        "location": {
+          "latitude": 50.452,
+          "longitude": 30.598
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.953
+    },
+    "createdAt": "2026-11-15T20:09:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 5,
+      "pickupKm": 3.041,
+      "assignedAt": "2026-11-15T20:11:00+02:00"
+    },
+    "startedAt": "2026-11-15T20:25:00+02:00",
+    "result": {
+      "actualKm": 9.043,
+      "fare": 148.52,
+      "completedAt": "2026-11-15T20:48:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 54,
+    "passengerId": 50,
+    "plan": {
+      "pickup": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "dropoff": {
+        "code": "P45",
+        "name": "Березняки",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.605
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 9.555
+    },
+    "createdAt": "2026-11-15T21:18:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 11,
+      "pickupKm": 2.075,
+      "assignedAt": "2026-11-15T21:20:00+02:00"
+    },
+    "startedAt": "2026-11-15T21:32:00+02:00",
+    "result": {
+      "actualKm": 10.033,
+      "fare": 160.4,
+      "completedAt": "2026-11-15T21:57:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 55,
+    "passengerId": 46,
+    "plan": {
+      "pickup": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "dropoff": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.607
+    },
+    "createdAt": "2026-11-15T21:43:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 28,
+      "pickupKm": 2.105,
+      "assignedAt": "2026-11-15T21:45:00+02:00"
+    },
+    "startedAt": "2026-11-15T21:56:00+02:00",
+    "result": {
+      "actualKm": 8.607,
+      "fare": 143.28,
+      "completedAt": "2026-11-15T22:18:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 56,
+    "passengerId": 58,
+    "plan": {
+      "pickup": {
+        "code": "P38",
+        "name": "Шулявська",
+        "location": {
+          "latitude": 50.455,
+          "longitude": 30.445
+        }
+      },
+      "dropoff": {
+        "code": "P04",
+        "name": "Контрактова площа",
+        "location": {
+          "latitude": 50.4651,
+          "longitude": 30.5154
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 6.64
+    },
+    "createdAt": "2026-11-15T22:42:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 4,
+      "pickupKm": 1.064,
+      "assignedAt": "2026-11-15T22:44:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "пасажир передумав",
+      "cancelledAt": "2026-11-15T22:49:00+02:00"
+    }
+  },
+  {
+    "id": 57,
+    "passengerId": 61,
+    "plan": {
+      "pickup": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "dropoff": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 27.456
+    },
+    "createdAt": "2026-11-15T23:02:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 40,
+      "pickupKm": 1.523,
+      "assignedAt": "2026-11-15T23:04:00+02:00"
+    },
+    "startedAt": "2026-11-15T23:13:00+02:00",
+    "result": {
+      "actualKm": 30.202,
+      "fare": 672.79,
+      "completedAt": "2026-11-16T00:18:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 58,
+    "passengerId": 45,
+    "plan": {
+      "pickup": {
+        "code": "P33",
+        "name": "Арсенальна",
+        "location": {
+          "latitude": 50.4446,
+          "longitude": 30.5455
+        }
+      },
+      "dropoff": {
+        "code": "P09",
+        "name": "Південний вокзал",
+        "location": {
+          "latitude": 50.4372,
+          "longitude": 30.48
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 6.124
+    },
+    "createdAt": "2026-11-16T00:04:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 48,
+      "pickupKm": 1.097,
+      "assignedAt": "2026-11-16T00:06:00+02:00"
+    },
+    "startedAt": "2026-11-16T00:17:00+02:00",
+    "result": {
+      "actualKm": 6.736,
+      "fare": 203.47,
+      "completedAt": "2026-11-16T00:35:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 59,
+    "passengerId": 69,
+    "plan": {
+      "pickup": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "dropoff": {
+        "code": "P41",
+        "name": "Сирець",
+        "location": {
+          "latitude": 50.476,
+          "longitude": 30.431
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 15.898
+    },
+    "createdAt": "2026-11-16T00:21:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 2,
+      "pickupKm": 4.12,
+      "assignedAt": "2026-11-16T00:23:00+02:00"
+    },
+    "startedAt": "2026-11-16T00:36:00+02:00",
+    "result": {
+      "actualKm": 17.011,
+      "fare": 305.17,
+      "completedAt": "2026-11-16T01:15:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 60,
+    "passengerId": 32,
+    "plan": {
+      "pickup": {
+        "code": "P48",
+        "name": "Чернігівська",
+        "location": {
+          "latitude": 50.46,
+          "longitude": 30.63
+        }
+      },
+      "dropoff": {
+        "code": "P37",
+        "name": "Площа Перемоги",
+        "location": {
+          "latitude": 50.4505,
+          "longitude": 30.493
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 12.683
+    },
+    "createdAt": "2026-11-16T01:08:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 39,
+      "pickupKm": 0.72,
+      "assignedAt": "2026-11-16T01:10:00+02:00"
+    },
+    "startedAt": "2026-11-16T01:21:00+02:00",
+    "result": {
+      "actualKm": 14.078,
+      "fare": 350.31,
+      "completedAt": "2026-11-16T01:54:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 61,
+    "passengerId": 36,
+    "plan": {
+      "pickup": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "dropoff": {
+        "code": "P46",
+        "name": "Дарницька площа",
+        "location": {
+          "latitude": 50.443,
+          "longitude": 30.615
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 18.459
+    },
+    "createdAt": "2026-11-16T01:57:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 17,
+      "pickupKm": 0.657,
+      "assignedAt": "2026-11-16T01:59:00+02:00"
+    },
+    "startedAt": "2026-11-16T02:07:00+02:00",
+    "result": {
+      "actualKm": 19.751,
+      "fare": 346.27,
+      "completedAt": "2026-11-16T02:51:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 62,
+    "passengerId": 76,
+    "plan": {
+      "pickup": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "dropoff": {
+        "code": "P40",
+        "name": "Дорогожичі",
+        "location": {
+          "latitude": 50.473,
+          "longitude": 30.449
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 5.352
+    },
+    "createdAt": "2026-11-16T02:28:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 38,
+      "pickupKm": 0.445,
+      "assignedAt": "2026-11-16T02:30:00+02:00"
+    },
+    "startedAt": "2026-11-16T02:39:00+02:00",
+    "result": {
+      "actualKm": 5.78,
+      "fare": 184.35,
+      "completedAt": "2026-11-16T02:55:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 63,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P13",
+        "name": "Вокзал «Дарниця»",
+        "location": {
+          "latitude": 50.4545,
+          "longitude": 30.6305
+        }
+      },
+      "dropoff": {
+        "code": "P09",
+        "name": "Південний вокзал",
+        "location": {
+          "latitude": 50.4372,
+          "longitude": 30.48
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 14.078
+    },
+    "createdAt": "2026-11-16T03:35:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 34,
+      "pickupKm": 1.31,
+      "assignedAt": "2026-11-16T03:37:00+02:00"
+    },
+    "startedAt": "2026-11-16T03:45:00+02:00",
+    "result": {
+      "actualKm": 15.345,
+      "fare": 375.65,
+      "completedAt": "2026-11-16T04:20:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 64,
+    "passengerId": 11,
+    "plan": {
+      "pickup": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "dropoff": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 13.993
+    },
+    "createdAt": "2026-11-16T04:17:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 57,
+      "pickupKm": 4.301,
+      "assignedAt": "2026-11-16T04:19:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "не вийшов до авто",
+      "cancelledAt": "2026-11-16T04:24:00+02:00"
+    }
+  },
+  {
+    "id": 65,
+    "passengerId": 77,
+    "plan": {
+      "pickup": {
+        "code": "P20",
+        "name": "Героїв Дніпра",
+        "location": {
+          "latitude": 50.5225,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 16.96
+    },
+    "createdAt": "2026-11-16T04:48:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 23,
+      "pickupKm": 3.389,
+      "assignedAt": "2026-11-16T04:50:00+02:00"
+    },
+    "startedAt": "2026-11-16T04:58:00+02:00",
+    "result": {
+      "actualKm": 17.299,
+      "fare": 309.49,
+      "completedAt": "2026-11-16T05:37:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 66,
+    "passengerId": 21,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P05",
+        "name": "Бессарабська площа",
+        "location": {
+          "latitude": 50.4418,
+          "longitude": 30.5212
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.054
+    },
+    "createdAt": "2026-11-16T05:15:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 18,
+      "pickupKm": 4.228,
+      "assignedAt": "2026-11-16T05:17:00+02:00"
+    },
+    "startedAt": "2026-11-16T05:30:00+02:00",
+    "result": {
+      "actualKm": 11.938,
+      "fare": 229.07,
+      "completedAt": "2026-11-16T05:58:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 67,
+    "passengerId": 28,
+    "plan": {
+      "pickup": {
+        "code": "P31",
+        "name": "Либідська площа",
+        "location": {
+          "latitude": 50.413,
+          "longitude": 30.525
+        }
+      },
+      "dropoff": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 10.274
+    },
+    "createdAt": "2026-11-16T05:57:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 43,
+      "pickupKm": 1.501,
+      "assignedAt": "2026-11-16T05:59:00+02:00"
+    },
+    "startedAt": "2026-11-16T06:08:00+02:00",
+    "result": {
+      "actualKm": 10.582,
+      "fare": 224.31,
+      "completedAt": "2026-11-16T06:34:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 68,
+    "passengerId": 50,
+    "plan": {
+      "pickup": {
+        "code": "P11",
+        "name": "Видубицький вокзал",
+        "location": {
+          "latitude": 50.4064,
+          "longitude": 30.5598
+        }
+      },
+      "dropoff": {
+        "code": "P08",
+        "name": "Лук'янівська площа",
+        "location": {
+          "latitude": 50.4623,
+          "longitude": 30.4823
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 10.781
+    },
+    "createdAt": "2026-11-16T06:59:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 12,
+      "pickupKm": 4.337,
+      "assignedAt": "2026-11-16T07:01:00+02:00"
+    },
+    "startedAt": "2026-11-16T07:09:00+02:00",
+    "result": {
+      "actualKm": 11.104,
+      "fare": 173.25,
+      "completedAt": "2026-11-16T07:36:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 69,
+    "passengerId": 23,
+    "plan": {
+      "pickup": {
+        "code": "P16",
+        "name": "Харківська площа",
+        "location": {
+          "latitude": 50.4005,
+          "longitude": 30.652
+        }
+      },
+      "dropoff": {
+        "code": "P04",
+        "name": "Контрактова площа",
+        "location": {
+          "latitude": 50.4651,
+          "longitude": 30.5154
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 15.665
+    },
+    "createdAt": "2026-11-16T07:35:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 2,
+      "pickupKm": 2.095,
+      "assignedAt": "2026-11-16T07:37:00+02:00"
+    },
+    "startedAt": "2026-11-16T07:43:00+02:00",
+    "result": {
+      "actualKm": 16.605,
+      "fare": 239.26,
+      "completedAt": "2026-11-16T08:21:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 70,
+    "passengerId": 59,
+    "plan": {
+      "pickup": {
+        "code": "P44",
+        "name": "Русанівка",
+        "location": {
+          "latitude": 50.441,
+          "longitude": 30.6
+        }
+      },
+      "dropoff": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 18.217
+    },
+    "createdAt": "2026-11-16T08:18:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 47,
+      "pickupKm": 4.627,
+      "assignedAt": "2026-11-16T08:20:00+02:00"
+    },
+    "startedAt": "2026-11-16T08:27:00+02:00",
+    "result": {
+      "actualKm": 19.492,
+      "fare": 366.87,
+      "completedAt": "2026-11-16T09:10:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 71,
+    "passengerId": 39,
+    "plan": {
+      "pickup": {
+        "code": "P36",
+        "name": "Золоті ворота",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.5135
+        }
+      },
+      "dropoff": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 16.311
+    },
+    "createdAt": "2026-11-16T08:50:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 10,
+      "pickupKm": 4.686,
+      "assignedAt": "2026-11-16T08:52:00+02:00"
+    },
+    "startedAt": "2026-11-16T08:57:00+02:00",
+    "result": {
+      "actualKm": 16.474,
+      "fare": 237.69,
+      "completedAt": "2026-11-16T09:34:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 72,
+    "passengerId": 38,
+    "plan": {
+      "pickup": {
+        "code": "P33",
+        "name": "Арсенальна",
+        "location": {
+          "latitude": 50.4446,
+          "longitude": 30.5455
+        }
+      },
+      "dropoff": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 6.172
+    },
+    "createdAt": "2026-11-16T09:29:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 39,
+      "pickupKm": 2.839,
+      "assignedAt": "2026-11-16T09:31:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-16T09:36:00+02:00"
+    }
+  },
+  {
+    "id": 73,
+    "passengerId": 20,
+    "plan": {
+      "pickup": {
+        "code": "P48",
+        "name": "Чернігівська",
+        "location": {
+          "latitude": 50.46,
+          "longitude": 30.63
+        }
+      },
+      "dropoff": {
+        "code": "P31",
+        "name": "Либідська площа",
+        "location": {
+          "latitude": 50.413,
+          "longitude": 30.525
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.816
+    },
+    "createdAt": "2026-11-16T10:32:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 26,
+      "pickupKm": 0.689,
+      "assignedAt": "2026-11-16T10:34:00+02:00"
+    },
+    "startedAt": "2026-11-16T10:47:00+02:00",
+    "result": {
+      "actualKm": 13.234,
+      "fare": 198.81,
+      "completedAt": "2026-11-16T11:18:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 74,
+    "passengerId": 45,
+    "plan": {
+      "pickup": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "dropoff": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 15.796
+    },
+    "createdAt": "2026-11-16T11:16:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 14,
+      "pickupKm": 1.353,
+      "assignedAt": "2026-11-16T11:18:00+02:00"
+    },
+    "startedAt": "2026-11-16T11:26:00+02:00",
+    "result": {
+      "actualKm": 17.218,
+      "fare": 246.62,
+      "completedAt": "2026-11-16T12:05:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 75,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "dropoff": {
+        "code": "P25",
+        "name": "Борщагівка",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.37
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 13.207
+    },
+    "createdAt": "2026-11-16T11:54:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 13,
+      "pickupKm": 1.078,
+      "assignedAt": "2026-11-16T11:56:00+02:00"
+    },
+    "startedAt": "2026-11-16T12:07:00+02:00",
+    "result": {
+      "actualKm": 13.735,
+      "fare": 204.82,
+      "completedAt": "2026-11-16T12:39:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 76,
+    "passengerId": 57,
+    "plan": {
+      "pickup": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "dropoff": {
+        "code": "P41",
+        "name": "Сирець",
+        "location": {
+          "latitude": 50.476,
+          "longitude": 30.431
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 24.829
+    },
+    "createdAt": "2026-11-16T12:32:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 45,
+      "pickupKm": 2.273,
+      "assignedAt": "2026-11-16T12:34:00+02:00"
+    },
+    "startedAt": "2026-11-16T12:38:00+02:00",
+    "result": {
+      "actualKm": 27.064,
+      "fare": 488.02,
+      "completedAt": "2026-11-16T13:37:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 77,
+    "passengerId": 9,
+    "plan": {
+      "pickup": {
+        "code": "P40",
+        "name": "Дорогожичі",
+        "location": {
+          "latitude": 50.473,
+          "longitude": 30.449
+        }
+      },
+      "dropoff": {
+        "code": "P01",
+        "name": "Центральний залізничний вокзал",
+        "location": {
+          "latitude": 50.4406,
+          "longitude": 30.489
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 5.957
+    },
+    "createdAt": "2026-11-16T13:20:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 9,
+      "pickupKm": 1.632,
+      "assignedAt": "2026-11-16T13:22:00+02:00"
+    },
+    "startedAt": "2026-11-16T13:28:00+02:00",
+    "result": {
+      "actualKm": 6.076,
+      "fare": 112.91,
+      "completedAt": "2026-11-16T13:45:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 78,
+    "passengerId": 27,
+    "plan": {
+      "pickup": {
+        "code": "P44",
+        "name": "Русанівка",
+        "location": {
+          "latitude": 50.441,
+          "longitude": 30.6
+        }
+      },
+      "dropoff": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.623
+    },
+    "createdAt": "2026-11-16T13:41:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 2,
+      "pickupKm": 3.542,
+      "assignedAt": "2026-11-16T13:43:00+02:00"
+    },
+    "startedAt": "2026-11-16T13:56:00+02:00",
+    "result": {
+      "actualKm": 9.227,
+      "fare": 150.72,
+      "completedAt": "2026-11-16T14:19:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 79,
+    "passengerId": 4,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 4.606
+    },
+    "createdAt": "2026-11-16T14:39:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 7,
+      "pickupKm": 3.544,
+      "assignedAt": "2026-11-16T14:41:00+02:00"
+    },
+    "startedAt": "2026-11-16T14:51:00+02:00",
+    "result": {
+      "actualKm": 5.021,
+      "fare": 100.25,
+      "completedAt": "2026-11-16T15:06:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 80,
+    "passengerId": 15,
+    "plan": {
+      "pickup": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "dropoff": {
+        "code": "P25",
+        "name": "Борщагівка",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.37
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 14.715
+    },
+    "createdAt": "2026-11-16T15:05:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 23,
+      "pickupKm": 1.611,
+      "assignedAt": "2026-11-16T15:07:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "пасажир передумав",
+      "cancelledAt": "2026-11-16T15:12:00+02:00"
+    }
+  },
+  {
+    "id": 81,
+    "passengerId": 51,
+    "plan": {
+      "pickup": {
+        "code": "P44",
+        "name": "Русанівка",
+        "location": {
+          "latitude": 50.441,
+          "longitude": 30.6
+        }
+      },
+      "dropoff": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.387
+    },
+    "createdAt": "2026-11-16T15:53:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 17,
+      "pickupKm": 1.434,
+      "assignedAt": "2026-11-16T15:55:00+02:00"
+    },
+    "startedAt": "2026-11-16T16:02:00+02:00",
+    "result": {
+      "actualKm": 11.729,
+      "fare": 180.75,
+      "completedAt": "2026-11-16T16:30:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 82,
+    "passengerId": 39,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.196
+    },
+    "createdAt": "2026-11-16T16:37:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 24,
+      "pickupKm": 0.612,
+      "assignedAt": "2026-11-16T16:39:00+02:00"
+    },
+    "startedAt": "2026-11-16T16:46:00+02:00",
+    "result": {
+      "actualKm": 12.092,
+      "fare": 185.1,
+      "completedAt": "2026-11-16T17:15:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 83,
+    "passengerId": 79,
+    "plan": {
+      "pickup": {
+        "code": "P40",
+        "name": "Дорогожичі",
+        "location": {
+          "latitude": 50.473,
+          "longitude": 30.449
+        }
+      },
+      "dropoff": {
+        "code": "P03",
+        "name": "Майдан Незалежності",
+        "location": {
+          "latitude": 50.4501,
+          "longitude": 30.5234
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.605
+    },
+    "createdAt": "2026-11-16T17:24:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 9,
+      "pickupKm": 0.491,
+      "assignedAt": "2026-11-16T17:26:00+02:00"
+    },
+    "startedAt": "2026-11-16T17:39:00+02:00",
+    "result": {
+      "actualKm": 7.757,
+      "fare": 133.08,
+      "completedAt": "2026-11-16T17:59:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 84,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P25",
+        "name": "Борщагівка",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.37
+        }
+      },
+      "dropoff": {
+        "code": "P35",
+        "name": "Андріївський узвіз",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.516
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 14.312
+    },
+    "createdAt": "2026-11-16T18:06:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 43,
+      "pickupKm": 4.239,
+      "assignedAt": "2026-11-16T18:08:00+02:00"
+    },
+    "startedAt": "2026-11-16T18:17:00+02:00",
+    "result": {
+      "actualKm": 15.028,
+      "fare": 295.45,
+      "completedAt": "2026-11-16T18:52:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 85,
+    "passengerId": 14,
+    "plan": {
+      "pickup": {
+        "code": "P03",
+        "name": "Майдан Незалежності",
+        "location": {
+          "latitude": 50.4501,
+          "longitude": 30.5234
+        }
+      },
+      "dropoff": {
+        "code": "P45",
+        "name": "Березняки",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.605
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 8.343
+    },
+    "createdAt": "2026-11-16T18:44:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 34,
+      "pickupKm": 0.886,
+      "assignedAt": "2026-11-16T18:46:00+02:00"
+    },
+    "startedAt": "2026-11-16T19:00:00+02:00",
+    "result": {
+      "actualKm": 8.343,
+      "fare": 188.49,
+      "completedAt": "2026-11-16T19:21:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 86,
+    "passengerId": 49,
+    "plan": {
+      "pickup": {
+        "code": "P20",
+        "name": "Героїв Дніпра",
+        "location": {
+          "latitude": 50.5225,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P38",
+        "name": "Шулявська",
+        "location": {
+          "latitude": 50.455,
+          "longitude": 30.445
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 10.928
+    },
+    "createdAt": "2026-11-16T19:39:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 34,
+      "pickupKm": 0.725,
+      "assignedAt": "2026-11-16T19:41:00+02:00"
+    },
+    "startedAt": "2026-11-16T19:55:00+02:00",
+    "result": {
+      "actualKm": 11.474,
+      "fare": 238.58,
+      "completedAt": "2026-11-16T20:22:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 87,
+    "passengerId": 37,
+    "plan": {
+      "pickup": {
+        "code": "P28",
+        "name": "Експоцентр",
+        "location": {
+          "latitude": 50.381,
+          "longitude": 30.477
+        }
+      },
+      "dropoff": {
+        "code": "P38",
+        "name": "Шулявська",
+        "location": {
+          "latitude": 50.455,
+          "longitude": 30.445
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 11.096
+    },
+    "createdAt": "2026-11-16T20:06:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 45,
+      "pickupKm": 3.031,
+      "assignedAt": "2026-11-16T20:08:00+02:00"
+    },
+    "startedAt": "2026-11-16T20:20:00+02:00",
+    "result": {
+      "actualKm": 12.428,
+      "fare": 253.85,
+      "completedAt": "2026-11-16T20:49:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 88,
+    "passengerId": 48,
+    "plan": {
+      "pickup": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "dropoff": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 6.54
+    },
+    "createdAt": "2026-11-16T20:52:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 47,
+      "pickupKm": 0.743,
+      "assignedAt": "2026-11-16T20:54:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "не вийшов до авто",
+      "cancelledAt": "2026-11-16T20:59:00+02:00"
+    }
+  },
+  {
+    "id": 89,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P38",
+        "name": "Шулявська",
+        "location": {
+          "latitude": 50.455,
+          "longitude": 30.445
+        }
+      },
+      "dropoff": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 7.784
+    },
+    "createdAt": "2026-11-16T21:25:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 51,
+      "pickupKm": 4.328,
+      "assignedAt": "2026-11-16T21:27:00+02:00"
+    },
+    "startedAt": "2026-11-16T21:37:00+02:00",
+    "result": {
+      "actualKm": 7.784,
+      "fare": 292.38,
+      "completedAt": "2026-11-16T21:57:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 90,
+    "passengerId": 20,
+    "plan": {
+      "pickup": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "dropoff": {
+        "code": "P39",
+        "name": "КПІ",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.457
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 5.088
+    },
+    "createdAt": "2026-11-16T22:18:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 12,
+      "pickupKm": 4.214,
+      "assignedAt": "2026-11-16T22:20:00+02:00"
+    },
+    "startedAt": "2026-11-16T22:24:00+02:00",
+    "result": {
+      "actualKm": 5.444,
+      "fare": 131.66,
+      "completedAt": "2026-11-16T22:39:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 91,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P45",
+        "name": "Березняки",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.605
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 14.39
+    },
+    "createdAt": "2026-11-16T22:46:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 5,
+      "pickupKm": 4.603,
+      "assignedAt": "2026-11-16T22:48:00+02:00"
+    },
+    "startedAt": "2026-11-16T22:55:00+02:00",
+    "result": {
+      "actualKm": 14.966,
+      "fare": 274.49,
+      "completedAt": "2026-11-16T23:29:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 92,
+    "passengerId": 57,
+    "plan": {
+      "pickup": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "dropoff": {
+        "code": "P44",
+        "name": "Русанівка",
+        "location": {
+          "latitude": 50.441,
+          "longitude": 30.6
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 7.301
+    },
+    "createdAt": "2026-11-16T23:47:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 57,
+      "pickupKm": 4.629,
+      "assignedAt": "2026-11-16T23:49:00+02:00"
+    },
+    "startedAt": "2026-11-17T00:02:00+02:00",
+    "result": {
+      "actualKm": 7.301,
+      "fare": 349.78,
+      "completedAt": "2026-11-17T00:21:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 93,
+    "passengerId": 77,
+    "plan": {
+      "pickup": {
+        "code": "P25",
+        "name": "Борщагівка",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.37
+        }
+      },
+      "dropoff": {
+        "code": "P43",
+        "name": "Гідропарк",
+        "location": {
+          "latitude": 50.446,
+          "longitude": 30.577
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 19.3
+    },
+    "createdAt": "2026-11-17T00:36:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 25,
+      "pickupKm": 4.279,
+      "assignedAt": "2026-11-17T00:38:00+02:00"
+    },
+    "startedAt": "2026-11-17T00:51:00+02:00",
+    "result": {
+      "actualKm": 21.423,
+      "fare": 371.35,
+      "completedAt": "2026-11-17T01:38:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 94,
+    "passengerId": 11,
+    "plan": {
+      "pickup": {
+        "code": "P31",
+        "name": "Либідська площа",
+        "location": {
+          "latitude": 50.413,
+          "longitude": 30.525
+        }
+      },
+      "dropoff": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 12.866
+    },
+    "createdAt": "2026-11-17T01:03:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 40,
+      "pickupKm": 0.729,
+      "assignedAt": "2026-11-17T01:05:00+02:00"
+    },
+    "startedAt": "2026-11-17T01:10:00+02:00",
+    "result": {
+      "actualKm": 13.638,
+      "fare": 341.51,
+      "completedAt": "2026-11-17T01:42:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 95,
+    "passengerId": 57,
+    "plan": {
+      "pickup": {
+        "code": "P34",
+        "name": "Поштова площа",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.525
+        }
+      },
+      "dropoff": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 4.627
+    },
+    "createdAt": "2026-11-17T01:57:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 17,
+      "pickupKm": 3.355,
+      "assignedAt": "2026-11-17T01:59:00+02:00"
+    },
+    "startedAt": "2026-11-17T02:10:00+02:00",
+    "result": {
+      "actualKm": 5.136,
+      "fare": 127.04,
+      "completedAt": "2026-11-17T02:25:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 96,
+    "passengerId": 13,
+    "plan": {
+      "pickup": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "dropoff": {
+        "code": "P14",
+        "name": "Позняки",
+        "location": {
+          "latitude": 50.398,
+          "longitude": 30.634
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.549
+    },
+    "createdAt": "2026-11-17T02:29:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 15,
+      "pickupKm": 2.356,
+      "assignedAt": "2026-11-17T02:31:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-17T02:36:00+02:00"
+    }
+  },
+  {
+    "id": 97,
+    "passengerId": 1,
+    "plan": {
+      "pickup": {
+        "code": "P24",
+        "name": "Академмістечко",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.355
+        }
+      },
+      "dropoff": {
+        "code": "P49",
+        "name": "Броварський проспект",
+        "location": {
+          "latitude": 50.459,
+          "longitude": 30.612
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 23.665
+    },
+    "createdAt": "2026-11-17T03:01:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 22,
+      "pickupKm": 3.304,
+      "assignedAt": "2026-11-17T03:03:00+02:00"
+    },
+    "startedAt": "2026-11-17T03:11:00+02:00",
+    "result": {
+      "actualKm": 26.032,
+      "fare": 440.48,
+      "completedAt": "2026-11-17T04:08:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 98,
+    "passengerId": 56,
+    "plan": {
+      "pickup": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "dropoff": {
+        "code": "P08",
+        "name": "Лук'янівська площа",
+        "location": {
+          "latitude": 50.4623,
+          "longitude": 30.4823
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 19.711
+    },
+    "createdAt": "2026-11-17T03:53:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 13,
+      "pickupKm": 2.026,
+      "assignedAt": "2026-11-17T03:55:00+02:00"
+    },
+    "startedAt": "2026-11-17T04:02:00+02:00",
+    "result": {
+      "actualKm": 21.288,
+      "fare": 369.32,
+      "completedAt": "2026-11-17T04:49:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 99,
+    "passengerId": 72,
+    "plan": {
+      "pickup": {
+        "code": "P12",
+        "name": "Лівобережна",
+        "location": {
+          "latitude": 50.452,
+          "longitude": 30.598
+        }
+      },
+      "dropoff": {
+        "code": "P08",
+        "name": "Лук'янівська площа",
+        "location": {
+          "latitude": 50.4623,
+          "longitude": 30.4823
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 10.751
+    },
+    "createdAt": "2026-11-17T04:39:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 3,
+      "pickupKm": 3.222,
+      "assignedAt": "2026-11-17T04:41:00+02:00"
+    },
+    "startedAt": "2026-11-17T04:45:00+02:00",
+    "result": {
+      "actualKm": 11.611,
+      "fare": 224.17,
+      "completedAt": "2026-11-17T05:13:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 100,
+    "passengerId": 21,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P39",
+        "name": "КПІ",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.457
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.735
+    },
+    "createdAt": "2026-11-17T05:06:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 15,
+      "pickupKm": 1.597,
+      "assignedAt": "2026-11-17T05:08:00+02:00"
+    },
+    "startedAt": "2026-11-17T05:14:00+02:00",
+    "result": {
+      "actualKm": 9.346,
+      "fare": 190.19,
+      "completedAt": "2026-11-17T05:37:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 101,
+    "passengerId": 18,
+    "plan": {
+      "pickup": {
+        "code": "P43",
+        "name": "Гідропарк",
+        "location": {
+          "latitude": 50.446,
+          "longitude": 30.577
+        }
+      },
+      "dropoff": {
+        "code": "P39",
+        "name": "КПІ",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.457
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.051
+    },
+    "createdAt": "2026-11-17T05:51:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 20,
+      "pickupKm": 4.794,
+      "assignedAt": "2026-11-17T05:53:00+02:00"
+    },
+    "startedAt": "2026-11-17T05:59:00+02:00",
+    "result": {
+      "actualKm": 11.383,
+      "fare": 220.75,
+      "completedAt": "2026-11-17T06:26:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 102,
+    "passengerId": 76,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 12.801
+    },
+    "createdAt": "2026-11-17T06:49:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 12,
+      "pickupKm": 3.724,
+      "assignedAt": "2026-11-17T06:51:00+02:00"
+    },
+    "startedAt": "2026-11-17T07:00:00+02:00",
+    "result": {
+      "actualKm": 13.313,
+      "fare": 199.76,
+      "completedAt": "2026-11-17T07:31:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 103,
+    "passengerId": 27,
+    "plan": {
+      "pickup": {
+        "code": "P50",
+        "name": "Червоний хутір",
+        "location": {
+          "latitude": 50.41,
+          "longitude": 30.68
+        }
+      },
+      "dropoff": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 19.114
+    },
+    "createdAt": "2026-11-17T07:06:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 12,
+      "pickupKm": 1.046,
+      "assignedAt": "2026-11-17T07:08:00+02:00"
+    },
+    "startedAt": "2026-11-17T07:21:00+02:00",
+    "result": {
+      "actualKm": 19.496,
+      "fare": 273.95,
+      "completedAt": "2026-11-17T08:04:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 104,
+    "passengerId": 18,
+    "plan": {
+      "pickup": {
+        "code": "P43",
+        "name": "Гідропарк",
+        "location": {
+          "latitude": 50.446,
+          "longitude": 30.577
+        }
+      },
+      "dropoff": {
+        "code": "P30",
+        "name": "Теремки",
+        "location": {
+          "latitude": 50.367,
+          "longitude": 30.454
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 16.088
+    },
+    "createdAt": "2026-11-17T07:53:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 5,
+      "pickupKm": 2.276,
+      "assignedAt": "2026-11-17T07:55:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "не вийшов до авто",
+      "cancelledAt": "2026-11-17T08:00:00+02:00"
+    }
+  },
+  {
+    "id": 105,
+    "passengerId": 32,
+    "plan": {
+      "pickup": {
+        "code": "P18",
+        "name": "Оболонська набережна",
+        "location": {
+          "latitude": 50.501,
+          "longitude": 30.504
+        }
+      },
+      "dropoff": {
+        "code": "P45",
+        "name": "Березняки",
+        "location": {
+          "latitude": 50.425,
+          "longitude": 30.605
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 14.39
+    },
+    "createdAt": "2026-11-17T08:40:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 32,
+      "pickupKm": 0.303,
+      "assignedAt": "2026-11-17T08:42:00+02:00"
+    },
+    "startedAt": "2026-11-17T08:54:00+02:00",
+    "result": {
+      "actualKm": 15.541,
+      "fare": 303.66,
+      "completedAt": "2026-11-17T09:30:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 106,
+    "passengerId": 66,
+    "plan": {
+      "pickup": {
+        "code": "P09",
+        "name": "Південний вокзал",
+        "location": {
+          "latitude": 50.4372,
+          "longitude": 30.48
+        }
+      },
+      "dropoff": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 7.643
+    },
+    "createdAt": "2026-11-17T09:35:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 6,
+      "pickupKm": 4.802,
+      "assignedAt": "2026-11-17T09:37:00+02:00"
+    },
+    "startedAt": "2026-11-17T09:43:00+02:00",
+    "result": {
+      "actualKm": 8.407,
+      "fare": 140.88,
+      "completedAt": "2026-11-17T10:04:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 107,
+    "passengerId": 19,
+    "plan": {
+      "pickup": {
+        "code": "P20",
+        "name": "Героїв Дніпра",
+        "location": {
+          "latitude": 50.5225,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P07",
+        "name": "НСК «Олімпійський»",
+        "location": {
+          "latitude": 50.4334,
+          "longitude": 30.5216
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 13.053
+    },
+    "createdAt": "2026-11-17T09:54:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 23,
+      "pickupKm": 0.334,
+      "assignedAt": "2026-11-17T09:56:00+02:00"
+    },
+    "startedAt": "2026-11-17T10:01:00+02:00",
+    "result": {
+      "actualKm": 13.314,
+      "fare": 199.77,
+      "completedAt": "2026-11-17T10:32:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 108,
+    "passengerId": 36,
+    "plan": {
+      "pickup": {
+        "code": "P19",
+        "name": "Мінська площа",
+        "location": {
+          "latitude": 50.5125,
+          "longitude": 30.4985
+        }
+      },
+      "dropoff": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 13.927
+    },
+    "createdAt": "2026-11-17T10:53:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 32,
+      "pickupKm": 4.251,
+      "assignedAt": "2026-11-17T10:55:00+02:00"
+    },
+    "startedAt": "2026-11-17T11:04:00+02:00",
+    "result": {
+      "actualKm": 13.927,
+      "fare": 277.83,
+      "completedAt": "2026-11-17T11:36:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 109,
+    "passengerId": 47,
+    "plan": {
+      "pickup": {
+        "code": "P42",
+        "name": "Петрівка",
+        "location": {
+          "latitude": 50.486,
+          "longitude": 30.498
+        }
+      },
+      "dropoff": {
+        "code": "P26",
+        "name": "Відрадний",
+        "location": {
+          "latitude": 50.429,
+          "longitude": 30.423
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 10.748
+    },
+    "createdAt": "2026-11-17T11:39:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 29,
+      "pickupKm": 2.443,
+      "assignedAt": "2026-11-17T11:41:00+02:00"
+    },
+    "startedAt": "2026-11-17T11:51:00+02:00",
+    "result": {
+      "actualKm": 10.963,
+      "fare": 171.56,
+      "completedAt": "2026-11-17T12:17:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 110,
+    "passengerId": 43,
+    "plan": {
+      "pickup": {
+        "code": "P04",
+        "name": "Контрактова площа",
+        "location": {
+          "latitude": 50.4651,
+          "longitude": 30.5154
+        }
+      },
+      "dropoff": {
+        "code": "P36",
+        "name": "Золоті ворота",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.5135
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 2.406
+    },
+    "createdAt": "2026-11-17T12:00:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 11,
+      "pickupKm": 2.685,
+      "assignedAt": "2026-11-17T12:02:00+02:00"
+    },
+    "startedAt": "2026-11-17T12:12:00+02:00",
+    "result": {
+      "actualKm": 2.647,
+      "fare": 90.0,
+      "completedAt": "2026-11-17T12:22:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 111,
+    "passengerId": 7,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P06",
+        "name": "Палац спорту",
+        "location": {
+          "latitude": 50.4385,
+          "longitude": 30.5215
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 4.732
+    },
+    "createdAt": "2026-11-17T12:46:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 15,
+      "pickupKm": 1.713,
+      "assignedAt": "2026-11-17T12:48:00+02:00"
+    },
+    "startedAt": "2026-11-17T12:53:00+02:00",
+    "result": {
+      "actualKm": 5.253,
+      "fare": 103.04,
+      "completedAt": "2026-11-17T13:08:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 112,
+    "passengerId": 51,
+    "plan": {
+      "pickup": {
+        "code": "P01",
+        "name": "Центральний залізничний вокзал",
+        "location": {
+          "latitude": 50.4406,
+          "longitude": 30.489
+        }
+      },
+      "dropoff": {
+        "code": "P21",
+        "name": "Виноградар",
+        "location": {
+          "latitude": 50.508,
+          "longitude": 30.43
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 11.153
+    },
+    "createdAt": "2026-11-17T13:34:00+02:00",
+    "status": "Cancelled",
+    "assignment": {
+      "driverId": 16,
+      "pickupKm": 4.216,
+      "assignedAt": "2026-11-17T13:36:00+02:00"
+    },
+    "startedAt": null,
+    "result": null,
+    "cancellation": {
+      "reason": "змінилися плани",
+      "cancelledAt": "2026-11-17T13:41:00+02:00"
+    }
+  },
+  {
+    "id": 113,
+    "passengerId": 7,
+    "plan": {
+      "pickup": {
+        "code": "P13",
+        "name": "Вокзал «Дарниця»",
+        "location": {
+          "latitude": 50.4545,
+          "longitude": 30.6305
+        }
+      },
+      "dropoff": {
+        "code": "P15",
+        "name": "Осокорки",
+        "location": {
+          "latitude": 50.3953,
+          "longitude": 30.616
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 8.661
+    },
+    "createdAt": "2026-11-17T14:23:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 45,
+      "pickupKm": 0.713,
+      "assignedAt": "2026-11-17T14:25:00+02:00"
+    },
+    "startedAt": "2026-11-17T14:29:00+02:00",
+    "result": {
+      "actualKm": 9.7,
+      "fare": 210.2,
+      "completedAt": "2026-11-17T14:53:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 114,
+    "passengerId": 65,
+    "plan": {
+      "pickup": {
+        "code": "P31",
+        "name": "Либідська площа",
+        "location": {
+          "latitude": 50.413,
+          "longitude": 30.525
+        }
+      },
+      "dropoff": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 4.004
+    },
+    "createdAt": "2026-11-17T15:01:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 8,
+      "pickupKm": 1.343,
+      "assignedAt": "2026-11-17T15:03:00+02:00"
+    },
+    "startedAt": "2026-11-17T15:08:00+02:00",
+    "result": {
+      "actualKm": 4.084,
+      "fare": 90.0,
+      "completedAt": "2026-11-17T15:21:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 115,
+    "passengerId": 69,
+    "plan": {
+      "pickup": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "dropoff": {
+        "code": "P22",
+        "name": "Нивки",
+        "location": {
+          "latitude": 50.4585,
+          "longitude": 30.404
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 12.932
+    },
+    "createdAt": "2026-11-17T15:54:00+02:00",
+    "status": "Completed",
+    "assignment": {
+      "driverId": 25,
+      "pickupKm": 3.242,
+      "assignedAt": "2026-11-17T15:56:00+02:00"
+    },
+    "startedAt": "2026-11-17T16:05:00+02:00",
+    "result": {
+      "actualKm": 13.32,
+      "fare": 199.84,
+      "completedAt": "2026-11-17T16:36:00+02:00"
+    },
+    "cancellation": null
+  },
+  {
+    "id": 116,
+    "passengerId": 73,
+    "plan": {
+      "pickup": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "dropoff": {
+        "code": "P10",
+        "name": "Деміївська площа",
+        "location": {
+          "latitude": 50.4058,
+          "longitude": 30.5175
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 4.958
+    },
+    "createdAt": "2026-11-17T16:24:00+02:00",
+    "status": "New",
+    "assignment": null,
+    "startedAt": null,
+    "result": null,
+    "cancellation": null
+  },
+  {
+    "id": 117,
+    "passengerId": 57,
+    "plan": {
+      "pickup": {
+        "code": "P47",
+        "name": "Лісовий масив",
+        "location": {
+          "latitude": 50.465,
+          "longitude": 30.644
+        }
+      },
+      "dropoff": {
+        "code": "P27",
+        "name": "Севастопольська площа",
+        "location": {
+          "latitude": 50.426,
+          "longitude": 30.474
+        }
+      },
+      "carClass": "Business",
+      "routeKm": 16.634
+    },
+    "createdAt": "2026-11-17T17:03:00+02:00",
+    "status": "New",
+    "assignment": null,
+    "startedAt": null,
+    "result": null,
+    "cancellation": null
+  },
+  {
+    "id": 118,
+    "passengerId": 46,
+    "plan": {
+      "pickup": {
+        "code": "P36",
+        "name": "Золоті ворота",
+        "location": {
+          "latitude": 50.4485,
+          "longitude": 30.5135
+        }
+      },
+      "dropoff": {
+        "code": "P41",
+        "name": "Сирець",
+        "location": {
+          "latitude": 50.476,
+          "longitude": 30.431
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 8.57
+    },
+    "createdAt": "2026-11-17T17:40:00+02:00",
+    "status": "New",
+    "assignment": null,
+    "startedAt": null,
+    "result": null,
+    "cancellation": null
+  },
+  {
+    "id": 119,
+    "passengerId": 43,
+    "plan": {
+      "pickup": {
+        "code": "P33",
+        "name": "Арсенальна",
+        "location": {
+          "latitude": 50.4446,
+          "longitude": 30.5455
+        }
+      },
+      "dropoff": {
+        "code": "P29",
+        "name": "Голосіївський парк",
+        "location": {
+          "latitude": 50.387,
+          "longitude": 30.51
+        }
+      },
+      "carClass": "Comfort",
+      "routeKm": 8.945
+    },
+    "createdAt": "2026-11-17T18:44:00+02:00",
+    "status": "New",
+    "assignment": null,
+    "startedAt": null,
+    "result": null,
+    "cancellation": null
+  },
+  {
+    "id": 120,
+    "passengerId": 46,
+    "plan": {
+      "pickup": {
+        "code": "P33",
+        "name": "Арсенальна",
+        "location": {
+          "latitude": 50.4446,
+          "longitude": 30.5455
+        }
+      },
+      "dropoff": {
+        "code": "P44",
+        "name": "Русанівка",
+        "location": {
+          "latitude": 50.441,
+          "longitude": 30.6
+        }
+      },
+      "carClass": "Economy",
+      "routeKm": 5.044
+    },
+    "createdAt": "2026-11-17T19:05:00+02:00",
+    "status": "New",
+    "assignment": null,
+    "startedAt": null,
+    "result": null,
+    "cancellation": null
+  }
+]
