@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
+    <!-- Межа вимірювання покриття (coverlet.msbuild): лише бібліотеки логіки — домен і
+         прикладний шар. Інфраструктура й консоль до знаменника не входять. -->
+    <Include>[TaxiDispatch.Domain]*,[TaxiDispatch.Application]*</Include>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+    <ThresholdType>line</ThresholdType>
   </PropertyGroup>
 
   <ItemGroup>
