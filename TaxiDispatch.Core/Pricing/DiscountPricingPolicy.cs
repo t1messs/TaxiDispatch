@@ -28,6 +28,6 @@ public sealed class DiscountPricingPolicy : IPricingPolicy
     public decimal PriceOf(RouteSegment segment)
     {
         ArgumentNullException.ThrowIfNull(segment);
-        return Math.Round(segment.Amount * (1m - _rate), 2);
+        return Math.Round(segment.Amount * (1m - _rate), 2, MidpointRounding.AwayFromZero);
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Text;
 using TaxiDispatch.Core.Documents;
@@ -6,8 +5,15 @@ using TaxiDispatch.Core.Legacy;
 
 namespace TaxiDispatch.Core.Reporting;
 
+/// <summary>
+/// Текстовий звіт про розрахований документ.
+/// </summary>
 public static class DocumentReport
 {
+    /// <summary>Формує текст звіту з фіксованою культурою. Не має побічних ефектів.</summary>
+    /// <param name="request">Запит на розрахунок.</param>
+    /// <param name="result">Результат розрахунку.</param>
+    /// <returns>Багаторядковий текст звіту.</returns>
     public static string TextOf(TotalRequest request, TotalResult result)
     {
         ArgumentNullException.ThrowIfNull(request);
