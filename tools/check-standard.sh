@@ -19,9 +19,11 @@ report() {
 files=$(git ls-files 'TaxiDispatch.Core/*.cs' 'TaxiDispatch.App/*.cs' 'TaxiDispatch.Tests/*.cs')
 core=$(git ls-files 'TaxiDispatch.Core/*.cs')
 
-# F-03: рядок не довший за 100 символів
-report F-03 "рядок довший за 100 символів" \
-    "$(awk 'length > 100 { print FILENAME ":" FNR ": " length " символів" }' $files)"
+# F-03: рядок не довший за 100 символів. Рахуємо символи, а не байти: awk на macOS вважає
+# кожну кириличну літеру за два символи, тому довжину рахує perl із декодуванням UTF-8.
+report F-03 "рядок довший за 100 символів (файл:рядок: довжина)" \
+    "$(perl -CSD -ne 'chomp; print "$ARGV:$.: ", length($_), "\n" if length($_) > 100;
+        close ARGV if eof' $files)"
 
 # S-13: файл не довший за 500 рядків
 report S-13 "файл довший за 500 рядків" \
