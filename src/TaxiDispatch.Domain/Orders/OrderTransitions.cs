@@ -19,6 +19,21 @@ public static class OrderTransitions
         };
 
     /// <summary>
+    /// Перевіряє, що подію дозволено, нічого не змінюючи: сценарій викликає це до того,
+    /// як торкнутися інших об'єктів (наприклад, водія).
+    /// </summary>
+    /// <param name="from">Поточний стан.</param>
+    /// <param name="orderEvent">Подія.</param>
+    /// <exception cref="InvalidOrderStateException">Перехід заборонено.</exception>
+    public static void EnsureAllowed(OrderStatus from, OrderEvent orderEvent)
+    {
+        if (!_allowed.ContainsKey((from, orderEvent)))
+        {
+            throw new InvalidOrderStateException(from, orderEvent);
+        }
+    }
+
+    /// <summary>
     /// Повертає новий стан за таблицею переходів. Не має побічних ефектів.
     /// </summary>
     /// <param name="from">Поточний стан.</param>
