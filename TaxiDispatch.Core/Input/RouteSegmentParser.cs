@@ -18,7 +18,7 @@ public static class RouteSegmentParser
     /// <summary>Найбільша допустима ціна за кілометр, грн.</summary>
     public const decimal MaxPricePerKm = 500m;
 
-    // Застосунок очікує десяткову кому (культура uk-UA); крапку теж приймаємо, замінюючи на кому.
+    // Очікуємо десяткову кому (культура uk-UA); крапку приймаємо, замінюючи на кому.
     private static readonly CultureInfo _inputCulture = CultureInfo.GetCultureInfo("uk-UA");
 
     /// <summary>
@@ -44,14 +44,14 @@ public static class RouteSegmentParser
             || distance is <= 0m or > MaxDistanceKm)
         {
             return Result.Fail<RouteSegment>(
-                "Дистанція — число більше 0 і не більше 1000 км, наприклад 3,5");
+                $"Дистанція — число більше 0 і не більше {MaxDistanceKm} км, наприклад 3,5");
         }
 
         if (!TryParseNumber(pricePerKm, out decimal price)
             || price is < 0m or > MaxPricePerKm)
         {
             return Result.Fail<RouteSegment>(
-                "Ціна за кілометр — число від 0 до 500 грн");
+                $"Ціна за кілометр — число від 0 до {MaxPricePerKm} грн");
         }
 
         return Result.Ok(new RouteSegment(address, distance, price));
