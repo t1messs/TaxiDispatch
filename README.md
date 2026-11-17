@@ -1,5 +1,7 @@
 # TaxiDispatch
 
+![CI](https://github.com/t1messs/TaxiDispatch/actions/workflows/ci.yml/badge.svg)
+
 Навчальний проєкт з дисципліни «Конструювання програмного забезпечення».
 Варіант № 13: приймання й розподіл замовлень таксі.
 
