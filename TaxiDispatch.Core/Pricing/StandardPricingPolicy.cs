@@ -12,6 +12,6 @@ public sealed class StandardPricingPolicy : IPricingPolicy
     public decimal PriceOf(RouteSegment segment)
     {
         ArgumentNullException.ThrowIfNull(segment);
-        return Math.Round(segment.Amount, 2);
+        return Math.Round(segment.Amount, 2, MidpointRounding.AwayFromZero);
     }
 }

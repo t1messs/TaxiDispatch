@@ -1,0 +1,5 @@
+P:System.DateTime.Now;D-18: поточний час передають параметром або через TimeProvider
+P:System.DateTime.UtcNow;D-18: поточний час передають параметром або через TimeProvider
+P:System.DateTime.Today;D-18: поточну дату передають параметром або через TimeProvider
+P:System.DateTimeOffset.Now;D-18: поточний час передають параметром або через TimeProvider
+P:System.DateTimeOffset.UtcNow;D-18: поточний час передають параметром або через TimeProvider

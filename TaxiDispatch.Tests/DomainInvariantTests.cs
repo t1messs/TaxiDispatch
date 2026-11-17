@@ -4,7 +4,6 @@ using TaxiDispatch.Core.Domain;
 using TaxiDispatch.Core.Pricing;
 using TaxiDispatch.Core.Services;
 using TaxiDispatch.Core.Storage;
-using Xunit;
 
 namespace TaxiDispatch.Tests;
 
