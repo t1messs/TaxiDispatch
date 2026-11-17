@@ -491,3 +491,7 @@ Claude outputs/
 report.csv
 audit.log
 *.log
+
+# ЛР7: результати запуску тестів і звіт покриття
+TestResults/
+coverage/
