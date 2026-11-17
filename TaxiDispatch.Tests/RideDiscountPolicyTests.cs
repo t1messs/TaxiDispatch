@@ -4,94 +4,40 @@ namespace TaxiDispatch.Tests;
 
 public class RideDiscountPolicyTests
 {
-    [Fact]
-    public void DiscountFor_NegativeAmount_Throws()
+    // decimal не є константою часу компіляції, тому суми передаємо як double
+    // і перетворюємо на decimal у тілі тесту.
+    [Theory]
+    [InlineData(0, false, 0)]
+    [InlineData(400, true, 20)]
+    [InlineData(999.99, false, 0)]
+    [InlineData(999.99, true, 50)]
+    [InlineData(1000, false, 100)]
+    [InlineData(1000, true, 150)]
+    public void DiscountFor_Boundaries_MatchesTable(double amount, bool isRegular, double expected)
     {
         // Arrange
         var policy = new RideDiscountPolicy();
 
         // Act
-        void Act() => policy.DiscountFor(-0.01m, true);
+        decimal actual = policy.DiscountFor((decimal)amount, isRegular);
 
         // Assert
-        Assert.Throws<ArgumentOutOfRangeException>(Act);
+        Assert.Equal((decimal)expected, actual);
     }
 
-    [Fact]
-    public void DiscountFor_ZeroAmountNewPassenger_ReturnsZero()
+    [Theory]
+    [InlineData(-0.01)]
+    [InlineData(-1000)]
+    public void DiscountFor_NegativeAmount_ThrowsOutOfRange(double amount)
     {
         // Arrange
         var policy = new RideDiscountPolicy();
 
         // Act
-        decimal actual = policy.DiscountFor(0m, false);
+        var ex = Assert.Throws<ArgumentOutOfRangeException>(
+            () => policy.DiscountFor((decimal)amount, true));
 
         // Assert
-        Assert.Equal(0.00m, actual);
-    }
-
-    [Fact]
-    public void DiscountFor_ShortRideRegular_ReturnsFivePercent()
-    {
-        // Arrange
-        var policy = new RideDiscountPolicy();
-
-        // Act
-        decimal actual = policy.DiscountFor(400m, true);
-
-        // Assert
-        Assert.Equal(20.00m, actual);
-    }
-
-    [Fact]
-    public void DiscountFor_JustBelowLongRideNewPassenger_ReturnsZero()
-    {
-        // Arrange
-        var policy = new RideDiscountPolicy();
-
-        // Act
-        decimal actual = policy.DiscountFor(999.99m, false);
-
-        // Assert
-        Assert.Equal(0.00m, actual);
-    }
-
-    [Fact]
-    public void DiscountFor_JustBelowLongRideRegular_ReturnsFivePercent()
-    {
-        // Arrange
-        var policy = new RideDiscountPolicy();
-
-        // Act
-        decimal actual = policy.DiscountFor(999.99m, true);
-
-        // Assert
-        Assert.Equal(50.00m, actual);
-    }
-
-    [Fact]
-    public void DiscountFor_LongRideBoundaryNewPassenger_ReturnsTenPercent()
-    {
-        // Arrange
-        var policy = new RideDiscountPolicy();
-
-        // Act
-        decimal actual = policy.DiscountFor(1000m, false);
-
-        // Assert
-        Assert.Equal(100.00m, actual);
-    }
-
-    [Fact]
-    public void DiscountFor_LongRideBoundaryRegular_ReturnsFifteenPercent()
-    {
-        // Arrange
-        var policy = new RideDiscountPolicy();
-
-        // Act
-        decimal actual = policy.DiscountFor(1000m, true);
-
-        // Assert
-        Assert.Equal(150.00m, actual);
+        Assert.Equal("amount", ex.ParamName);
     }
 }
