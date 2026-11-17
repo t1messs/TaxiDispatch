@@ -496,3 +496,8 @@ audit.log
 TestResults/
 coverage/
 coverage.cobertura.xml
+
+# ЛР8: локальні налаштування й секрети не потрапляють у репозиторій
+appsettings.Local.json
+**/*.secrets.json
+.env*
