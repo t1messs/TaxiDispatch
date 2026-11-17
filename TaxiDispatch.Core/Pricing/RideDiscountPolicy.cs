@@ -16,6 +16,9 @@ public sealed class RideDiscountPolicy
     /// <summary>Межа дорогої поїздки, грн.</summary>
     public const decimal LongRideFrom = 1000m;
 
+    /// <summary>Максимальна сума знижки, грн.</summary>
+    public const decimal MaxDiscount = 150m;
+
     /// <summary>
     /// Обчислює знижку на поїздку.
     /// </summary>
@@ -45,6 +48,12 @@ public sealed class RideDiscountPolicy
             rate += LongRideRate;
         }
 
-        return decimal.Round(amount * rate, 2);
+        decimal discount = decimal.Round(amount * rate, 2);
+        if (discount > MaxDiscount)
+        {
+            discount = MaxDiscount;
+        }
+
+        return discount;
     }
 }
