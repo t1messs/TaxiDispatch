@@ -24,6 +24,9 @@ jobs:
       - name: Перевірка форматування
         run: dotnet format --verify-no-changes --no-restore
 
+      - name: Перевірка правил стандарту поза Roslyn
+        run: bash tools/check-standard.sh
+
       - name: Складання Release з аналізаторами
         run: dotnet build -c Release --no-restore
 
