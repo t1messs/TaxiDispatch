@@ -19,7 +19,7 @@ using ILoggerFactory logs = LoggerFactory.Create(builder => builder.AddProvider(
 ILogger log = logs.CreateLogger("TaxiDispatch.App");
 try
 {
-    Composition.CreateMenu(io, logs, clock).Run();
+    Composition.CreateMenu(io, logs, clock, FeatureFlags.FromEnvironment()).Run();
     return 0;
 }
 catch (EndOfStreamException)
