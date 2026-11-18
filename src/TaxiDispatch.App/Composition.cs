@@ -13,11 +13,20 @@ namespace TaxiDispatch.App;
 /// </summary>
 internal static class Composition
 {
-    public static MainMenu CreateMenu(ConsoleIo io, ILoggerFactory logs, TimeProvider clock)
+    public static MainMenu CreateMenu(
+        ConsoleIo io,
+        ILoggerFactory logs,
+        TimeProvider clock,
+        FeatureFlags flags)
     {
         var paths = new DataPaths("data", "state");
         var store = new JsonTaxiStore(paths);
         IFarePolicy fares = new TariffFarePolicy(JsonTariffSource.Load(paths));
+        if (flags.SurgeFactor is decimal surge)
+        {
+            fares = new SurgeFarePolicy(fares, surge);
+        }
+
         var orders = new OrderScreens(
             io,
             store.Places,
