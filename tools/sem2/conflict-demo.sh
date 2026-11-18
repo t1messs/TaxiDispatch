@@ -3,7 +3,7 @@
 # Працює в тимчасовому клоні — робоча копія й GitHub не змінюються.
 #   bash tools/sem2/conflict-demo.sh          — довга гілка feature + hotfix у main → конфлікт
 #   bash tools/sem2/conflict-demo.sh resolve  — розв'язання, складання й тести
-set -eu
+set -euo pipefail
 
 demo="${TMPDIR:-/tmp}/taxidispatch-gitflow"
 file="src/TaxiDispatch.Domain/Pricing/FareCalculator.cs"
@@ -15,8 +15,8 @@ if [ "${1:-}" = "resolve" ]; then
     git add "$file"
     git commit -q --no-edit
     git log --oneline --graph -8
-    dotnet build -c Release -warnaserror -v q
-    dotnet test --no-build -c Release -v q
+    dotnet build -c Release -warnaserror 2>&1 | tail -3
+    dotnet test --no-build -c Release 2>&1 | tail -2
     exit 0
 fi
 
